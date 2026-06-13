@@ -1,0 +1,464 @@
+window.PAPERS = [
+  {
+    "id": "sharp-non-uniqueness-navier-stokes-critical",
+    "title": "Sharp non-uniqueness for the Navier-Stokes equations in scaling critical spaces",
+    "authors": "Mikihiro Fujii",
+    "preprintUrl": "https://arxiv.org/abs/2602.19846",
+    "preprintLabel": "arXiv",
+    "journalUrl": "",
+    "journal": "Submitted",
+    "abstract": {
+      "en": "The original abstract is available from the arXiv, HAL, or journal link below.",
+      "ja": "元のアブストラクトは下記の arXiv・HAL・ジャーナルリンクから確認できます。"
+    }
+  },
+  {
+    "id": "asymptotic-instability-forced-navier-stokes",
+    "title": "Asymptotic instability for the forced Navier-Stokes equations in critical Besov spaces",
+    "authors": "Mikihiro Fujii, Hiroyuki Tsurumi",
+    "preprintUrl": "https://arxiv.org/abs/2509.21272",
+    "preprintLabel": "arXiv",
+    "journalUrl": "",
+    "journal": "Submitted",
+    "abstract": {
+      "en": "The original abstract is available from the arXiv, HAL, or journal link below.",
+      "ja": "元のアブストラクトは下記の arXiv・HAL・ジャーナルリンクから確認できます。"
+    }
+  },
+  {
+    "id": "rotating-compressible-nsk-fourier-lebesgue",
+    "title": "Global strong solutions to the $3$D rotating compressible Navier-Stokes-Korteweg system for large data in the critical $\\widehat{L^p}$ framework",
+    "listTitle": "Global strong solutions to the 3D rotating compressible Navier-Stokes-Korteweg system for large data in the critical $\\widehat{L^p}$ framework",
+    "authors": "Mikihiro Fujii, Shunhang Zhang",
+    "preprintUrl": "https://arxiv.org/abs/2509.06078",
+    "preprintLabel": "arXiv",
+    "journalUrl": "",
+    "journal": "Submitted",
+    "abstract": {
+      "en": "The original abstract is available from the arXiv, HAL, or journal link below.",
+      "ja": "元のアブストラクトは下記の arXiv・HAL・ジャーナルリンクから確認できます。"
+    }
+  },
+  {
+    "id": "analyticity-anisotropic-navier-stokes-lp",
+    "title": "Analyticity in space and time for global solutions to the anisotropic Navier-Stokes equations in the critical $L^p$ framework",
+    "authors": "Mikihiro Fujii, Yang Li",
+    "preprintUrl": "https://arxiv.org/abs/2511.20482",
+    "preprintLabel": "arXiv",
+    "journalUrl": "",
+    "journal": "Submitted",
+    "abstract": {
+      "en": "The original abstract is available from the arXiv, HAL, or journal link below.",
+      "ja": "元のアブストラクトは下記の arXiv・HAL・ジャーナルリンクから確認できます。"
+    }
+  },
+  {
+    "id": "large-stratified-boussinesq-horizontal-dissipation",
+    "title": "Global large solutions to the $3$D stratified Boussinesq equations with horizontal dissipation in the critical spaces",
+    "listTitle": "Global large solutions to the 3D stratified Boussinesq equations with horizontal dissipation in the critical spaces",
+    "authors": "Mikihiro Fujii",
+    "preprintUrl": "https://hal.science/hal-04894010v1",
+    "preprintLabel": "HAL",
+    "journalUrl": "",
+    "journal": "Submitted",
+    "abstract": {
+      "en": "The original abstract is available from the arXiv, HAL, or journal link below.",
+      "ja": "元のアブストラクトは下記の arXiv・HAL・ジャーナルリンクから確認できます。"
+    }
+  },
+  {
+    "id": "decay-rates-stationary-navier-stokes-infinity",
+    "title": "Decay rates of three dimensional stationary Navier-Stokes flows at the spatial infinity",
+    "authors": "Mikihiro Fujii, Hiroyuki Tsurumi, Xiaojing Zhang",
+    "preprintUrl": "https://arxiv.org/abs/2508.17723",
+    "preprintLabel": "arXiv",
+    "journalUrl": "",
+    "journal": "Submitted",
+    "abstract": {
+      "en": "The original abstract is available from the arXiv, HAL, or journal link below.",
+      "ja": "元のアブストラクトは下記の arXiv・HAL・ジャーナルリンクから確認できます。"
+    }
+  },
+  {
+    "id": "fast-rotation-limit-incompressible-navier-stokes",
+    "title": "Fast rotation limit for the $3$D incompressible Navier-Stokes equations on the whole space",
+    "listTitle": "Fast rotation limit for the 3D incompressible Navier-Stokes equations on the whole space",
+    "authors": "Mikihiro Fujii",
+    "preprintUrl": "https://hal.science/hal-04973317v1",
+    "preprintLabel": "HAL",
+    "journalUrl": "",
+    "journal": "Submitted",
+    "abstract": {
+      "en": "The original abstract is available from the arXiv, HAL, or journal link below.",
+      "ja": "元のアブストラクトは下記の arXiv・HAL・ジャーナルリンクから確認できます。"
+    }
+  },
+  {
+    "id": "stationary-critical-supercritical-qg",
+    "title": "Stationary solutions to the critical and super-critical quasi-geostrophic equation in the scaling critical Sobolev space",
+    "authors": "Mikihiro Fujii",
+    "preprintUrl": "https://arxiv.org/abs/2503.11095",
+    "preprintLabel": "arXiv",
+    "journalUrl": "https://www.sciencedirect.com/science/article/pii/S0362546X26000726?via%3Dihub",
+    "journal": "Nonlinear Analysis (2026)",
+    "abstract": {
+      "en": "The original abstract is available from the arXiv, HAL, or journal link below.",
+      "ja": "元のアブストラクトは下記の arXiv・HAL・ジャーナルリンクから確認できます。"
+    }
+  },
+  {
+    "id": "global-strong-compressible-navier-stokes-coriolis-large",
+    "title": "Global strong solutions to the compressible Navier-Stokes-Coriolis system for large data",
+    "authors": "Mikihiro Fujii, Keiichi Watanabe",
+    "preprintUrl": "https://arxiv.org/abs/2411.02701",
+    "preprintLabel": "arXiv",
+    "journalUrl": "https://link.springer.com/article/10.1007/s00205-026-02172-w",
+    "journal": "Archive for Rational Mechanics and Analysis (2026)",
+    "abstract": {
+      "en": "The original abstract is available from the arXiv, HAL, or journal link below.",
+      "ja": "元のアブストラクトは下記の arXiv・HAL・ジャーナルリンクから確認できます。"
+    }
+  },
+  {
+    "id": "incompressible-fast-rotation-limits-euler",
+    "title": "Incompressible and fast rotation limits for $3$D compressible rotating Euler system with general initial data",
+    "listTitle": "Incompressible and fast rotation limits for 3D compressible rotating Euler system with general initial data",
+    "authors": "Mikihiro Fujii, Yang Li, Peng Mu",
+    "preprintUrl": "https://arxiv.org/abs/2504.17290",
+    "preprintLabel": "arXiv",
+    "journalUrl": "https://londmathsoc.onlinelibrary.wiley.com/doi/10.1112/blms.70312",
+    "journal": "Bulletin of the London Mathematical Society (2026)",
+    "abstract": {
+      "en": "The original abstract is available from the arXiv, HAL, or journal link below.",
+      "ja": "元のアブストラクトは下記の arXiv・HAL・ジャーナルリンクから確認できます。"
+    }
+  },
+  {
+    "id": "stability-stratified-boussinesq-horizontal-viscosity",
+    "title": "Linear and nonlinear stability for the $3$D stratified Boussinesq equations with the horizontal viscosity and diffusivity",
+    "listTitle": "Linear and nonlinear stability for the 3D stratified Boussinesq equations with the horizontal viscosity and diffusivity",
+    "authors": "Mikihiro Fujii, Yang Li",
+    "preprintUrl": "https://arxiv.org/abs/2410.08494",
+    "preprintLabel": "arXiv",
+    "journalUrl": "https://epubs.siam.org/doi/abs/10.1137/24M1715970?af=R",
+    "journal": "SIAM Journal on Mathematical Analysis (2026)",
+    "abstract": {
+      "en": "The original abstract is available from the arXiv, HAL, or journal link below.",
+      "ja": "元のアブストラクトは下記の arXiv・HAL・ジャーナルリンクから確認できます。"
+    }
+  },
+  {
+    "id": "dispersive-hall-mhd-constant-equilibrium",
+    "title": "Dispersive phenomena on the Hall-MHD system around the constant equilibrium state in the general dissipative coefficients case",
+    "authors": "Mikihiro Fujii, Shunhang Zhang",
+    "preprintUrl": "",
+    "preprintLabel": "",
+    "journalUrl": "https://link.springer.com/article/10.1007/s00021-025-00990-8",
+    "journal": "Journal of Mathematical Fluid Mechanics (2026)",
+    "abstract": {
+      "en": "The original abstract is available from the arXiv, HAL, or journal link below.",
+      "ja": "元のアブストラクトは下記の arXiv・HAL・ジャーナルリンクから確認できます。"
+    }
+  },
+  {
+    "id": "time-periodic-navier-stokes-whole-space",
+    "title": "Time-periodic solutions to the Navier-Stokes equations on the whole space including the two-dimensional case",
+    "authors": "Mikihiro Fujii",
+    "preprintUrl": "https://arxiv.org/abs/2312.10878",
+    "preprintLabel": "arXiv",
+    "journalUrl": "https://doi.org/10.4171/aihpc/170",
+    "journal": "Annales de l'Institut Henri Poincare, Analyse Non Lineaire (2025)",
+    "abstract": {
+      "en": "The original abstract is available from the arXiv, HAL, or journal link below.",
+      "ja": "元のアブストラクトは下記の arXiv・HAL・ジャーナルリンクから確認できます。"
+    }
+  },
+  {
+    "id": "sharp-stationary-quasi-geostrophic",
+    "title": "Sharp well-posedness and ill-posedness of the stationary quasi-geostrophic equation",
+    "authors": "Mikihiro Fujii, Tsukasa Iwabuchi",
+    "preprintUrl": "https://arxiv.org/abs/2503.11092",
+    "preprintLabel": "arXiv",
+    "journalUrl": "https://link.springer.com/article/10.1007/s00208-025-03236-0",
+    "journal": "Mathematische Annalen (2025)",
+    "abstract": {
+      "en": "The original abstract is available from the arXiv, HAL, or journal link below.",
+      "ja": "元のアブストラクトは下記の arXiv・HAL・ジャーナルリンクから確認できます。"
+    }
+  },
+  {
+    "id": "stationary-navier-stokes-half-spaces",
+    "title": "Stationary Navier-Stokes equations on the half spaces in the scaling critical framework",
+    "authors": "Mikihiro Fujii",
+    "preprintUrl": "https://arxiv.org/abs/2312.10882",
+    "preprintLabel": "arXiv",
+    "journalUrl": "https://www.sciencedirect.com/science/article/pii/S0022039625003250?dgcid=author",
+    "journal": "Journal of Differential Equations (2025)",
+    "abstract": {
+      "en": "The original abstract is available from the arXiv, HAL, or journal link below.",
+      "ja": "元のアブストラクトは下記の arXiv・HAL・ジャーナルリンクから確認できます。"
+    }
+  },
+  {
+    "id": "compressible-navier-stokes-coriolis-critical-besov",
+    "title": "Compressible Navier-Stokes-Coriolis system in critical Besov spaces",
+    "authors": "Mikihiro Fujii, Keiichi Watanabe",
+    "preprintUrl": "https://arxiv.org/abs/2411.02191",
+    "preprintLabel": "arXiv",
+    "journalUrl": "https://www.sciencedirect.com/science/article/pii/S0022039625001494",
+    "journal": "Journal of Differential Equations (2025)",
+    "abstract": {
+      "en": "The original abstract is available from the arXiv, HAL, or journal link below.",
+      "ja": "元のアブストラクトは下記の arXiv・HAL・ジャーナルリンクから確認できます。"
+    }
+  },
+  {
+    "id": "low-mach-2d-navier-stokes-korteweg",
+    "title": "Low Mach number limit for the global large solutions to the $2$D Navier-Stokes-Korteweg system in the critical $\\widehat{L^p}$ framework",
+    "listTitle": "Low Mach number limit for the global large solutions to the 2D Navier-Stokes-Korteweg system in the critical $\\widehat{L^p}$ framework",
+    "authors": "Mikihiro Fujii, Yang Li",
+    "preprintUrl": "https://arxiv.org/abs/2410.08493",
+    "preprintLabel": "arXiv",
+    "journalUrl": "https://link.springer.com/article/10.1007/s00526-024-02857-8",
+    "journal": "Calculus of Variations and Partial Differential Equations (2025)",
+    "abstract": {
+      "en": "The original abstract is available from the arXiv, HAL, or journal link below.",
+      "ja": "元のアブストラクトは下記の arXiv・HAL・ジャーナルリンクから確認できます。"
+    }
+  },
+  {
+    "id": "anisotropic-navier-stokes-half-space-large-time",
+    "title": "Large time behavior for solutions to the anisotropic Navier-Stokes equations in a $3$D half-space",
+    "listTitle": "Large time behavior for solutions to the anisotropic Navier-Stokes equations in a 3D half-space",
+    "authors": "Mikihiro Fujii, Yang Li",
+    "preprintUrl": "https://arxiv.org/abs/2410.04904",
+    "preprintLabel": "arXiv",
+    "journalUrl": "https://academic.oup.com/imrn/advance-article/doi/10.1093/imrn/rnae265/7918660",
+    "journal": "International Mathematics Research Notices (2024)",
+    "abstract": {
+      "en": "The original abstract is available from the arXiv, HAL, or journal link below.",
+      "ja": "元のアブストラクトは下記の arXiv・HAL・ジャーナルリンクから確認できます。"
+    }
+  },
+  {
+    "id": "stationary-navier-stokes-uniform-flow",
+    "title": "Well-posedness of the two-dimensional stationary Navier-Stokes equations around a uniform flow",
+    "authors": "Mikihiro Fujii, Hiroyuki Tsurumi",
+    "preprintUrl": "https://arxiv.org/abs/2407.05012",
+    "preprintLabel": "arXiv",
+    "journalUrl": "https://onlinelibrary.wiley.com/doi/abs/10.1002/mana.202400011",
+    "journal": "Mathematische Nachrichten (2024)",
+    "abstract": {
+      "en": "The original abstract is available from the arXiv, HAL, or journal link below.",
+      "ja": "元のアブストラクトは下記の arXiv・HAL・ジャーナルリンクから確認できます。"
+    }
+  },
+  {
+    "id": "hall-mhd-constant-equilibrium-global-solutions",
+    "title": "Global solutions for the incompressible Hall-magnetohydrodynamics system around constant equilibrium states",
+    "authors": "Mikihiro Fujii, Ryosuke Nakasato",
+    "preprintUrl": "",
+    "preprintLabel": "",
+    "journalUrl": "https://www.sciencedirect.com/science/article/abs/pii/S0022247X24001537",
+    "journal": "Journal of Mathematical Analysis and Applications (2024)",
+    "abstract": {
+      "en": "The original abstract is available from the arXiv, HAL, or journal link below.",
+      "ja": "元のアブストラクトは下記の arXiv・HAL・ジャーナルリンクから確認できます。"
+    }
+  },
+  {
+    "id": "ill-posedness-2d-stationary-navier-stokes-plane",
+    "title": "Ill-posedness of the two-dimensional stationary Navier-Stokes equations on the whole plane",
+    "authors": "Mikihiro Fujii",
+    "preprintUrl": "https://arxiv.org/abs/2304.08367",
+    "preprintLabel": "arXiv",
+    "journalUrl": "https://link.springer.com/article/10.1007/s40818-024-00174-z",
+    "journal": "Annals of PDE (2024)",
+    "abstract": {
+      "en": "The original abstract is available from the arXiv, HAL, or journal link below.",
+      "ja": "元のアブストラクトは下記の arXiv・HAL・ジャーナルリンクから確認できます。"
+    }
+  },
+  {
+    "id": "rotating-navier-stokes-critical-fourier-besov",
+    "title": "Global solutions to the rotating Navier-Stokes equations with large data in the critical Fourier-Besov spaces",
+    "authors": "Mikihiro Fujii",
+    "preprintUrl": "",
+    "preprintLabel": "",
+    "journalUrl": "https://onlinelibrary.wiley.com/doi/abs/10.1002/mana.202300226",
+    "journal": "Mathematische Nachrichten (2024)",
+    "abstract": {
+      "en": "The original abstract is available from the arXiv, HAL, or journal link below.",
+      "ja": "元のアブストラクトは下記の arXiv・HAL・ジャーナルリンクから確認できます。"
+    }
+  },
+  {
+    "id": "low-mach-compressible-navier-stokes-critical-besov",
+    "title": "Low Mach number limit of the global solution to the compressible Navier-Stokes system for large data in the critical Besov space",
+    "authors": "Mikihiro Fujii",
+    "preprintUrl": "https://arxiv.org/abs/2210.08743",
+    "preprintLabel": "arXiv",
+    "journalUrl": "https://link.springer.com/article/10.1007/s00208-023-02621-x",
+    "journal": "Mathematische Annalen (2024)",
+    "abstract": {
+      "en": "The original abstract is available from the arXiv, HAL, or journal link below.",
+      "ja": "元のアブストラクトは下記の arXiv・HAL・ジャーナルリンクから確認できます。"
+    }
+  },
+  {
+    "id": "global-well-posedness-hall-mhd-critical",
+    "title": "Global well-posedness of the incompressible Hall-MHD system in large critical spaces",
+    "authors": "Mikihiro Fujii",
+    "preprintUrl": "",
+    "preprintLabel": "",
+    "journalUrl": "https://link.springer.com/article/10.1007/s00028-023-00933-8",
+    "journal": "Journal of Evolution Equations (2024)",
+    "abstract": {
+      "en": "The original abstract is available from the arXiv, HAL, or journal link below.",
+      "ja": "元のアブストラクトは下記の arXiv・HAL・ジャーナルリンクから確認できます。"
+    }
+  },
+  {
+    "id": "large-time-3d-anisotropic-navier-stokes",
+    "title": "Large time behavior of solutions to the $3$D anisotropic Navier-Stokes equation",
+    "listTitle": "Large time behavior of solutions to the 3D anisotropic Navier-Stokes equation",
+    "authors": "Mikihiro Fujii",
+    "preprintUrl": "https://arxiv.org/abs/2108.11940",
+    "preprintLabel": "arXiv",
+    "journalUrl": "https://www.sciencedirect.com/science/article/abs/pii/S1468121822002048",
+    "journal": "Nonlinear Analysis: Real World Applications (2023)",
+    "abstract": {
+      "en": "The original abstract is available from the arXiv, HAL, or journal link below.",
+      "ja": "元のアブストラクトは下記の arXiv・HAL・ジャーナルリンクから確認できます。"
+    }
+  },
+  {
+    "id": "dissipative-qg-dispersive-forcing",
+    "title": "Global solutions to the dissipative $2$D quasi-geostrophic equation with dispersive forcing",
+    "listTitle": "Global solutions to the dissipative 2D quasi-geostrophic equation with dispersive forcing",
+    "authors": "Mikihiro Fujii",
+    "preprintUrl": "https://arxiv.org/abs/1908.11524",
+    "preprintLabel": "arXiv",
+    "journalUrl": "https://projecteuclid.org/journals/journal-of-the-mathematical-society-of-japan/volume-75/issue-1/Global-solutions-to-the-dissipative-quasi-geostrophic-equation-with-dispersive/10.2969/jmsj/87148714.short",
+    "journal": "Journal of the Mathematical Society of Japan (2023)",
+    "abstract": {
+      "en": "The original abstract is available from the arXiv, HAL, or journal link below.",
+      "ja": "元のアブストラクトは下記の arXiv・HAL・ジャーナルリンクから確認できます。"
+    }
+  },
+  {
+    "id": "time-periodic-qg-supercritical-dissipation",
+    "title": "Time periodic solutions to the $2$D quasi-geostrophic equation with the supercritical dissipation",
+    "listTitle": "Time periodic solutions to the 2D quasi-geostrophic equation with the supercritical dissipation",
+    "authors": "Mikihiro Fujii",
+    "preprintUrl": "https://arxiv.org/abs/2006.03235",
+    "preprintLabel": "arXiv",
+    "journalUrl": "https://link.springer.com/article/10.1007/s00028-022-00787-6",
+    "journal": "Journal of Evolution Equations (2022)",
+    "abstract": {
+      "en": "The original abstract is available from the arXiv, HAL, or journal link below.",
+      "ja": "元のアブストラクトは下記の arXiv・HAL・ジャーナルリンクから確認できます。"
+    }
+  },
+  {
+    "id": "heat-equation-fractional-brownian-singularities",
+    "title": "Isolated singularities in the heat equation behaving like fractional Brownian motions",
+    "authors": "Mikihiro Fujii, Ikuro Okada, Eiji Yanagida",
+    "preprintUrl": "https://arxiv.org/abs/2012.04453",
+    "preprintLabel": "arXiv",
+    "journalUrl": "https://www.sciencedirect.com/science/article/abs/pii/S0022247X21004017",
+    "journal": "Journal of Mathematical Analysis and Applications (2021)",
+    "abstract": {
+      "en": "The original abstract is available from the arXiv, HAL, or journal link below.",
+      "ja": "元のアブストラクトは下記の arXiv・HAL・ジャーナルリンクから確認できます。"
+    }
+  },
+  {
+    "id": "long-time-qg-large-dispersive-forcing",
+    "title": "Long Time Existence and Asymptotic Behavior of Solutions for the $2$D Quasi-geostrophic Equation with Large Dispersive Forcing",
+    "listTitle": "Long Time Existence and Asymptotic Behavior of Solutions for the 2D Quasi-geostrophic Equation with Large Dispersive Forcing",
+    "authors": "Mikihiro Fujii",
+    "preprintUrl": "https://arxiv.org/abs/1908.11524",
+    "preprintLabel": "arXiv",
+    "journalUrl": "https://link.springer.com/article/10.1007/s00021-020-00540-4",
+    "journal": "Journal of Mathematical Fluid Mechanics (2021)",
+    "abstract": {
+      "en": "The original abstract is available from the arXiv, HAL, or journal link below.",
+      "ja": "元のアブストラクトは下記の arXiv・HAL・ジャーナルリンクから確認できます。"
+    }
+  }
+];
+
+(() => {
+  const abstracts = {
+    "sharp-non-uniqueness-navier-stokes-critical": String.raw`It is known that uniqueness of mild solutions to the incompressible Navier-Stokes equations holds in the critical class $C([0,T);L^n(\mathbb{R}^n))$ for $n \geqslant 3$. In this paper, we prove that this result is sharp in the sense that uniqueness fails if $L^n(\mathbb{R}^n)$ is replaced by some scaling critical spaces that are even slightly larger. We achieve this through a complete classification for every pair $(p,q)$ of whether uniqueness of mild solutions in the critical Besov class $C([0,T);\dot{B}_{p,q}^{n/p-1}(\mathbb{R}^n))$ holds or not. Our non-uniqueness mechanism produces infinitely many global solutions emanating even from zero initial state, whose large-time asymptotics are governed by non-trivial stationary flow. To the best of our knowledge, such non-unique solutions provide the first examples of non-dissipative unforced Navier-Stokes flow with critical regularity.`,
+    "asymptotic-instability-forced-navier-stokes": String.raw`The asymptotic stability is one of the classical problems in the field of mathematical analysis of fluid mechanics. In $\mathbb{R}^n$ with $n \geq 3$, it is easily proved by the standard argument that if the given small external force decays at temporal infinity, then the small forced Navier-Stokes flow also strongly converges to zero as time tends to infinity in the framework of the critical Besov spaces $\dot{B}_{p,q}^{n/p-1}(\mathbb{R}^n)$ with $1 \leq p < n$ and $1 \leq q < \infty$. In the present paper, we show that this asymptotic stability fails for $p \geq n$ with $n \geq 3$ in the sense that there exist arbitrary small external forces whose critical Besov norm decays in large time, whereas the corresponding Navier-Stokes flows oscillate and do not strongly converge as $t \to \infty$ in the framework of the critical Besov spaces $\dot{B}_{p,q}^{n/p-1}(\mathbb{R}^n)$. Moreover, we find that the situation is different in the two-dimensional case $n=2$ and show the forced Navier-Stokes flow is asymptotically unstable in $\dot{B}_{p,1}^{2/p-1}(\mathbb{R}^2)$ for all $1 \leq p \leq \infty$. Our instability does not appear in the linear level but is caused by the nonlinear interaction from external forces.`,
+    "rotating-compressible-nsk-fourier-lebesgue": String.raw`Let us consider the $3$D compressible Navier-Stokes-Korteweg system in the rotational framework. Although there is a wealth of literature on the weak solutions to this system, there seem to be no results on the strong solutions. In this paper, we show the unique existence of global solutions for large initial data in the critical Besov-type spaces based on the Fourier-Lebesgue spaces $\widehat{L^p}(\mathbb{R}^3)$ with $2 \leq p < 3$, provided that the rotation speed and the Mach number are sufficiently large and small, respectively. The key ingredient of the proof is to establish the Strichartz-type estimates due to the dispersion caused by the mixture of the rotation and acoustic waves in the Fourier-Lebesgue spaces, and focus on the better structure of dissipation from the Korteweg term and the nonlinear terms of the divergence form in the momentum formulation.`,
+    "analyticity-anisotropic-navier-stokes-lp": String.raw`In the present paper, we consider the real analyticity of the global solutions to the $3$D incompressible anisotropic Navier-Stokes equations. We show that if only the horizontal component of initial velocity is small and analytic in $x_3$, then there exists a unique global solution which is analytic in $t>0$ and $x\in \mathbb{R}^3$. Our functional framework lies in some anisotropic Besov spaces based on $L^p(\mathbb{R}^3)$. To our best knowledge, this paper is the first contribution to the well-posedness of the anisotropic Navier-Stokes equations in function spaces of the Besov type based on the full $L^p(\mathbb{R}^3)$ setting.`,
+    "large-stratified-boussinesq-horizontal-dissipation": String.raw`In the present paper, we consider the 3D stably stratified Boussinesq equations with the horizontal viscosity and thermal diffusion, and prove the unique existence of global solutions for arbitrary large initial disturbances in the scaling critical anisotropic Besov spaces provided that the buoyancy frequency is sufficiently large. Moreover, we investigate the asymptotic profile of the solution in the strong stratification limit and show that the global solution converges to the 2D stratified Navier-Stokes flow in some critical space-time norms. Due to the lack of the dissipation in vertical direction, there arise some difficulties in the analysis of the stability around large flow. Furthermore, as a by-product, our calculus on the limit system provides an improvement of the result by Liu, Paicu, and Zhang (Arch. Rational Mech. Anal. 238 (2020) 805-843) for the global well-posedness of the anisotropic Navier-Stokes equations.`,
+    "decay-rates-stationary-navier-stokes-infinity": String.raw`In this paper, we establish the well-posedness results of the three dimensional stationary Navier-Stokes equations (SNS) in some critical hybrid type Besov spaces with respect to the scaling invariant structure of (SNS). Although such critical functional spaces contain the functions with singularities, we give some sufficient conditions such that the $L^{\infty}$-norm of the solutions of (SNS) decay at the infinity within some polynomial type rate.`,
+    "fast-rotation-limit-incompressible-navier-stokes": String.raw`In this paper, we consider the 3D incompressible Navier-Stokes equation with rotational framework. We prove that the unique global solution exists and converges to the 2 dimensional flow in some anisotropic Strichartz norm, when the speed of rotation goes to infinity, for the arbitrary large initial perturbation in the scaling critical Sobolev space $\dot{H}^{1/2}(\mathbb{R}^3)$. Moreover, we consider the singular limit problem in the scaling subcritical setting and find that the convergence rate of the fast rotation limit is given by polynomial order if given initial data satisfy certain conditions.`,
+    "stationary-critical-supercritical-qg": String.raw`We consider the stationary problem for the quasi-geostrophic equation with the critical and super-critical dissipation and prove the unique existence of small solutions for given small external force in the scaling critical Sobolev spaces framework. Moreover, we also show that the data-to-solution map is continuous. Since the critical and super-critical case involves the derivative loss, which affects the class of the continuity of the data-to-solution map, we reveal that the map is no longer uniform continuous, in contrast to the sub-critical case, where the Lipschitz continuity holds.`,
+    "global-strong-compressible-navier-stokes-coriolis-large": String.raw`We consider the compressible Navier-Stokes system with the Coriolis force on the $3$D whole space. In this model, the Coriolis force causes the linearized solution to behave like a $4$th order dissipative semigroup $\{ e^{-t\Delta^2} \}_{t>0}$ with slower time decay rates than the heat kernel, which creates difficulties in nonlinear estimates in the low-frequency part and prevents us from constructing the global strong solutions by following the classical method. On account of this circumstance, the existence of unique global strong solutions has been open even in the classical Matsumura-Nishida framework. In this paper, we overcome the aforementioned difficulties and succeed in constructing a unique global strong solution in the framework of scaling critical Besov spaces. Furthermore, our result also shows that the global solution is constructed for arbitrarily large initial data provided that the speed of the rotation is high and the Mach number is low enough by focusing on the dispersive effect due to the mixture of the Coriolis force and acoustic wave.`,
+    "incompressible-fast-rotation-limits-euler": String.raw`This paper is concerned with the low Mach and Rossby number limits of 3D compressible rotating Euler equations with ill-prepared initial data in the whole space. More precisely, the initial data is the sum of a 3D part and a 2D part. With the help of a suitable intermediate system, we perform this singular limit rigorously with the target system being a 2D QG-type. This particularly gives an affirmative answer to the question raised by Ngo and Scrobogna. As a by-product, our proof gives a rigorous justification of the convergence from the 2D inviscid rotating shallow water equations to the 2D QG equations in the whole space.`,
+    "stability-stratified-boussinesq-horizontal-viscosity": String.raw`In this paper, we consider the 3D Boussinesq equations for stably stratified fluids with the horizontal viscosity and thermal diffusivity and investigate the large time behavior of the solutions. Making use of the anisotropic Littlewood-Paley theory, we obtain their precise $L^1$-$L^p$ decay estimates, which provide us information on both the anisotropic and dispersive structure of the system. More precisely, we reveal that the dispersion from the skew symmetric terms of stratification makes the decay rates of some portions of the solutions faster and furthermore the third component of the velocity field exhibit the enhanced dissipative effect, which provides a faster decay rate.`,
+    "dispersive-hall-mhd-constant-equilibrium": String.raw`We consider the incompressible Hall-MHD system on the 3D whole space. Then, it is known that the perturbed system around the constant equilibrium state exhibits a dispersive structure. However, this dispersion is so complicated that the results on the effect of dispersion are known only for the special case $\nu = \mu$, where the dispersive relation becomes simpler. Here $\nu$ and $\mu$ are viscosity and resistive coefficients respectively. The purpose of this paper is to improve the previous results and investigate the dispersive effect for the general case $\nu \neq \mu$ without complicated calculations. Consequently, we may obtain the global well-posedness and time-periodic solvability for large data in critical Besov spaces, provided that the size of the constant magnetic field is sufficiently large.`,
+    "time-periodic-navier-stokes-whole-space": String.raw`Let us consider the incompressible Navier-Stokes equations with the time-periodic external forces in the whole space $\mathbb{R}^n$ with $n \geq 2$ and investigate the existence and non-existence of time-periodic solutions. In the higher-dimensional case $n \geq 3$, we construct a unique small solution for given small time-periodic force in the scaling-critical spaces of Besov type and prove its stability under small perturbations. In contrast, for the two-dimensional case $n=2$, the time-periodic solvability of the Navier-Stokes equations has long been open. It is the central work of this paper that we have now succeeded in solving this issue negatively by providing examples of small external forces such that each of them does not generate time-periodic solutions.`,
+    "sharp-stationary-quasi-geostrophic": String.raw`We consider the stationary problem for the quasi-geostrophic equation on the whole plane and investigate its well-posedness and ill-posedness. In the first author's previous study (Ann. PDE 10:10, 2024), it was shown that the two-dimensional stationary Navier-Stokes equations are ill-posed in the critical Besov spaces $\dot{B}_{p,1}^{2/p-1}(\mathbb{R}^2)$ with $1 \leq p \leq 2$. Although the quasi-geostrophic equation has the same invariant scaling structure as the Navier-Stokes equations, we reveal that the quasi-geostrophic equation is well-posed in the scaling critical Besov spaces $\dot{B}_{p,q}^{2/p-1}(\mathbb{R}^2)$ with $(p,q) \in [1,4) \times [1,\infty]$ or $(p,q)=(4,2)$ due to the better properties of the nonlinear structure of the quasi-geostrophic equation compared to that of the Navier-Stokes equations. Moreover, we also prove the optimality for the above range of $(p,q)$ ensuring the well-posedness in the sense that the stationary quasi-geostrophic equation is ill-posed for all the other cases.`,
+    "stationary-navier-stokes-half-spaces": String.raw`In this paper, we consider the inhomogeneous Dirichlet boundary value problem for the stationary Navier-Stokes equations in $n$-dimensional half spaces $\mathbb{R}^n_+ = \{x = (x', x_n) ; x' \in \mathbb{R}^{n-1}, x_n > 0\}$ with $n \geq 3$ and prove the well-posedness in the scaling critical Besov spaces. Our approach is to regard the system as an evolution equation for the normal variable $x_n$ and reformulate it as an integral equation. Then, we achieve the goal by making use of the maximal regularity method that has developed in the context of nonstationary analysis in critical Besov spaces. Furthermore, for the case of $n \geq 4$, we find that the asymptotic profile of the solution as $x_n \to \infty$ is given by the $(n-1)$-dimensional stationary Navier-Stokes flow.`,
+    "compressible-navier-stokes-coriolis-critical-besov": String.raw`We consider the three-dimensional compressible Navier-Stokes system with the Coriolis force and prove the long-time existence of a unique strong solution. More precisely, we show that for any $0 < T < \infty$ and arbitrary large initial data in the scaling critical Besov spaces, the solution uniquely exists on $[0, T]$ provided that the speed of rotation is high and the Mach numbers are low enough. To the best of our knowledge, this paper is the first contribution to the well-posedness of the compressible Navier-Stokes system with the Coriolis force in the whole space $\mathbb{R}^3$. The key ingredient of our analysis is to establish the dispersive linear estimates despite a quite complicated structure of the linearized equation due to the anisotropy of the Coriolis force.`,
+    "low-mach-2d-navier-stokes-korteweg": String.raw`In the present paper, we consider the compressible Navier-Stokes-Korteweg system on the 2D whole plane and show that a unique global solution exists in the scaling critical Fourier-Besov spaces for arbitrary large initial data provided that the Mach number is sufficiently small. Moreover, we also show that the global solution converges to the 2D incompressible Navier-Stokes flow in the singular limit of zero Mach number. The key ingredient of the proof lies in the nonlinear stability estimates around the large incompressible flow via the Strichartz estimate for the linearized equations in Fourier-Besov spaces.`,
+    "anisotropic-navier-stokes-half-space-large-time": String.raw`We consider the large time behavior of the solution to the anisotropic Navier-Stokes equations in a 3D half-space. Investigating the precise anisotropic nature of linearized solutions, we obtain the optimal decay estimates for the nonlinear global solutions in anisotropic Lebesgue norms. In particular, we reveal the enhanced dissipation mechanism for the third component of velocity field. We notice that, in contrast to the whole space case, some difficulties arises on the $L^1(\mathbb{R}^3_+)$-estimates of the solution due to the nonlocal operators appearing in the linear solution formula. To overcome this, we introduce suitable Besov-type spaces and employ the Littlewood-Paley analysis on the tangential space.`,
+    "stationary-navier-stokes-uniform-flow": String.raw`In this paper, we consider the solvability of the two-dimensional stationary Navier-Stokes equations on the whole plane $\mathbb{R}^2$. In Fujii [Ann. PDE, 10 (2024), no. 1. Paper No. 10], it was proved that the stationary Navier-Stokes equations on $\mathbb{R}^2$ is ill-posed for solutions around zero. In contrast, considering solutions around the nonzero constant flow, the perturbed system has a better regularity in the linear part, which enables us to prove the unique existence of solutions in the scaling critical spaces of the Besov type.`,
+    "hall-mhd-constant-equilibrium-global-solutions": String.raw`We consider the initial value problem for the magnetohydrodynamics system with the Hall effect, around a constant equilibrium state $(u, B) = (0, \bar{B}) \in \mathbb{R}^3 \times \mathbb{R}^3$. Then, the perturbed system possesses the dispersive nature due to the constant magnetic field $\bar{B}$. The aim of this paper is to control the dispersion and prove the well-posedness of the perturbed system. To this end, we consider scaling critical function spaces of Besov type based on the Fourier-Lebesgue spaces $\widehat{L^p}(\mathbb{R}^3)$, namely critical Fourier-Besov spaces, and show the global well-posedness for all $1 \leq p \leq \infty$. Moreover, we focus on the weak dispersive case $|\bar{B}| \ll 1$ and the strong dispersive case $|\bar{B}| \gg 1$. In the former case, the dispersion is negligible and we show the well-posedness in the scaling critical Besov spaces based on the usual Lebesgue space $L^p$. For the latter case, we prove that the global unique solution is established even for arbitrarily large data in the scaling critical $L^2$-Besov spaces by virtue of the Strichartz type estimates for the linear solutions.`,
+    "ill-posedness-2d-stationary-navier-stokes-plane": String.raw`We consider the two-dimensional stationary Navier-Stokes equations on the whole plane $\mathbb{R}^2$. In the higher-dimensional cases $\mathbb{R}^n$ with $n \geq 3$, the well-posedness and ill-posedness in scaling critical spaces are well-investigated by numerous papers. However, the corresponding problem in the two-dimensional whole plane case has been known as an open problem due to inherent difficulties of two-dimensional analysis. The aim of this paper is to address this issue and solve it negatively. More precisely, we prove the ill-posedness in the scaling critical Besov spaces based on $L^p(\mathbb{R}^2)$ for all $1 \leq p \leq 2$ in the sense of the discontinuity of the solution map. To overcome the difficulties, we propose a new method based on the contradictory argument that reduces the problem to the analysis of the corresponding nonstationary Navier-Stokes equations and shows the existence of nonstationary solutions with strange large time behavior, if we suppose to contrary that the stationary problem is well-posed.`,
+    "rotating-navier-stokes-critical-fourier-besov": String.raw`We consider the initial value problem for the 3D incompressible Navier-Stokes equation with the Coriolis force. The aim of this paper is to prove the existence of a unique global solution with arbitrarily large initial data in the scaling critical Fourier-Besov spaces $\dot{FB}_{p,\sigma}^{3/p-1}(\mathbb{R}^3)^3$ $(2 \leq p < 4, 1 \leq \sigma < \infty)$, provided that the size of the Coriolis parameter is sufficiently large. Moreover, if the initial data additionally belongs to the scaling sub-critical spaces, we obtain an explicit relationship between the initial data and the Coriolis force, which ensures the existence of a unique global solution.`,
+    "low-mach-compressible-navier-stokes-critical-besov": String.raw`In this paper, we consider the compressible Navier-Stokes system around the constant equilibrium states and prove the existence of a unique global solution for arbitrarily large initial data in the scaling critical Besov space provided that the Mach number is sufficiently small, and the incompressible part of the initial velocity generates the global solution of the incompressible Navier-Stokes equation. Moreover, we consider the low Mach number limit and show that the compressible solution converges to the solution of the incompressible Navier-Stokes equation in some space time norms.`,
+    "global-well-posedness-hall-mhd-critical": String.raw`In this paper, we consider the initial value problem of the incompressible Hall-MHD system and prove the global well-posedness in the scaling critical class $\dot{B}_{p,\infty}^{-1+3/p}(\mathbb{R}^3) \times (\dot{B}_{p,\infty}^{-1+3/p}(\mathbb{R}^3) \cap L^\infty(\mathbb{R}^3))$ for $3 < p < \infty$. Moreover, we also refine the smallness conditions and show that our global well-posedness holds for initial data whose $\dot{B}_{p,\infty}^{-1+3/p}(\mathbb{R}^3)$-norm is large, provided that some weaker norm is sufficiently small.`,
+    "large-time-3d-anisotropic-navier-stokes": String.raw`We consider the large time behavior of the solution to the $3$D Navier-Stokes equation with horizontal viscosity $\Delta_{\rm h} u=\partial_1^2 u+\partial_2^2 u$ and show that the $L^p$ decay rate of the horizontal components of the velocity field coincides to that of the $2$D heat kernel, while the vertical component decays like the $3$D heat kernel. Moreover, we consider the asymptotic expansion of the solution and find that a portion of the nonlinear term affect the leading term of the horizontal components of the velocity field, whereas the leading term of the vertical component is given by only the linear solution.`,
+    "dissipative-qg-dispersive-forcing": String.raw`We consider the initial value problem for the 2D quasi-geostrophic equation with supercritical dissipation and dispersive forcing and prove the global existence of a unique solution in the scaling subcritical Sobolev spaces $H^s(\mathbb{R}^2)$ $(s > 2-\alpha)$ and the scaling critical space $H^{2-\alpha}(\mathbb{R}^2)$. More precisely, for the scaling subcritical case, we establish a unique global solution for a given initial data $\theta_0 \in H^s(\mathbb{R}^2)$ $(s > 2-\alpha)$ if the size of dispersion parameter is sufficiently large and also obtain the relationship between the initial data and the dispersion parameter, which ensures the existence of the global solution. For the scaling critical case, we find that the size of dispersion parameter to ensure the global existence is determined by each subset $K \subset H^{2-\alpha}(\mathbb{R}^2)$, which is precompact in some homogeneous Sobolev spaces.`,
+    "time-periodic-qg-supercritical-dissipation": String.raw`We consider the 2D dissipative quasi-geostrophic equation with the time periodic external force and prove the existence of a unique time periodic solution in the case of the supercritical dissipation. In this case, the smoothing effect of the semigroup generated by the dissipation term is too weak to control the nonlinearity in the Duhamel term of the corresponding integral equation. In this paper, we give a new approach which does not depend on the contraction mapping principle for the integral equation.`,
+    "heat-equation-fractional-brownian-singularities": String.raw`We consider solutions of the linear heat equation in $\mathbb{R}^N$ with isolated singularities. It is assumed that the position of a singular point depends on time and is Hölder continuous with the exponent $\alpha \in (0, 1)$. We show that any isolated singularity is removable if it is weaker than a certain order depending on $\alpha$. We also show the optimality of the removability condition by showing the existence of a solution with a nonremovable singularity. These results are applied to the case where the singular point behaves like a fractional Brownian motion with the Hurst exponent $H \in (0, 1/2]$. It turns out that $H=1/N$ is critical.`,
+    "long-time-qg-large-dispersive-forcing": String.raw`We consider the initial value problem of the 2D dispersive quasi-geostrophic equation. We prove the long time existence of the solution for given initial data $\theta_0 \in H^s(\mathbb{R}^2)$ with $s > 2$. Moreover, we show that the solution converges to the corresponding linear dispersive solution $e^{-AtR_1}\theta_0$ when the size of dispersion parameter goes to infinity.`
+  };
+
+  const abstractTranslations = {
+    "sharp-non-uniqueness-navier-stokes-critical": String.raw`非圧縮性Navier-Stokes方程式のmild解の一意性は，$n \geqslant 3$ に対して臨界クラス $C([0,T);L^n(\mathbb{R}^n))$ において成り立つことが知られている．本論文では，$L^n(\mathbb{R}^n)$ をわずかに大きなスケール臨界空間に置き換えると一意性が破綻するという意味で，この結果が鋭いことを示す．これは，臨界Besovクラス $C([0,T);\dot{B}_{p,q}^{n/p-1}(\mathbb{R}^n))$ においてmild解の一意性が成り立つか否かを，すべての組 $(p,q)$ について完全に分類することにより達成される．我々の非一意性の機構は，零初期状態から出発する無限個の大域解を生成し，その大時間漸近挙動は非自明な定常流に支配される．著者の知る限り，このような非一意解は，臨界正則性をもつ非散逸的な外力なしNavier-Stokes流の初めての例を与えるものである．`,
+    "asymptotic-instability-forced-navier-stokes": String.raw`漸近安定性は，流体力学の数学解析における古典的な問題の一つである．$n \geq 3$ に対する $\mathbb{R}^n$ において，与えられた小さい外力が時間無限大で減衰するならば，対応する小さい外力付きNavier-Stokes流も，$1 \leq p < n$ かつ $1 \leq q < \infty$ に対する臨界Besov空間 $\dot{B}_{p,q}^{n/p-1}(\mathbb{R}^n)$ の枠組みにおいて，時間が無限大に向かうとき強く零へ収束することは，標準的な議論により容易に示される．本論文では，$n \geq 3$ で $p \geq n$ の場合にはこの漸近安定性が破綻することを示す．すなわち，臨界Besovノルムは大時間で減衰する任意に小さい外力が存在する一方で，対応するNavier-Stokes流は振動し，臨界Besov空間 $\dot{B}_{p,q}^{n/p-1}(\mathbb{R}^n)$ の枠組みにおいて $t \to \infty$ のとき強収束しない．さらに，二次元の場合 $n=2$ では状況が異なることを見出し，$1 \leq p \leq \infty$ のすべてに対して $\dot{B}_{p,1}^{2/p-1}(\mathbb{R}^2)$ における外力付きNavier-Stokes流が漸近不安定であることを示す．我々の不安定性は線形レベルでは現れず，外力から生じる非線形相互作用によって引き起こされる．`,
+    "rotating-compressible-nsk-fourier-lebesgue": String.raw`回転系における $3$ 次元圧縮性Navier-Stokes-Korteweg系を考える．この系の弱解に関する文献は多く存在するが，強解に関する結果は見当たらないようである．本論文では，回転速度が十分大きく，Mach数が十分小さいという条件の下で，$2 \leq p < 3$ に対するFourier-Lebesgue空間 $\widehat{L^p}(\mathbb{R}^3)$ に基づく臨界Besov型空間において，大きな初期値に対する大域解の一意存在を示す．証明の鍵は，回転と音波の混合により生じる分散性に基づくFourier-Lebesgue空間でのStrichartz型評価を確立し，Korteweg項から来るより良い散逸構造と，運動量定式化における発散形の非線形項に着目する点にある．`,
+    "analyticity-anisotropic-navier-stokes-lp": String.raw`本論文では，$3$ 次元非圧縮性非等方Navier-Stokes方程式の大域解の実解析性を考察する．初期速度の水平成分のみが小さく，かつ $x_3$ に関して解析的であれば，$t>0$ および $x\in \mathbb{R}^3$ に関して解析的な一意大域解が存在することを示す．我々の関数空間の枠組みは，$L^p(\mathbb{R}^3)$ に基づくある種の非等方Besov空間である．著者の知る限り，本論文は，完全な $L^p(\mathbb{R}^3)$ 設定に基づくBesov型関数空間における非等方Navier-Stokes方程式の適切性に対する初めての貢献である．`,
+    "large-stratified-boussinesq-horizontal-dissipation": String.raw`本論文では，水平粘性および水平熱拡散をもつ $3$ 次元安定成層Boussinesq方程式を考え，浮力振動数が十分大きいならば，任意に大きな初期擾乱に対して，スケール臨界非等方Besov空間における大域解の一意存在を証明する．さらに，強成層極限における解の漸近形を調べ，大域解がある臨界時空間ノルムにおいて $2$ 次元成層Navier-Stokes流へ収束することを示す．鉛直方向の散逸が欠如しているため，大きな流れのまわりの安定性解析にはいくつかの困難が生じる．さらに副産物として，極限系に関する我々の解析は，非等方Navier-Stokes方程式の大域適切性に関するLiu，Paicu，Zhang (Arch. Rational Mech. Anal. 238 (2020) 805-843) の結果を改良するものとなっている．`,
+    "decay-rates-stationary-navier-stokes-infinity": String.raw`本論文では，$3$ 次元定常Navier-Stokes方程式 (SNS) のスケール不変構造に関して，ある種の臨界混合型Besov空間における適切性結果を確立する．このような臨界関数空間は特異性をもつ関数を含むが，(SNS) の解の $L^{\infty}$ ノルムが空間無限遠である多項式型の速度で減衰するための十分条件を与える．`,
+    "fast-rotation-limit-incompressible-navier-stokes": String.raw`本論文では，回転の枠組みにおける $3$ 次元非圧縮性Navier-Stokes方程式を考える．スケール臨界Sobolev空間 $\dot{H}^{1/2}(\mathbb{R}^3)$ に属する任意に大きな初期擾乱に対して，一意大域解が存在し，回転速度が無限大に向かうとき，ある非等方Strichartzノルムにおいて $2$ 次元流へ収束することを証明する．さらに，スケール亜臨界設定における特異極限問題を考え，初期値がある条件を満たす場合，高速回転極限の収束率が多項式オーダーで与えられることを見出す．`,
+    "stationary-critical-supercritical-qg": String.raw`臨界および超臨界散逸をもつ準地衡流方程式の定常問題を考え，スケール臨界Sobolev空間の枠組みにおいて，与えられた小さい外力に対する小さい解の一意存在を証明する．さらに，データから解への写像が連続であることも示す．臨界および超臨界の場合には微分の損失が含まれ，これがデータから解への写像の連続性の種類に影響を与えるため，Lipschitz連続性が成り立つ亜臨界の場合とは対照的に，この写像はもはや一様連続ではないことを明らかにする．`,
+    "global-strong-compressible-navier-stokes-coriolis-large": String.raw`$3$ 次元全空間上のCoriolis力をもつ圧縮性Navier-Stokes系を考える．このモデルでは，Coriolis力により線形化解は熱核よりも遅い時間減衰率をもつ $4$ 階散逸半群 $\{ e^{-t\Delta^2} \}_{t>0}$ のように振る舞うため，低周波部分の非線形評価に困難が生じ，古典的な方法に従って大域強解を構成することが妨げられる．この事情により，古典的なMatsumura-Nishidaの枠組みにおいてさえ，一意大域強解の存在は未解決であった．本論文では，これらの困難を克服し，スケール臨界Besov空間の枠組みにおいて一意大域強解の構成に成功する．さらに我々の結果は，Coriolis力と音波の混合に由来する分散効果に着目することにより，回転速度が大きくMach数が十分小さいならば，任意に大きな初期値に対して大域解が構成されることも示している．`,
+    "incompressible-fast-rotation-limits-euler": String.raw`本論文は，全空間におけるpreparedでない初期値をもつ $3$ 次元圧縮性回転Euler方程式の低Mach数・低Rossby数極限を扱う．より正確には，初期値は $3$ 次元部分と $2$ 次元部分の和である．適切な中間系を用いることにより，目標系を $2$ 次元QG型の系として，この特異極限を厳密に実行する．これは特に，NgoとScrobognaにより提起された問題に肯定的な答えを与える．副産物として，我々の証明は，全空間における $2$ 次元非粘性回転浅水方程式から $2$ 次元QG方程式への収束を厳密に正当化する．`,
+    "stability-stratified-boussinesq-horizontal-viscosity": String.raw`本論文では，水平粘性および水平熱拡散をもつ安定成層流体の $3$ 次元Boussinesq方程式を考え，解の大時間挙動を調べる．非等方Littlewood-Paley理論を用いることで，精密な $L^1$-$L^p$ 減衰評価を得る．これにより，系の非等方構造と分散構造の双方に関する情報が得られる．より正確には，成層化の歪対称項から生じる分散により，解のある部分の減衰率がより速くなり，さらに速度場の第 $3$ 成分が強められた散逸効果を示し，より速い減衰率を与えることを明らかにする．`,
+    "dispersive-hall-mhd-constant-equilibrium": String.raw`$3$ 次元全空間上の非圧縮性Hall-MHD系を考える．定数平衡状態まわりの摂動系が分散構造をもつことは知られている．しかし，この分散は非常に複雑であり，分散効果に関する既知の結果は，分散関係がより単純になる特別な場合 $\nu = \mu$ に限られていた．ここで $\nu$ と $\mu$ はそれぞれ粘性係数と抵抗係数である．本論文の目的は，従来の結果を改良し，複雑な計算を用いることなく一般の場合 $\nu \neq \mu$ に対する分散効果を調べることである．その結果，定数磁場の大きさが十分大きいならば，臨界Besov空間における大きなデータに対して，大域適切性および時間周期解の可解性を得ることができる．`,
+    "time-periodic-navier-stokes-whole-space": String.raw`$n \geq 2$ に対する全空間 $\mathbb{R}^n$ 上で，時間周期外力をもつ非圧縮性Navier-Stokes方程式を考え，時間周期解の存在と非存在を調べる．高次元の場合 $n \geq 3$ には，与えられた小さい時間周期外力に対して，Besov型のスケール臨界空間における一意小解を構成し，小摂動に対するその安定性を証明する．これに対し，二次元の場合 $n=2$ におけるNavier-Stokes方程式の時間周期可解性は長く未解決であった．本論文の中心的な成果は，時間周期解を生成しない小さい外力の例を与えることにより，この問題を否定的に解決した点にある．`,
+    "sharp-stationary-quasi-geostrophic": String.raw`全平面上の準地衡流方程式の定常問題を考え，その適切性と非適切性を調べる．第一著者の以前の研究 (Ann. PDE 10:10, 2024) では，$1 \leq p \leq 2$ に対する臨界Besov空間 $\dot{B}_{p,1}^{2/p-1}(\mathbb{R}^2)$ において，二次元定常Navier-Stokes方程式が非適切であることが示された．準地衡流方程式はNavier-Stokes方程式と同じ不変スケーリング構造をもつが，Navier-Stokes方程式の非線形構造と比べて準地衡流方程式の非線形構造がより良い性質をもつため，$(p,q) \in [1,4) \times [1,\infty]$ または $(p,q)=(4,2)$ に対して，準地衡流方程式がスケール臨界Besov空間 $\dot{B}_{p,q}^{2/p-1}(\mathbb{R}^2)$ において適切であることを明らかにする．さらに，上記の $(p,q)$ の範囲が適切性を保証する最適な範囲であること，すなわち他のすべての場合には定常準地衡流方程式が非適切であることも証明する．`,
+    "stationary-navier-stokes-half-spaces": String.raw`本論文では，$n \geq 3$ に対する $n$ 次元半空間 $\mathbb{R}^n_+ = \{x = (x', x_n) ; x' \in \mathbb{R}^{n-1}, x_n > 0\}$ における定常Navier-Stokes方程式の非斉次Dirichlet境界値問題を考え，スケール臨界Besov空間における適切性を証明する．我々の方法は，この系を法線変数 $x_n$ に関する発展方程式とみなし，積分方程式として再定式化することである．その上で，臨界Besov空間における非定常解析の文脈で発展してきた最大正則性法を用いて目的を達成する．さらに，$n \geq 4$ の場合には，$x_n \to \infty$ における解の漸近形が $(n-1)$ 次元定常Navier-Stokes流によって与えられることを見出す．`,
+    "compressible-navier-stokes-coriolis-critical-besov": String.raw`Coriolis力をもつ $3$ 次元圧縮性Navier-Stokes系を考え，一意強解の長時間存在を証明する．より正確には，任意の $0 < T < \infty$ と，スケール臨界Besov空間に属する任意に大きな初期値に対して，回転速度が大きくMach数が十分小さいならば，解が $[0,T]$ 上で一意に存在することを示す．著者の知る限り，本論文は全空間 $\mathbb{R}^3$ におけるCoriolis力をもつ圧縮性Navier-Stokes系の適切性に対する初めての貢献である．解析の鍵は，Coriolis力の非等方性に起因する線形化方程式の非常に複雑な構造にもかかわらず，分散型線形評価を確立することにある．`,
+    "low-mach-2d-navier-stokes-korteweg": String.raw`本論文では，$2$ 次元全平面上の圧縮性Navier-Stokes-Korteweg系を考え，Mach数が十分小さいならば，任意に大きな初期値に対して，スケール臨界Fourier-Besov空間における一意大域解が存在することを示す．さらに，大域解がMach数零の特異極限において $2$ 次元非圧縮性Navier-Stokes流へ収束することも示す．証明の鍵は，Fourier-Besov空間における線形化方程式のStrichartz評価を用いた，大きな非圧縮流まわりの非線形安定性評価にある．`,
+    "anisotropic-navier-stokes-half-space-large-time": String.raw`$3$ 次元半空間における非等方Navier-Stokes方程式の解の大時間挙動を考える．線形化解の精密な非等方的性質を調べることにより，非線形大域解に対する非等方Lebesgueノルムでの最適減衰評価を得る．特に，速度場の第 $3$ 成分に対する強められた散逸機構を明らかにする．全空間の場合とは対照的に，線形解公式に現れる非局所作用素のため，解の $L^1(\mathbb{R}^3_+)$ 評価にはいくつかの困難が生じることに注意する．これを克服するため，適切なBesov型空間を導入し，接空間上のLittlewood-Paley解析を用いる．`,
+    "stationary-navier-stokes-uniform-flow": String.raw`本論文では，全平面 $\mathbb{R}^2$ 上の二次元定常Navier-Stokes方程式の可解性を考える．Fujii [Ann. PDE, 10 (2024), no. 1. Paper No. 10] では，$\mathbb{R}^2$ 上の定常Navier-Stokes方程式が零まわりの解に対して非適切であることが証明された．これに対し，非零定数流まわりの解を考えると，摂動系は線形部分により良い正則性をもつため，Besov型のスケール臨界空間において解の一意存在を証明することが可能となる．`,
+    "hall-mhd-constant-equilibrium-global-solutions": String.raw`定数平衡状態 $(u, B) = (0, \bar{B}) \in \mathbb{R}^3 \times \mathbb{R}^3$ のまわりで，Hall効果をもつ磁気流体力学系の初期値問題を考える．このとき，摂動系は定数磁場 $\bar{B}$ により分散的性質をもつ．本論文の目的は，この分散を制御し，摂動系の適切性を証明することである．そのために，Fourier-Lebesgue空間 $\widehat{L^p}(\mathbb{R}^3)$ に基づくBesov型のスケール臨界関数空間，すなわち臨界Fourier-Besov空間を考え，すべての $1 \leq p \leq \infty$ に対して大域適切性を示す．さらに，弱分散の場合 $|\bar{B}| \ll 1$ と強分散の場合 $|\bar{B}| \gg 1$ に着目する．前者の場合，分散は無視でき，通常のLebesgue空間 $L^p$ に基づくスケール臨界Besov空間における適切性を示す．後者の場合，線形解に対するStrichartz型評価により，スケール臨界 $L^2$-Besov空間において任意に大きなデータに対しても大域一意解が確立されることを証明する．`,
+    "ill-posedness-2d-stationary-navier-stokes-plane": String.raw`全平面 $\mathbb{R}^2$ 上の二次元定常Navier-Stokes方程式を考える．$n \geq 3$ の高次元の場合 $\mathbb{R}^n$ では，スケール臨界空間における適切性と非適切性は多数の論文によりよく研究されている．しかし，二次元全平面の場合における対応する問題は，二次元解析に固有の困難のため未解決問題として知られていた．本論文の目的はこの問題に取り組み，否定的に解決することである．より正確には，すべての $1 \leq p \leq 2$ に対して，$L^p(\mathbb{R}^2)$ に基づくスケール臨界Besov空間における非適切性を，解写像の不連続性の意味で証明する．困難を克服するため，定常問題が適切であると仮定した場合に，問題を対応する非定常Navier-Stokes方程式の解析へ帰着し，奇妙な大時間挙動をもつ非定常解の存在を示すという，背理法に基づく新しい方法を提案する．`,
+    "rotating-navier-stokes-critical-fourier-besov": String.raw`Coriolis力をもつ $3$ 次元非圧縮性Navier-Stokes方程式の初期値問題を考える．本論文の目的は，Coriolisパラメータの大きさが十分大きいならば，スケール臨界Fourier-Besov空間 $\dot{FB}_{p,\sigma}^{3/p-1}(\mathbb{R}^3)^3$ $(2 \leq p < 4, 1 \leq \sigma < \infty)$ において，任意に大きな初期値に対する一意大域解の存在を証明することである．さらに，初期値が追加的にスケール亜臨界空間に属する場合には，一意大域解の存在を保証する初期値とCoriolis力との明示的な関係を得る．`,
+    "low-mach-compressible-navier-stokes-critical-besov": String.raw`本論文では，定数平衡状態まわりの圧縮性Navier-Stokes系を考え，Mach数が十分小さく，かつ初期速度の非圧縮部分が非圧縮性Navier-Stokes方程式の大域解を生成するならば，スケール臨界Besov空間において任意に大きな初期値に対する一意大域解が存在することを証明する．さらに，低Mach数極限を考え，圧縮性解がある時空間ノルムにおいて非圧縮性Navier-Stokes方程式の解へ収束することを示す．`,
+    "global-well-posedness-hall-mhd-critical": String.raw`本論文では，非圧縮性Hall-MHD系の初期値問題を考え，$3 < p < \infty$ に対して，スケール臨界クラス $\dot{B}_{p,\infty}^{-1+3/p}(\mathbb{R}^3) \times (\dot{B}_{p,\infty}^{-1+3/p}(\mathbb{R}^3) \cap L^\infty(\mathbb{R}^3))$ における大域適切性を証明する．さらに，小ささ条件を精密化し，$\dot{B}_{p,\infty}^{-1+3/p}(\mathbb{R}^3)$ ノルムが大きい初期値に対しても，あるより弱いノルムが十分小さいならば，我々の大域適切性が成り立つことを示す．`,
+    "large-time-3d-anisotropic-navier-stokes": String.raw`水平粘性 $\Delta_{\rm h} u=\partial_1^2 u+\partial_2^2 u$ をもつ $3$ 次元Navier-Stokes方程式の解の大時間挙動を考え，速度場の水平成分の $L^p$ 減衰率が $2$ 次元熱核の減衰率と一致する一方で，鉛直成分は $3$ 次元熱核のように減衰することを示す．さらに，解の漸近展開を考え，非線形項の一部が速度場の水平成分の主要項に影響を与えるのに対し，鉛直成分の主要項は線形解のみによって与えられることを見出す．`,
+    "dissipative-qg-dispersive-forcing": String.raw`超臨界散逸と分散外力をもつ $2$ 次元準地衡流方程式の初期値問題を考え，スケール亜臨界Sobolev空間 $H^s(\mathbb{R}^2)$ $(s > 2-\alpha)$ およびスケール臨界空間 $H^{2-\alpha}(\mathbb{R}^2)$ において一意大域解の存在を証明する．より正確には，スケール亜臨界の場合，分散パラメータの大きさが十分大きいならば，与えられた初期値 $\theta_0 \in H^s(\mathbb{R}^2)$ $(s > 2-\alpha)$ に対する一意大域解を構成し，大域解の存在を保証する初期値と分散パラメータとの関係も得る．スケール臨界の場合には，大域存在を保証する分散パラメータの大きさが，ある斉次Sobolev空間で相対コンパクトな各部分集合 $K \subset H^{2-\alpha}(\mathbb{R}^2)$ によって決定されることを見出す．`,
+    "time-periodic-qg-supercritical-dissipation": String.raw`時間周期外力をもつ $2$ 次元散逸型準地衡流方程式を考え，超臨界散逸の場合に一意な時間周期解の存在を証明する．この場合，散逸項により生成される半群の平滑化効果は，対応する積分方程式のDuhamel項における非線形性を制御するには弱すぎる．本論文では，積分方程式に対する縮小写像原理に依存しない新しい方法を与える．`,
+    "heat-equation-fractional-brownian-singularities": String.raw`孤立特異性をもつ $\mathbb{R}^N$ 上の線形熱方程式の解を考える．特異点の位置は時間に依存し，指数 $\alpha \in (0, 1)$ でHölder連続であると仮定する．任意の孤立特異性は，$\alpha$ に依存するある次数より弱ければ除去可能であることを示す．また，非除去可能な特異性をもつ解の存在を示すことにより，除去可能性条件の最適性も示す．これらの結果は，特異点がHurst指数 $H \in (0, 1/2]$ をもつfractional Brownian motionのように振る舞う場合に応用される．その結果，$H=1/N$ が臨界であることが分かる．`,
+    "long-time-qg-large-dispersive-forcing": String.raw`$2$ 次元分散型準地衡流方程式の初期値問題を考える．$s > 2$ を満たす初期値 $\theta_0 \in H^s(\mathbb{R}^2)$ に対して，解の長時間存在を証明する．さらに，分散パラメータの大きさが無限大に向かうとき，解が対応する線形分散解 $e^{-AtR_1}\theta_0$ へ収束することを示す．`
+  };
+
+  window.PAPERS.forEach((paper) => {
+    if (!abstracts[paper.id]) return;
+    paper.abstract = {
+      en: abstracts[paper.id],
+      ja: abstractTranslations[paper.id] || abstracts[paper.id]
+    };
+  });
+})();
