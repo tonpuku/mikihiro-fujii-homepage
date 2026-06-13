@@ -205,7 +205,8 @@ a:hover {
 
 .formula-tile {
   position: relative;
-  grid-column: span 2;
+  grid-column: var(--c, span 2);
+  grid-row: var(--row, auto);
   max-width: 100%;
   min-width: 0;
   color: rgba(35, 148, 188, 0.16);
@@ -241,7 +242,8 @@ a:hover {
 }
 
 .formula-tile-main {
-  grid-column: 1 / -1;
+  grid-column: var(--c, 1 / -1);
+  grid-row: var(--row, 3);
   color: rgba(34, 151, 193, 0.24);
 }
 
