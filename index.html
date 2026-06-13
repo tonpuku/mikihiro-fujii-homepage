@@ -6,7 +6,7 @@
     <title>Mikihiro Fujii</title>
     <meta name="description" content="Mikihiro Fujii, Lecturer at Nagoya City University. Mathematical analysis of nonlinear PDEs in fluid dynamics.">
     <link rel="stylesheet" href="assets/vendor/katex/katex.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260614-31">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260614-32">
     <script defer src="assets/vendor/katex/katex.min.js"></script>
     <script defer src="assets/vendor/katex/auto-render.min.js"></script>
     <script defer src="assets/js/site.js?v=20260613-5"></script>
@@ -31,253 +31,60 @@
 
     <main class="home-page">
       <div class="home-formula-bg" aria-hidden="true">
-          <div class="formula-field">
-            <div class="formula-tile" style="--x: 5%; --y: 6%; --r: -8deg;">$$\nabla\cdot u=0$$</div>
-            <div class="formula-tile" style="--x: 18%; --y: 7%; --r: 0deg;">$$\omega=\nabla\times u$$</div>
-            <div class="formula-tile" style="--x: 32%; --y: 5%; --r: 9deg;">$$\Lambda=(-\Delta)^{1/2}$$</div>
-            <div class="formula-tile formula-tile-wide" style="--x: 47%; --y: 8%; --r: -6deg;">$$\partial_t\rho+\nabla\cdot(\rho u)=0$$</div>
-            <div class="formula-tile" style="--x: 61%; --y: 5%; --r: 0deg;">$$\mathbb P=I-\nabla\Delta^{-1}\nabla\cdot$$</div>
-            <div class="formula-tile" style="--x: 75%; --y: 8%; --r: 11deg;">$$e^{t\Delta}u_0$$</div>
-            <div class="formula-tile" style="--x: 90%; --y: 6%; --r: -10deg;">$$R_j=\partial_j\Lambda^{-1}$$</div>
+        <div class="formula-field">
+          <div class="formula-tile formula-tile-main" style="--r: -4deg;">$$\partial_tu-\Delta u+(u\cdot\nabla)u+\nabla p=0,\quad \nabla\cdot u=0$$</div>
+          <div class="formula-tile" style="--r: 3deg;">$$\omega=\nabla\times u$$</div>
+          <div class="formula-tile formula-tile-wide" style="--r: -7deg;">$$\partial_t\rho+\nabla\cdot(\rho u)=0$$</div>
+          <div class="formula-tile" style="--r: 0deg;">$$\Lambda=(-\Delta)^{1/2}$$</div>
 
-            <div class="formula-tile" style="--x: 8%; --y: 17%; --r: 6deg;">$$u=K*\omega$$</div>
-            <div class="formula-tile" style="--x: 22%; --y: 16%; --r: -12deg;">$$\operatorname{curl}u=\omega$$</div>
-            <div class="formula-tile formula-tile-wide" style="--x: 36%; --y: 18%; --r: 0deg;">$$\partial_t u-\Delta u+\nabla p=F$$</div>
-            <div class="formula-tile" style="--x: 52%; --y: 16%; --r: 10deg;">$$\dot B^s_{p,q}$$</div>
-            <div class="formula-tile" style="--x: 66%; --y: 18%; --r: -7deg;">$$\operatorname{div}B=0$$</div>
-            <div class="formula-tile formula-tile-wide" style="--x: 82%; --y: 16%; --r: 4deg;">$$\partial_t\theta+u\cdot\nabla\theta=0$$</div>
-            <div class="formula-tile" style="--x: 96%; --y: 18%; --r: -2deg;">$$\rho^\varepsilon\to1$$</div>
+          <div class="formula-tile" style="--r: 8deg;">$$u=K*\omega$$</div>
+          <div class="formula-tile formula-tile-wide" style="--r: -3deg;">$$\rho(\partial_tu+u\cdot\nabla u)+\nabla P(\rho)=\mathcal Au$$</div>
+          <div class="formula-tile" style="--r: 6deg;">$$\mathbb P=I-\nabla\Delta^{-1}\nabla\cdot$$</div>
+          <div class="formula-tile" style="--r: -6deg;">$$R_j=\partial_j\Lambda^{-1}$$</div>
+          <div class="formula-tile" style="--r: 2deg;">$$\nabla\cdot B=0$$</div>
 
-            <div class="formula-tile" style="--x: 4%; --y: 28%; --r: 0deg;">$$\mathbb P\nabla p=0$$</div>
-            <div class="formula-tile formula-tile-wide" style="--x: 19%; --y: 29%; --r: 8deg;">$$u_\lambda(t,x)=\lambda u(\lambda^2t,\lambda x)$$</div>
-            <div class="formula-tile" style="--x: 35%; --y: 27%; --r: -8deg;">$$\Delta_{\rm h}=\partial_1^2+\partial_2^2$$</div>
-            <div class="formula-tile formula-tile-wide" style="--x: 48%; --y: 20%; --r: 0deg;">$$\partial_t B-\Delta B+\nabla\times((\nabla\times B)\times B)=0$$</div>
-            <div class="formula-tile" style="--x: 59%; --y: 18%; --r: 12deg;">$$\nabla\times\nabla p=0$$</div>
-            <div class="formula-tile formula-tile-wide" style="--x: 70%; --y: 21%; --r: -11deg;">$$\varepsilon^2(\partial_tu+u\cdot\nabla u)+\nabla\rho=0$$</div>
-            <div class="formula-tile" style="--x: 73%; --y: 15%; --r: 0deg;">$$u_{\rm h}=(u_1,u_2)$$</div>
+          <div class="formula-tile formula-tile-wide" style="--r: -8deg;">$$\partial_tB-\Delta B+\nabla\times((\nabla\times B)\times B)=\nabla\times(u\times B)$$</div>
+          <div class="formula-tile" style="--r: 4deg;">$$\nabla\times B=J$$</div>
+          <div class="formula-tile" style="--r: -2deg;">$$\operatorname{curl}u=\omega$$</div>
+          <div class="formula-tile formula-tile-wide" style="--r: 7deg;">$$\partial_t\theta+u\cdot\nabla\theta+\kappa\Lambda^\alpha\theta=f$$</div>
+          <div class="formula-tile" style="--r: -5deg;">$$u=\nabla^\perp\Lambda^{-1}\theta$$</div>
 
-            <div class="formula-tile" style="--x: 7%; --y: 39%; --r: -14deg;">$$-\Delta p=\partial_i\partial_j(u_iu_j)$$</div>
-            <div class="formula-tile" style="--x: 21%; --y: 40%; --r: 4deg;">$$\partial_3u$$</div>
-            <div class="formula-tile formula-tile-wide" style="--x: 36%; --y: 38%; --r: 0deg;">$$\partial_t u+(u\cdot\nabla)u+\nabla p=0$$</div>
-            <div class="formula-tile" style="--x: 51%; --y: 41%; --r: -6deg;">$$\widehat{\Lambda^\alpha f}=|\xi|^\alpha\widehat f$$</div>
-            <div class="formula-tile" style="--x: 66%; --y: 39%; --r: 9deg;">$$F_\Omega=e_3\times u$$</div>
-            <div class="formula-tile" style="--x: 82%; --y: 41%; --r: 0deg;">$$\int u\cdot\nabla p\,dx=0$$</div>
-            <div class="formula-tile" style="--x: 96%; --y: 39%; --r: -9deg;">$$\partial_t f+u\cdot\nabla f=0$$</div>
+          <div class="formula-tile" style="--r: 0deg;">$$-\Delta p=\partial_i\partial_j(u_i u_j)$$</div>
+          <div class="formula-tile formula-tile-wide" style="--r: -7deg;">$$\partial_tu+\Omega e_3\times u-\Delta u+\nabla p=0$$</div>
+          <div class="formula-tile" style="--r: 9deg;">$$F_\Omega=e_3\times u$$</div>
+          <div class="formula-tile" style="--r: -4deg;">$$\Delta_{\rm h}=\partial_1^2+\partial_2^2$$</div>
+          <div class="formula-tile" style="--r: 5deg;">$$u_{\rm h}=(u_1,u_2)$$</div>
 
-            <div class="formula-tile formula-tile-main" style="--x: 51%; --y: 19%; --r: -5deg;">$$\partial_tu-\Delta u+(u\cdot\nabla)u+\nabla p=0,\quad \nabla\cdot u=0$$</div>
-            <div class="formula-tile" style="--x: 39%; --y: 18%; --r: 11deg;">$$\|u(t)\|_{\dot H^s}$$</div>
-            <div class="formula-tile" style="--x: 61%; --y: 22%; --r: 0deg;">$$\partial_t\omega-\Delta\omega+u\cdot\nabla\omega=0$$</div>
-            <div class="formula-tile" style="--x: 70%; --y: 20%; --r: -12deg;">$$B_\lambda(t,x)=\lambda B(\lambda^2t,\lambda x)$$</div>
-            <div class="formula-tile formula-tile-wide" style="--x: 88%; --y: 45%; --r: 7deg;">$$\partial_t\theta+R^\perp\theta\cdot\nabla\theta+\kappa\Lambda^\alpha\theta=0$$</div>
-            <div class="formula-tile" style="--x: 94%; --y: 45%; --r: -3deg;">$$\partial_t\rho+\operatorname{div}(\rho u)=0$$</div>
+          <div class="formula-tile formula-tile-wide" style="--r: 3deg;">$$\partial_tv-\Delta_{\rm h}v+(v\cdot\nabla)v+\nabla p=\theta e_3$$</div>
+          <div class="formula-tile" style="--r: -8deg;">$$\partial_t\theta-\Delta_{\rm h}\theta+(v\cdot\nabla)\theta=0$$</div>
+          <div class="formula-tile" style="--r: 6deg;">$$-\Delta U+(U\cdot\nabla)U+\nabla P=f$$</div>
+          <div class="formula-tile" style="--r: -1deg;">$$\nabla\cdot U=0$$</div>
+          <div class="formula-tile" style="--r: 8deg;">$$\partial_t\omega+u\cdot\nabla\omega=\omega\cdot\nabla u$$</div>
 
-            <div class="formula-tile" style="--x: 5%; --y: 63%; --r: 10deg;">$$\|e^{t\Delta}f\|_{L^q}\le Ct^{-\sigma}\|f\|_{L^p}$$</div>
-            <div class="formula-tile" style="--x: 28%; --y: 56%; --r: 0deg;">$$\int_{\mathbb R^n}u\cdot\nabla\phi\,dx=0$$</div>
-            <div class="formula-tile formula-tile-wide" style="--x: 36%; --y: 44%; --r: -10deg;">$$\partial_tu-\nu\Delta u+(u\cdot\nabla)u+\nabla p=(\nabla\times B)\times B$$</div>
-            <div class="formula-tile" style="--x: 43%; --y: 22%; --r: 5deg;">$$\|u_0\|_{\dot B^{-1+n/p}_{p,q}}<\varepsilon$$</div>
-            <div class="formula-tile" style="--x: 68%; --y: 45%; --r: 0deg;">$$\partial_t\omega+u\cdot\nabla\omega=\omega\cdot\nabla u$$</div>
-            <div class="formula-tile" style="--x: 84%; --y: 56%; --r: -13deg;">$$\lim_{\varepsilon\to0}u^\varepsilon=u$$</div>
-            <div class="formula-tile" style="--x: 96%; --y: 58%; --r: 9deg;">$$\Delta p=-\nabla\cdot(u\cdot\nabla u)$$</div>
-            <div class="formula-tile" style="--x: 9%; --y: 50%; --r: 6deg;">$$\partial_t\omega+u\cdot\nabla\omega=0$$</div>
-            <div class="formula-tile" style="--x: 18%; --y: 55%; --r: -9deg;">$$\nabla\cdot u_{\rm h}=0$$</div>
-            <div class="formula-tile" style="--x: 39%; --y: 51%; --r: 8deg;">$$\mathbb P\nabla\cdot(u\otimes u)$$</div>
-            <div class="formula-tile" style="--x: 55%; --y: 55%; --r: -5deg;">$$\partial_t B-\Delta B=G$$</div>
-            <div class="formula-tile" style="--x: 71%; --y: 58%; --r: 0deg;">$$\theta(t)=e^{-t\Lambda^\alpha}\theta_0$$</div>
-            <div class="formula-tile" style="--x: 88%; --y: 50%; --r: 12deg;">$$\|\nabla u\|_{L^2}^2$$</div>
-            <div class="formula-tile" style="--x: 11%; --y: 45%; --r: -7deg;">$$\Delta u=\nabla\cdot\nabla u$$</div>
-            <div class="formula-tile" style="--x: 22%; --y: 48%; --r: 9deg;">$$\nabla\times B=J$$</div>
-            <div class="formula-tile" style="--x: 34%; --y: 46%; --r: 0deg;">$$\Pi_{\rm div}u=u$$</div>
-            <div class="formula-tile" style="--x: 47%; --y: 49%; --r: -11deg;">$$\rho^\varepsilon u^\varepsilon\rightharpoonup u$$</div>
-            <div class="formula-tile" style="--x: 62%; --y: 47%; --r: 6deg;">$$u\cdot\nabla\theta$$</div>
-            <div class="formula-tile" style="--x: 78%; --y: 52%; --r: -4deg;">$$\nabla\cdot(\rho u\otimes u)$$</div>
+          <div class="formula-tile formula-tile-wide" style="--r: -6deg;">$$u_\lambda(t,x)=\lambda u(\lambda^2t,\lambda x)$$</div>
+          <div class="formula-tile" style="--r: 3deg;">$$B_\lambda(t,x)=\lambda B(\lambda^2t,\lambda x)$$</div>
+          <div class="formula-tile" style="--r: -4deg;">$$\dot B^{\,n/p-1}_{p,q}$$</div>
+          <div class="formula-tile" style="--r: 7deg;">$$\|u_0\|_{\dot B^{-1+n/p}_{p,q}}<\varepsilon$$</div>
+          <div class="formula-tile" style="--r: 0deg;">$$e^{t\Delta}u_0$$</div>
 
-            <div class="formula-tile" style="--x: 8%; --y: 75%; --r: 0deg;">$$\partial_t\theta+u\cdot\nabla\theta+\kappa\Lambda^\alpha\theta=f$$</div>
-            <div class="formula-tile" style="--x: 23%; --y: 74%; --r: -8deg;">$$\partial_t B+\nabla\times(B\times u)=\Delta B$$</div>
-            <div class="formula-tile" style="--x: 39%; --y: 77%; --r: 12deg;">$$\rho(\partial_tu+u\cdot\nabla u)+\nabla P(\rho)=\mathcal Au$$</div>
-            <div class="formula-tile" style="--x: 55%; --y: 74%; --r: 0deg;">$$\sup_{t>0}t^\alpha\|u(t)\|_{L^q}$$</div>
-            <div class="formula-tile" style="--x: 70%; --y: 77%; --r: -11deg;">$$-\Delta U+(U\cdot\nabla)U+\nabla P=f$$</div>
-            <div class="formula-tile" style="--x: 86%; --y: 75%; --r: 6deg;">$$\partial_tu+\Omega e_3\times u-\Delta u+\nabla p=0$$</div>
-            <div class="formula-tile" style="--x: 97%; --y: 78%; --r: 0deg;">$$\nabla\cdot B=0$$</div>
+          <div class="formula-tile" style="--r: 5deg;">$$\rho^\varepsilon\to1$$</div>
+          <div class="formula-tile formula-tile-wide" style="--r: -5deg;">$$\varepsilon^2(\partial_tu+u\cdot\nabla u)+\nabla\rho=\varepsilon\nu\Delta u$$</div>
+          <div class="formula-tile" style="--r: 6deg;">$$\lim_{\varepsilon\to0}u^\varepsilon=u$$</div>
+          <div class="formula-tile" style="--r: -2deg;">$$\widehat{\Lambda^\alpha f}=|\xi|^\alpha\widehat f$$</div>
+          <div class="formula-tile" style="--r: 9deg;">$$\partial_t f+u\cdot\nabla f=0$$</div>
 
-            <div class="formula-tile" style="--x: 4%; --y: 88%; --r: -6deg;">$$\frac12\frac{d}{dt}\|u\|_{L^2}^2+\|\nabla u\|_{L^2}^2=0$$</div>
-            <div class="formula-tile" style="--x: 20%; --y: 90%; --r: 9deg;">$$\partial_t v-\Delta_{\rm h}v+(v\cdot\nabla)v+\nabla p=\theta e_3$$</div>
-            <div class="formula-tile" style="--x: 36%; --y: 87%; --r: 0deg;">$$\partial_t\theta-\Delta_{\rm h}\theta+(v\cdot\nabla)\theta=0$$</div>
-            <div class="formula-tile" style="--x: 53%; --y: 91%; --r: -12deg;">$$\|u(t)\|_{L^q}\lesssim t^{-\frac n2(\frac1p-\frac1q)}\|u_0\|_{L^p}$$</div>
-            <div class="formula-tile" style="--x: 71%; --y: 88%; --r: 5deg;">$$\widehat{(-\Delta)^\alpha f}(\xi)=|\xi|^{2\alpha}\widehat f(\xi)$$</div>
-            <div class="formula-tile" style="--x: 88%; --y: 91%; --r: 0deg;">$$\partial_tu+\mathbb P\nabla\cdot(u\otimes u)=\Delta u$$</div>
-          <div class="hero-equation equation-ns">
-            $$\partial_t u -\Delta u + (u \cdot \nabla)u + \nabla p =0,\quad
-            \nabla \cdot u = 0$$
-          </div>
-          <div class="hero-equation equation-cns">
-            $$\begin{cases}
-            \partial_t \rho + \nabla \cdot (\rho u)=0,\\
-            \rho(\partial_t u+(u\cdot\nabla)u)+\nabla P(\rho)
-            =\mu\Delta u+(\lambda+\mu)\nabla\nabla\cdot u
-            \end{cases}$$
-          </div>
-          <div class="hero-equation equation-qg-top">
-            $$\partial_t \theta + u\cdot\nabla\theta + \kappa(-\Delta)^\alpha\theta = f,\quad
-            u=\nabla^\perp(-\Delta)^{-1/2}\theta$$
-          </div>
-          <div class="hero-equation equation-hall">
-            $$\begin{cases}
-            \partial_t u-\nu\Delta u+(u\cdot\nabla)u+\nabla p=(\nabla\times B)\times B,\\
-            \partial_t B-\mu\Delta B+\nabla\times((\nabla\times B)\times B)=\nabla\times(u\times B),\\
-            \nabla\cdot u=\nabla\cdot B=0
-            \end{cases}$$
-          </div>
-          <div class="hero-equation equation-qg">
-            $$\partial_t\theta+u\cdot\nabla\theta+\kappa(-\Delta)^\alpha\theta=f,\qquad
-            u=\nabla^\perp(-\Delta)^{-1/2}\theta$$
-          </div>
-          <div class="hero-equation equation-boussinesq">
-            $$\begin{cases}
-            \partial_t v - \Delta_{\rm h}v+(v\cdot\nabla)v+\nabla p=\theta e_3,\\
-            \partial_t\theta-\Delta_{\rm h}\theta+(v\cdot\nabla)\theta=0,\quad
-            \nabla\cdot v=0
-            \end{cases}$$
-          </div>
-          <div class="hero-equation equation-euler">
-            $$\partial_t u+(u\cdot\nabla)u+\nabla p=0,\quad \nabla\cdot u=0$$
-          </div>
-          <div class="hero-equation equation-stationary">
-            $$-\Delta U+(U\cdot\nabla)U+\nabla P=f,\quad \nabla\cdot U=0$$
-          </div>
-          <div class="hero-equation equation-hall-small">
-            $$\partial_t B-\Delta B+\nabla\times((\nabla\times B)\times B)=\nabla\times(u\times B)$$
-          </div>
-          <div class="hero-equation equation-cns-small">
-            $$\partial_t \rho+\nabla\cdot(\rho u)=0,\quad
-            \partial_t(\rho u)+\nabla\cdot(\rho u\otimes u)+\nabla P(\rho)=\mathcal{A}u$$
-          </div>
-          <div class="hero-equation equation-sqg">
-            $$\partial_t\theta+R^\perp\theta\cdot\nabla\theta+\kappa\Lambda^\alpha\theta=0$$
-          </div>
-          <div class="hero-equation equation-vorticity">
-            $$\partial_t\omega+u\cdot\nabla\omega-\Delta\omega=\omega\cdot\nabla u$$
-          </div>
-          <div class="hero-equation equation-coriolis">
-            $$\partial_t u-\Delta u+\Omega e_3\times u+(u\cdot\nabla)u+\nabla p=0$$
-          </div>
-          <div class="hero-equation equation-energy">
-            $$\frac{1}{2}\frac{d}{dt}\|u(t)\|_{L^2}^2+\|\nabla u(t)\|_{L^2}^2=0$$
-          </div>
-          <div class="hero-equation equation-fill equation-pressure">
-            $$-\Delta p=\partial_i\partial_j(u_i u_j)$$
-          </div>
-          <div class="hero-equation equation-fill equation-stokes">
-            $$\partial_t u-\Delta u+\nabla p=F,\quad \nabla\cdot u=0$$
-          </div>
-          <div class="hero-equation equation-fill equation-scaling">
-            $$u_\lambda(t,x)=\lambda u(\lambda^2t,\lambda x)$$
-          </div>
-          <div class="hero-equation equation-fill equation-besov">
-            $$\|u_0\|_{\dot B^{-1+n/p}_{p,q}}<\varepsilon$$
-          </div>
-          <div class="hero-equation equation-fill equation-transport">
-            $$\partial_t f+u\cdot\nabla f=0$$
-          </div>
-          <div class="hero-equation equation-fill equation-heat">
-            $$e^{t\Delta}u_0$$
-          </div>
-          <div class="hero-equation equation-fill equation-vorticity-small">
-            $$\partial_t\omega-\Delta\omega+u\cdot\nabla\omega=0$$
-          </div>
-          <div class="hero-equation equation-fill equation-mhd-small">
-            $$\partial_t B+\nabla\times(B\times u)+\nabla\times((\nabla\times B)\times B)=\Delta B$$
-          </div>
-          <div class="hero-equation equation-fill equation-mach">
-            $$\varepsilon^2(\partial_t u+u\cdot\nabla u)+\nabla\rho=\varepsilon\nu\Delta u$$
-          </div>
-          <div class="hero-equation equation-fill equation-fourier">
-            $$\widehat{(-\Delta)^\alpha f}(\xi)=|\xi|^{2\alpha}\widehat f(\xi)$$
-          </div>
-          <div class="hero-equation equation-fill equation-decay">
-            $$\|u(t)\|_{L^q}\lesssim t^{-\frac n2(\frac1p-\frac1q)}\|u_0\|_{L^p}$$
-          </div>
-          <div class="hero-equation equation-fill equation-helmholtz">
-            $$\mathbb P=I-\nabla\Delta^{-1}\nabla\cdot$$
-          </div>
-          <div class="hero-equation equation-fill equation-lambda">
-            $$\Lambda=(-\Delta)^{1/2}$$
-          </div>
-          <div class="hero-equation equation-fill equation-divfree">
-            $$\int_{\mathbb R^n}u\cdot\nabla\phi\,dx=0$$
-          </div>
-          <div class="hero-equation equation-dense equation-dense-01">
-            $$\nabla\cdot u=0$$
-          </div>
-          <div class="hero-equation equation-dense equation-dense-02">
-            $$\omega=\nabla\times u$$
-          </div>
-          <div class="hero-equation equation-dense equation-dense-03">
-            $$u=K*\omega$$
-          </div>
-          <div class="hero-equation equation-dense equation-dense-04">
-            $$\partial_t\rho+\operatorname{div}(\rho u)=0$$
-          </div>
-          <div class="hero-equation equation-dense equation-dense-05">
-            $$\Lambda^\alpha=(-\Delta)^{\alpha/2}$$
-          </div>
-          <div class="hero-equation equation-dense equation-dense-06">
-            $$\mathbb P\nabla p=0$$
-          </div>
-          <div class="hero-equation equation-dense equation-dense-07">
-            $$\|e^{t\Delta}f\|_{L^q}\le Ct^{-\sigma}\|f\|_{L^p}$$
-          </div>
-          <div class="hero-equation equation-dense equation-dense-08">
-            $$\int u\cdot\nabla p\,dx=0$$
-          </div>
-          <div class="hero-equation equation-dense equation-dense-09">
-            $$B_\lambda(t,x)=\lambda B(\lambda^2t,\lambda x)$$
-          </div>
-          <div class="hero-equation equation-dense equation-dense-10">
-            $$\partial_t\theta+u\cdot\nabla\theta=0$$
-          </div>
-          <div class="hero-equation equation-dense equation-dense-11">
-            $$\operatorname{curl}u=\omega$$
-          </div>
-          <div class="hero-equation equation-dense equation-dense-12">
-            $$\Delta_{\rm h}=\partial_1^2+\partial_2^2$$
-          </div>
-          <div class="hero-equation equation-dense equation-dense-13">
-            $$F_\Omega=e_3\times u$$
-          </div>
-          <div class="hero-equation equation-dense equation-dense-14">
-            $$\partial_t u+\mathbb P\nabla\cdot(u\otimes u)=\Delta u$$
-          </div>
-          <div class="hero-equation equation-dense equation-dense-15">
-            $$\|u(t)\|_{\dot H^s}$$
-          </div>
-          <div class="hero-equation equation-dense equation-dense-16">
-            $$\operatorname{div}B=0$$
-          </div>
-          <div class="hero-equation equation-dense equation-dense-17">
-            $$\nabla\times\nabla p=0$$
-          </div>
-          <div class="hero-equation equation-dense equation-dense-18">
-            $$R_j=\partial_j\Lambda^{-1}$$
-          </div>
-          <div class="hero-equation equation-dense equation-dense-19">
-            $$\dot B^s_{p,q}$$
-          </div>
-          <div class="hero-equation equation-dense equation-dense-20">
-            $$\rho^\varepsilon\to 1$$
-          </div>
-          <div class="hero-equation equation-dense equation-dense-21">
-            $$u_{\rm h}=(u_1,u_2)$$
-          </div>
-          <div class="hero-equation equation-dense equation-dense-22">
-            $$\partial_3 u$$
-          </div>
-          <div class="hero-equation equation-dense equation-dense-23">
-            $$\sup_{t>0}t^\alpha\|u(t)\|_{L^q}$$
-          </div>
-          <div class="hero-equation equation-dense equation-dense-24">
-            $$\lim_{\varepsilon\to0}u^\varepsilon=u$$
-          </div>
-          </div>
+          <div class="formula-tile formula-tile-wide" style="--r: -8deg;">$$\frac12\frac{d}{dt}\|u\|_{L^2}^2+\|\nabla u\|_{L^2}^2=0$$</div>
+          <div class="formula-tile" style="--r: 4deg;">$$\int u\cdot\nabla p\,dx=0$$</div>
+          <div class="formula-tile" style="--r: -5deg;">$$\nabla\times\nabla p=0$$</div>
+          <div class="formula-tile" style="--r: 6deg;">$$\theta(t)=e^{-t\Lambda^\alpha}\theta_0$$</div>
+          <div class="formula-tile" style="--r: -3deg;">$$\mathbb P\nabla\cdot(u\otimes u)$$</div>
+
+          <div class="formula-tile" style="--r: 0deg;">$$\|e^{t\Delta}f\|_{L^q}\le Ct^{-\sigma}\|f\|_{L^p}$$</div>
+          <div class="formula-tile" style="--r: 7deg;">$$\partial_t\omega-\Delta\omega+u\cdot\nabla\omega=0$$</div>
+          <div class="formula-tile formula-tile-wide" style="--r: -6deg;">$$\partial_t\theta+R^\perp\theta\cdot\nabla\theta+\kappa\Lambda^\alpha\theta=0$$</div>
+          <div class="formula-tile" style="--r: 5deg;">$$\sup_{t>0}t^\alpha\|u(t)\|_{L^q}$$</div>
+          <div class="formula-tile" style="--r: -4deg;">$$\widehat{(-\Delta)^\alpha f}=|\xi|^{2\alpha}\widehat f$$</div>
+        </div>
       </div>
 
       <section class="hero">
