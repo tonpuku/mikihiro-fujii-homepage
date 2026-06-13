@@ -6,7 +6,7 @@
     <title>Mikihiro Fujii</title>
     <meta name="description" content="Mikihiro Fujii, Lecturer at Nagoya City University. Mathematical analysis of nonlinear PDEs in fluid dynamics.">
     <link rel="stylesheet" href="assets/vendor/katex/katex.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260614-38">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260614-40">
     <script defer src="assets/vendor/katex/katex.min.js"></script>
     <script defer src="assets/vendor/katex/auto-render.min.js"></script>
     <script defer src="assets/js/site.js?v=20260613-5"></script>
@@ -32,30 +32,32 @@
     <main class="home-page">
       <div class="home-formula-bg" aria-hidden="true">
         <div class="formula-field">
-          <div class="formula-tile formula-tile-wide" style="--row: 1; --c: 1 / 4; --r: -6deg;">$$\partial_t\rho+\nabla\cdot(\rho u)=0$$</div>
-          <div class="formula-tile formula-tile-wide" style="--row: 1; --c: 4 / 7; --r: 5deg;">$$\partial_tu+(u\cdot\nabla)u+\nabla p=0,\quad\nabla\cdot u=0$$</div>
+          <div class="formula-tile formula-tile-short" style="--row: 1; --c: 1 / 4; --r: -6deg;">$$\partial_t\rho+\nabla\cdot(\rho u)=0$$</div>
+          <div class="formula-tile formula-tile-short" style="--row: 1; --c: 5 / 8; --r: 4deg;">$$\partial_t\omega+u\cdot\nabla\omega=0$$</div>
+          <div class="formula-tile formula-tile-short" style="--row: 1; --c: 9 / 13; --r: -3deg;">$$\partial_t\theta+R^\perp\theta\cdot\nabla\theta+\Lambda^\alpha\theta=0$$</div>
 
-          <div class="formula-tile formula-tile-long" style="--row: 2; --c: 1 / 7; --r: 3deg;">$$\rho(\partial_tu+u\cdot\nabla u)+\nabla P(\rho)=\mu\Delta u+(\lambda+\mu)\nabla\nabla\cdot u$$</div>
+          <div class="formula-tile formula-tile-half" style="--row: 2; --c: 1 / 7; --r: 3deg;">$$\partial_tu+u\cdot\nabla u+\Omega e_3\times u+\nabla P(\rho)=\nu\Delta u$$</div>
+          <div class="formula-tile formula-tile-half" style="--row: 2; --c: 7 / 13; --r: -5deg;">$$\partial_tB-\Delta B+\nabla\times((\nabla\times B)\times B)=\nabla\times(u\times B)$$</div>
 
-          <div class="formula-tile formula-tile-main formula-tile-long" style="--row: 3; --c: 1 / 7; --r: -4deg;">$$\begin{gathered}\partial_tu-\Delta u+(u\cdot\nabla)u+\nabla p=0\\ \nabla\cdot u=0\end{gathered}$$</div>
+          <div class="formula-tile formula-tile-main formula-tile-long" style="--row: 3 / 5; --c: 2 / 12; --r: -4deg;">$$\partial_tu-\Delta u+(u\cdot\nabla)u+\nabla p=0,\quad \nabla\cdot u=0$$</div>
 
-          <div class="formula-tile formula-tile-wide" style="--row: 5; --c: 1 / 4; --r: -8deg;">$$\partial_tB-\Delta B+\nabla\times((\nabla\times B)\times B)=0$$</div>
+          <div class="formula-tile formula-tile-half" style="--row: 5; --c: 1 / 7; --r: 5deg;">$$\partial_tu-\Delta_{\rm h}u+(u\cdot\nabla)u+\nabla p=0,\quad\nabla\cdot u=0$$</div>
+          <div class="formula-tile formula-tile-half" style="--row: 5; --c: 7 / 13; --r: -4deg;">$$\partial_t\theta-\Delta_{\rm h}\theta+u\cdot\nabla\theta=-Nu_3$$</div>
 
-          <div class="formula-tile formula-tile-wide" style="--row: 5; --c: 4 / 7; --r: 7deg;">$$\partial_t\theta+u\cdot\nabla\theta+\kappa(-\Delta)^\alpha\theta=f$$</div>
-          <div class="formula-tile formula-tile-wide" style="--row: 6; --c: 1 / 4; --r: -5deg;">$$\partial_t\theta+R^\perp\theta\cdot\nabla\theta+\kappa\Lambda^\alpha\theta=0$$</div>
+          <div class="formula-tile formula-tile-half" style="--row: 6; --c: 1 / 7; --r: -7deg;">$$\partial_tu+\Omega e_3\times u-\Delta u+(u\cdot\nabla)u+\nabla p=0$$</div>
+          <div class="formula-tile formula-tile-half" style="--row: 6; --c: 7 / 13; --r: 6deg;">$$\partial_t(\rho u)+\nabla\cdot(\rho u\otimes u)+\nabla P(\rho)=\operatorname{div}\mathbb S(u)$$</div>
 
-          <div class="formula-tile formula-tile-long" style="--row: 7; --c: 1 / 7; --r: -7deg;">$$\partial_tu+\Omega e_3\times u-\Delta u+(u\cdot\nabla)u+\nabla p=0,\quad\nabla\cdot u=0$$</div>
+          <div class="formula-tile formula-tile-half" style="--row: 7; --c: 1 / 7; --r: 4deg;">$$-\Delta U+(U\cdot\nabla)U+\nabla P=f,\quad\nabla\cdot U=0$$</div>
+          <div class="formula-tile formula-tile-half" style="--row: 7; --c: 7 / 13; --r: -6deg;">$$\kappa\Lambda^\alpha\Theta+R^\perp\Theta\cdot\nabla\Theta=f$$</div>
 
-          <div class="formula-tile formula-tile-wide" style="--row: 8; --c: 1 / 4; --r: 4deg;">$$\partial_tv-\Delta_{\rm h}v+(v\cdot\nabla)v+\nabla p=\theta e_3$$</div>
-          <div class="formula-tile formula-tile-wide" style="--row: 8; --c: 4 / 7; --r: -4deg;">$$\partial_t\theta-\Delta_{\rm h}\theta+(v\cdot\nabla)\theta=0$$</div>
+          <div class="formula-tile formula-tile-half" style="--row: 8; --c: 1 / 7; --r: -4deg;">$$\partial_t\theta+u\cdot\nabla\theta+\kappa\Lambda^\alpha\theta+A\mathcal R_1\theta=0$$</div>
+          <div class="formula-tile formula-tile-half" style="--row: 8; --c: 7 / 13; --r: 7deg;">$$\varepsilon^2(\partial_tu+u\cdot\nabla u)+\nabla\rho=\varepsilon\nu\Delta u$$</div>
 
-          <div class="formula-tile formula-tile-wide" style="--row: 9; --c: 1 / 4; --r: 6deg;">$$-\Delta U+(U\cdot\nabla)U+\nabla P=f,\quad\nabla\cdot U=0$$</div>
-          <div class="formula-tile formula-tile-wide" style="--row: 9; --c: 4 / 7; --r: -3deg;">$$\partial_t\omega+u\cdot\nabla\omega-\Delta\omega=\omega\cdot\nabla u$$</div>
+          <div class="formula-tile formula-tile-half" style="--row: 9; --c: 1 / 7; --r: 5deg;">$$\partial_tu+u\cdot\nabla u+\frac{1}{\varepsilon}e_3\times u+\frac{1}{\varepsilon^2}\nabla h(\rho)=0$$</div>
+          <div class="formula-tile formula-tile-half" style="--row: 9; --c: 7 / 13; --r: -5deg;">$$\partial_t\omega+u\cdot\nabla\omega-\Delta\omega=\omega\cdot\nabla u$$</div>
 
-          <div class="formula-tile formula-tile-long" style="--row: 10; --c: 1 / 7; --r: 5deg;">$$\partial_t(\rho u)+\nabla\cdot(\rho u\otimes u)+\nabla P(\rho)=\operatorname{div}\mathbb S(u)$$</div>
-
-          <div class="formula-tile formula-tile-wide" style="--row: 11; --c: 1 / 4; --r: -6deg;">$$\varepsilon^2(\partial_tu+u\cdot\nabla u)+\nabla\rho=\varepsilon\nu\Delta u$$</div>
-          <div class="formula-tile formula-tile-wide" style="--row: 11; --c: 4 / 7; --r: 8deg;">$$\partial_tB+\nabla\times(B\times u)=\Delta B$$</div>
+          <div class="formula-tile formula-tile-half" style="--row: 10; --c: 1 / 7; --r: -6deg;">$$\partial_tv-\Delta_{\rm h}v+v\cdot\nabla v+\nabla p=N\theta e_3$$</div>
+          <div class="formula-tile formula-tile-half" style="--row: 10; --c: 7 / 13; --r: 6deg;">$$\partial_tu-\Delta u+u\cdot\nabla u+\nabla p=(B\cdot\nabla)B$$</div>
         </div>
       </div>
 
