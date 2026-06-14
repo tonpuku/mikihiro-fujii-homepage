@@ -228,7 +228,29 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   };
 
+  const getPreprintIdentifier = (paper) => {
+    if (!paper || !paper.preprintUrl) return "";
+    const url = paper.preprintUrl;
+    const arxivMatch = url.match(/arxiv\.org\/(?:abs|pdf)\/([^?#/]+)/i);
+    if (arxivMatch) return `arXiv:${arxivMatch[1].replace(/\.pdf$/i, "")}`;
+
+    const halMatch = url.match(/hal\.science\/([^?#/]+)/i);
+    if (halMatch) return `HAL: ${halMatch[1]}`;
+
+    return paper.preprintLabel || "";
+  };
+
+  const getPaperDisplayJournal = (paper) => {
+    if (!paper) return "";
+    const identifier = getPreprintIdentifier(paper);
+    if (identifier && /^submitted$/i.test(paper.journal || "")) {
+      return `${paper.journal}, ${identifier}`;
+    }
+    return paper.journal || "";
+  };
+
   const formatPaperLists = () => {
+    const paperMap = getPaperMap();
     document.querySelectorAll(".paper-list li").forEach((item) => {
       if (item.dataset.formattedPaper === "true") return;
 
@@ -240,9 +262,17 @@ document.addEventListener("DOMContentLoaded", () => {
       const titleIndex = fullText.indexOf(titleText);
       if (titleIndex < 0) return;
 
+      const paper = paperMap.get(normalizeTitle(titleText));
+      const isPreprintSection =
+        item.closest(".pub-section")?.querySelector("h2")?.dataset.i18n === "research.preprints";
+      const preprintIdentifier = isPreprintSection ? getPreprintIdentifier(paper) : "";
       const authors = cleanLine(fullText.slice(0, titleIndex));
       const afterTitle = fullText.slice(titleIndex + titleText.length);
       const { venue, year, suffix } = splitVenueAndYear(afterTitle);
+      const venueText =
+        preprintIdentifier && !venue.toLowerCase().includes(preprintIdentifier.toLowerCase())
+          ? cleanLine(`${venue}, ${preprintIdentifier}`)
+          : venue;
       const existingLink = titleElement.closest("a");
       const internalHref = existingLink?.getAttribute("href") || "";
       const titleLine = document.createElement(internalHref.startsWith("paper.html") ? "a" : "span");
@@ -259,10 +289,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       item.replaceChildren(authorsLine, titleLine);
 
-      if (venue) {
+      if (venueText) {
         const venueLine = document.createElement("span");
         venueLine.className = "paper-venue-line";
-        venueLine.textContent = venue;
+        venueLine.textContent = venueText;
         if (year || suffix) {
           const yearElement = document.createElement("span");
           yearElement.className = "paper-year-inline";
@@ -341,7 +371,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (titleElement) titleElement.textContent = paper.title;
     if (authorsElement) authorsElement.textContent = paper.authors;
-    setJournalMeta(journalMetaElement, paper.journal);
+    setJournalMeta(journalMetaElement, getPaperDisplayJournal(paper));
     if (abstractElement) abstractElement.textContent = paper.abstract[language] || paper.abstract.en;
 
     if (paper.preprintUrl) {
