@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "common.language": "言語",
       "common.desktopView": "デスクトップ表示",
       "common.mobileView": "スマホ表示",
-      "home.name": "藤井幹大",
+      "home.name": "藤井 幹大",
       "home.profile": "プロフィール",
       "home.institution": "所属",
       "home.institution.value": "名古屋市立大学大学院理学研究科",
