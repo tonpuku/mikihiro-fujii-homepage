@@ -2,6 +2,26 @@
 
 このホームページは静的サイトです。`index.html` と `assets` フォルダを含む、このフォルダの中身をそのままWebサーバーへ置けば公開できます。
 
+## GitHub Pagesに反映する場合
+
+現在の公開URL:
+
+```text
+https://tonpuku.github.io/mikihiro-fujii-homepage/
+```
+
+このMacでは、このリポジトリ専用のDeploy keyを使ってGitHubへpushできるように設定済みです。Codexで編集したあと、変更をcommitして次を実行するとGitHub Pagesへ反映されます。
+
+```sh
+git push origin main
+```
+
+GitHub Pagesの更新には通常数十秒から数分かかります。反映確認は次のようにできます。
+
+```sh
+curl -I https://tonpuku.github.io/mikihiro-fujii-homepage/
+```
+
 ## 公開に必要なもの
 
 - `index.html`
