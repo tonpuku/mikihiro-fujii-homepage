@@ -1107,6 +1107,14 @@ h3 {
   counter-reset: talk-item;
 }
 
+.paper-list[data-reverse-numbering="true"] {
+  counter-reset: paper-item var(--paper-list-start);
+}
+
+.talk-list[data-reverse-numbering="true"] {
+  counter-reset: talk-item var(--talk-list-start);
+}
+
 .paper-list li,
 .talk-list li {
   display: grid;
@@ -1124,6 +1132,14 @@ h3 {
 
 .talk-list li {
   counter-increment: talk-item;
+}
+
+.paper-list[data-reverse-numbering="true"] li {
+  counter-increment: paper-item -1;
+}
+
+.talk-list[data-reverse-numbering="true"] li {
+  counter-increment: talk-item -1;
 }
 
 .paper-list li:last-child,

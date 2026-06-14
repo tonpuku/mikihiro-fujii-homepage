@@ -437,6 +437,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
+  const applyReverseListNumbering = () => {
+    document.querySelectorAll(".paper-list").forEach((list) => {
+      list.style.setProperty("--paper-list-start", String(list.children.length + 1));
+      list.dataset.reverseNumbering = "true";
+      list.setAttribute("reversed", "");
+    });
+
+    document.querySelectorAll(".talk-list").forEach((list) => {
+      list.style.setProperty("--talk-list-start", String(list.children.length + 1));
+      list.dataset.reverseNumbering = "true";
+      list.setAttribute("reversed", "");
+    });
+  };
+
   const setVisible = (element, isVisible) => {
     if (!element) return;
     element.hidden = !isVisible;
@@ -687,6 +701,7 @@ document.addEventListener("DOMContentLoaded", () => {
   linkResearchPapers();
   formatPaperLists();
   formatTalkLists();
+  applyReverseListNumbering();
   ensurePageFormulaBackground();
   applyLanguage(getInitialLanguage());
 
