@@ -210,7 +210,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const cleaned = cleanLine(value);
     const yearMatch = cleaned.match(/\((\d{4})\)/);
     if (!yearMatch) {
-      return { venue: cleaned, year: "" };
+      const toAppearMatch = cleaned.match(/,\s*(to appear\.?.*)$/i);
+      if (toAppearMatch) {
+        return {
+          venue: cleanLine(cleaned.slice(0, toAppearMatch.index)),
+          year: "",
+          suffix: cleanLine(toAppearMatch[1])
+        };
+      }
+      return { venue: cleaned, year: "", suffix: "" };
     }
 
     return {
@@ -255,11 +263,15 @@ document.addEventListener("DOMContentLoaded", () => {
         const venueLine = document.createElement("span");
         venueLine.className = "paper-venue-line";
         venueLine.textContent = venue;
-        if (year) {
-          venueLine.append(" ");
+        if (year || suffix) {
           const yearElement = document.createElement("span");
           yearElement.className = "paper-year-inline";
-          yearElement.textContent = `(${year})${suffix ? `, ${suffix}` : ""}`;
+          if (year) {
+            venueLine.append(" ");
+            yearElement.textContent = `(${year})${suffix ? `, ${suffix}` : ""}`;
+          } else {
+            yearElement.textContent = `, ${suffix}`;
+          }
           venueLine.appendChild(yearElement);
         }
         item.appendChild(venueLine);
