@@ -130,6 +130,30 @@ document.addEventListener("DOMContentLoaded", () => {
     return stored === "ja" || stored === "en" ? stored : "en";
   };
 
+  const formulaBackgroundMarkup = String.raw`
+      <div class="home-formula-bg page-formula-bg" aria-hidden="true">
+        <div class="formula-field">
+          <div class="formula-tile formula-tile-system formula-tile-half" style="--row: 1 / 3; --c: 1 / 7; --r: -6deg;">$$\begin{gathered}\partial_t \rho+\nabla\cdot(\rho u)=0\\ \partial_t(\rho u)+\nabla\cdot(\rho u\otimes u)+\nabla P(\rho)=\operatorname{div}\mathbb S(u)\end{gathered}$$</div>
+          <div class="formula-tile formula-tile-half" style="--row: 1; --c: 7 / 13; --r: 4deg;">$$\partial_t\theta+R^\perp\theta\cdot\nabla\theta+\kappa\Lambda^\alpha\theta=f$$</div>
+          <div class="formula-tile formula-tile-half" style="--row: 2; --c: 7 / 13; --r: -5deg;">$$\partial_t\omega+u\cdot\nabla\omega=0$$</div>
+          <div class="formula-tile formula-tile-main formula-tile-long" style="--row: 3 / 5; --c: 2 / 12; --r: -4deg;">$$\begin{gathered}\partial_t u-\Delta u+(u\cdot\nabla)u+\nabla p=0\\ \nabla \cdot u = 0\end{gathered}$$</div>
+          <div class="formula-tile formula-tile-system formula-tile-long" style="--row: 5 / 7; --c: 1 / 13; --r: 5deg;">$$\begin{gathered}\partial_t u-\Delta u+u\cdot\nabla u+\nabla p=(B\cdot\nabla)B\\ \partial_tB-\Delta B+u\cdot\nabla B-B\cdot\nabla u+\nabla\times((\nabla\times B)\times B)=0\\ \nabla\cdot u=\nabla\cdot B=0\end{gathered}$$</div>
+          <div class="formula-tile formula-tile-system formula-tile-half" style="--row: 7 / 9; --c: 1 / 7; --r: -5deg;">$$\begin{gathered}\partial_t v-\Delta_{\rm h}v+v\cdot\nabla v+\nabla p=N\theta e_3\\ \partial_t\theta-\Delta_{\rm h}\theta+v\cdot\nabla\theta=-Nv_3\\ \nabla\cdot v=0\end{gathered}$$</div>
+          <div class="formula-tile formula-tile-system formula-tile-half" style="--row: 7 / 9; --c: 7 / 13; --r: 4deg;">$$\begin{gathered}-\Delta U+(U\cdot\nabla)U+\nabla P=f\\ \nabla \cdot U = 0\end{gathered}$$</div>
+          <div class="formula-tile formula-tile-system formula-tile-half" style="--row: 9 / 11; --c: 1 / 7; --r: 5deg;">$$\begin{gathered}\partial_tu+\Omega e_3\times u-\Delta u+(u\cdot\nabla)u+\nabla p=0\\ \nabla\cdot u=0\end{gathered}$$</div>
+          <div class="formula-tile formula-tile-system formula-tile-half" style="--row: 9 / 11; --c: 7 / 13; --r: -6deg;">$$\begin{gathered}\partial_t \rho+\nabla\cdot(\rho u)=0\\ \varepsilon^2(\partial_tu+u\cdot\nabla u)+\nabla\rho=\varepsilon\nu\Delta u\end{gathered}$$</div>
+          <div class="formula-tile formula-tile-system formula-tile-half" style="--row: 11 / 13; --c: 1 / 7; --r: -4deg;">$$\begin{gathered}\partial_t u-\Delta_{\rm h}u+(u\cdot\nabla)u+\nabla p=0\\ \nabla\cdot u=0\end{gathered}$$</div>
+          <div class="formula-tile formula-tile-half" style="--row: 11; --c: 7 / 13; --r: 7deg;">$$\kappa\Lambda^\alpha\Theta+R^\perp\Theta\cdot\nabla\Theta=f$$</div>
+          <div class="formula-tile formula-tile-half" style="--row: 12; --c: 7 / 13; --r: -5deg;">$$\partial_t\omega+u\cdot\nabla\omega-\Delta\omega=\omega\cdot\nabla u$$</div>
+        </div>
+      </div>`;
+
+  const ensurePageFormulaBackground = () => {
+    const main = document.querySelector("main");
+    if (!main || main.querySelector(".home-formula-bg")) return;
+    main.insertAdjacentHTML("afterbegin", formulaBackgroundMarkup);
+  };
+
   const viewportMeta = document.querySelector('meta[name="viewport"]');
   const defaultViewport = viewportMeta?.getAttribute("content") || "width=device-width, initial-scale=1";
   const desktopViewport = "width=1100";
@@ -458,6 +482,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   linkResearchPapers();
   formatPaperLists();
+  ensurePageFormulaBackground();
   applyLanguage(getInitialLanguage());
 
   function renderMath() {

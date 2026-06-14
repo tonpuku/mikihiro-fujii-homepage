@@ -34,6 +34,18 @@ body {
   line-height: 1.72;
 }
 
+main {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+main > .page-title,
+main > .section {
+  position: relative;
+  z-index: 2;
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -215,6 +227,15 @@ a:hover {
 
 .home-formula-bg .hero-equation {
   display: none;
+}
+
+.page-formula-bg {
+  position: fixed;
+  inset: 72px 0 0;
+}
+
+.page-formula-bg .formula-field {
+  transform: none;
 }
 
 .formula-field {
@@ -1254,6 +1275,10 @@ h3 {
 }
 
 @media (max-width: 820px) {
+  .page-formula-bg {
+    inset: 0;
+  }
+
   .site-header {
     position: static;
     display: block;
