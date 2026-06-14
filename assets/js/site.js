@@ -159,16 +159,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const applyLanguage = (language) => {
     const dictionary = translations[language] || translations.en;
-    const languageLabels =
-      language === "ja"
-        ? {
-            en: "英語",
-            ja: "日本語"
-          }
-        : {
-            en: "English",
-            ja: "Japanese"
-          };
+    const languageLabels = {
+      ja: "日本語",
+      en: "ENGLISH"
+    };
     document.documentElement.lang = language;
 
     document.querySelectorAll("[data-i18n]").forEach((element) => {
@@ -184,7 +178,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const label = languageLabels[option] || option;
       button.textContent = label;
       button.setAttribute("aria-label", label);
-      button.dataset.shortLabel = option.toUpperCase();
+      button.dataset.shortLabel = label;
       button.setAttribute("aria-pressed", String(isActive));
     });
 

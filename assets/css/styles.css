@@ -124,19 +124,19 @@ a:hover {
 
 .language-toggle {
   display: inline-grid;
-  grid-template-columns: repeat(2, minmax(88px, 1fr));
+  grid-template-columns: repeat(2, minmax(96px, 1fr));
   gap: 2px;
   padding: 3px;
-  background: #eef6f5;
-  border: 1px solid rgba(27, 119, 114, 0.18);
+  background: #fff6f6;
+  border: 1px solid rgba(190, 80, 86, 0.2);
   border-radius: 999px;
 }
 
 .language-toggle button {
-  min-width: 88px;
+  min-width: 96px;
   min-height: 32px;
   padding: 0 9px;
-  color: var(--muted);
+  color: #b95d62;
   background: transparent;
   border: 0;
   border-radius: 999px;
@@ -148,9 +148,9 @@ a:hover {
 }
 
 .language-toggle button[aria-pressed="true"] {
-  color: var(--ink);
+  color: #9f4148;
   background: #ffffff;
-  box-shadow: 0 1px 6px rgba(22, 32, 37, 0.08);
+  box-shadow: 0 1px 6px rgba(135, 54, 60, 0.1);
 }
 
 .view-mode-toggle {
@@ -1572,18 +1572,13 @@ h3 {
   }
 
   .language-toggle {
-    grid-template-columns: repeat(2, 31px);
+    grid-template-columns: repeat(2, minmax(72px, 1fr));
   }
 
   .language-toggle button {
-    min-width: 31px;
-    padding: 0;
-    font-size: 0;
-  }
-
-  .language-toggle button::after {
-    content: attr(data-short-label);
-    font-size: 0.76rem;
+    min-width: 72px;
+    padding: 0 6px;
+    font-size: 0.68rem;
   }
 
   .hero-copy {
