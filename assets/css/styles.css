@@ -87,14 +87,20 @@ a:hover {
 }
 
 .brand-mark {
-  display: grid;
-  place-items: center;
+  display: block;
   width: 38px;
   height: 38px;
-  color: #fffdf8;
-  background: linear-gradient(135deg, var(--teal), var(--copper));
   border-radius: 50%;
-  font-size: 0.82rem;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(35, 122, 83, 0.16);
+  flex: 0 0 auto;
+}
+
+.brand-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .header-actions {
