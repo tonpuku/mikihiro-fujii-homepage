@@ -255,6 +255,11 @@ a:hover {
   font-size: clamp(1.34rem, 1.92vw, 2.24rem);
 }
 
+.formula-tile-system .katex {
+  font-size: clamp(1rem, 1.55vw, 1.78rem);
+  line-height: 1.06;
+}
+
 .formula-tile-main {
   grid-column: var(--c, 1 / -1);
   grid-row: var(--row, 3);
@@ -262,7 +267,8 @@ a:hover {
 }
 
 .formula-tile-main .katex {
-  font-size: clamp(2.16rem, 3.75vw, 4.02rem);
+  font-size: clamp(1.88rem, 3.28vw, 3.46rem);
+  line-height: 1.04;
 }
 
 .hero-equation {
