@@ -440,7 +440,7 @@ document.addEventListener("DOMContentLoaded", () => {
     element.hidden = !isVisible;
   };
 
-  const setJournalMeta = (element, journal) => {
+  const setJournalMeta = (element, journal, publicationDate, language = document.documentElement.lang) => {
     if (!element) return;
     element.textContent = "";
     if (!journal) {
@@ -461,6 +461,18 @@ document.addEventListener("DOMContentLoaded", () => {
       yearElement.className = "paper-detail-journal-year";
       yearElement.textContent = yearMatch[1];
       element.appendChild(yearElement);
+    }
+
+    const publicationDateText =
+      typeof publicationDate === "string"
+        ? publicationDate
+        : publicationDate?.[language] || publicationDate?.en || "";
+    if (publicationDateText) {
+      element.append(", ");
+      const dateElement = document.createElement("span");
+      dateElement.className = "paper-detail-publication-date";
+      dateElement.textContent = publicationDateText;
+      element.appendChild(dateElement);
     }
 
     setVisible(element, true);
@@ -495,7 +507,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (titleElement) titleElement.textContent = paper.title;
     if (authorsElement) authorsElement.textContent = paper.authors;
-    setJournalMeta(journalMetaElement, getPaperDisplayJournal(paper));
+    setJournalMeta(journalMetaElement, getPaperDisplayJournal(paper), paper.publicationDate, language);
     if (abstractElement) abstractElement.textContent = paper.abstract[language] || paper.abstract.en;
 
     if (paper.preprintUrl) {

@@ -454,7 +454,102 @@ window.PAPERS = [
     "long-time-qg-large-dispersive-forcing": String.raw`$2$ 次元分散型準地衡流方程式の初期値問題を考える．$s > 2$ を満たす初期値 $\theta_0 \in H^s(\mathbb{R}^2)$ に対して，解の長時間存在を証明する．さらに，分散パラメータの大きさが無限大に向かうとき，解が対応する線形分散解 $e^{-AtR_1}\theta_0$ へ収束することを示す．`
   };
 
+  const publicationDates = {
+    "stationary-critical-supercritical-qg": {
+      en: "Available online: April 11, 2026",
+      ja: "オンライン公開: 2026年4月11日"
+    },
+    "global-strong-compressible-navier-stokes-coriolis-large": {
+      en: "Published online: March 24, 2026",
+      ja: "オンライン出版: 2026年3月24日"
+    },
+    "incompressible-fast-rotation-limits-euler": {
+      en: "Published online: February 23, 2026",
+      ja: "オンライン出版: 2026年2月23日"
+    },
+    "stability-stratified-boussinesq-horizontal-viscosity": {
+      en: "Published online: January 23, 2026",
+      ja: "オンライン出版: 2026年1月23日"
+    },
+    "dispersive-hall-mhd-constant-equilibrium": {
+      en: "Published online: January 13, 2026",
+      ja: "オンライン出版: 2026年1月13日"
+    },
+    "time-periodic-navier-stokes-whole-space": {
+      en: "Published: December 8, 2025",
+      ja: "出版: 2025年12月8日"
+    },
+    "sharp-stationary-quasi-geostrophic": {
+      en: "Published online: August 6, 2025",
+      ja: "オンライン出版: 2025年8月6日"
+    },
+    "stationary-navier-stokes-half-spaces": {
+      en: "Available online: April 10, 2025",
+      ja: "オンライン公開: 2025年4月10日"
+    },
+    "compressible-navier-stokes-coriolis-critical-besov": {
+      en: "Available online: February 17, 2025",
+      ja: "オンライン公開: 2025年2月17日"
+    },
+    "low-mach-2d-navier-stokes-korteweg": {
+      en: "Published online: December 6, 2024",
+      ja: "オンライン出版: 2024年12月6日"
+    },
+    "anisotropic-navier-stokes-half-space-large-time": {
+      en: "Published online: December 10, 2024",
+      ja: "オンライン出版: 2024年12月10日"
+    },
+    "stationary-navier-stokes-uniform-flow": {
+      en: "Published online: September 26, 2024",
+      ja: "オンライン出版: 2024年9月26日"
+    },
+    "hall-mhd-constant-equilibrium-global-solutions": {
+      en: "Available online: February 15, 2024",
+      ja: "オンライン公開: 2024年2月15日"
+    },
+    "ill-posedness-2d-stationary-navier-stokes-plane": {
+      en: "Published online: May 28, 2024",
+      ja: "オンライン出版: 2024年5月28日"
+    },
+    "rotating-navier-stokes-critical-fourier-besov": {
+      en: "Published online: December 15, 2023",
+      ja: "オンライン出版: 2023年12月15日"
+    },
+    "low-mach-compressible-navier-stokes-critical-besov": {
+      en: "Published online: May 4, 2023",
+      ja: "オンライン出版: 2023年5月4日"
+    },
+    "global-well-posedness-hall-mhd-critical": {
+      en: "Published online: January 11, 2024",
+      ja: "オンライン出版: 2024年1月11日"
+    },
+    "large-time-3d-anisotropic-navier-stokes": {
+      en: "Available online: December 21, 2022",
+      ja: "オンライン公開: 2022年12月21日"
+    },
+    "dissipative-qg-dispersive-forcing": {
+      en: "Published: January 25, 2023",
+      ja: "出版: 2023年1月25日"
+    },
+    "time-periodic-qg-supercritical-dissipation": {
+      en: "Published online: March 8, 2022",
+      ja: "オンライン出版: 2022年3月8日"
+    },
+    "heat-equation-fractional-brownian-singularities": {
+      en: "Available online: May 19, 2021",
+      ja: "オンライン公開: 2021年5月19日"
+    },
+    "long-time-qg-large-dispersive-forcing": {
+      en: "Published online: November 23, 2020",
+      ja: "オンライン出版: 2020年11月23日"
+    }
+  };
+
   window.PAPERS.forEach((paper) => {
+    if (publicationDates[paper.id]) {
+      paper.publicationDate = publicationDates[paper.id];
+    }
+
     if (!abstracts[paper.id]) return;
     paper.abstract = {
       en: abstracts[paper.id],
