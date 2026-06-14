@@ -69,7 +69,7 @@ window.PAPERS = [
   {
     "id": "decay-rates-stationary-navier-stokes-infinity",
     "title": "Decay rates of three dimensional stationary Navier-Stokes flows at the spatial infinity",
-    "authors": "Mikihiro Fujii, Hiroyuki Tsurumi, Xiaojing Zhang",
+    "authors": "Mikihiro Fujii, Hiroyuki Tsurumi, Xin Zhang",
     "preprintUrl": "https://arxiv.org/abs/2508.17723",
     "preprintLabel": "arXiv",
     "journalUrl": "",
