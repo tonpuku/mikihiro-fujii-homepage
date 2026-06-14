@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
       "common.nav.lecture": "Lecture",
       "common.nav.links": "Links",
       "common.language": "Language",
+      "common.desktopView": "Desktop view",
+      "common.mobileView": "Mobile view",
       "home.name": "Mikihiro Fujii",
       "home.profile": "Profile",
       "home.institution": "Institution",
@@ -67,6 +69,8 @@ document.addEventListener("DOMContentLoaded", () => {
       "common.nav.lecture": "教育活動",
       "common.nav.links": "リンク",
       "common.language": "言語",
+      "common.desktopView": "デスクトップ表示",
+      "common.mobileView": "スマホ表示",
       "home.name": "藤井幹大",
       "home.profile": "プロフィール",
       "home.institution": "所属",
@@ -126,6 +130,33 @@ document.addEventListener("DOMContentLoaded", () => {
     return stored === "ja" || stored === "en" ? stored : "en";
   };
 
+  const viewportMeta = document.querySelector('meta[name="viewport"]');
+  const defaultViewport = viewportMeta?.getAttribute("content") || "width=device-width, initial-scale=1";
+  const desktopViewport = "width=1100";
+  let currentViewMode = localStorage.getItem("site-view-mode") === "desktop" ? "desktop" : "auto";
+  const viewModeButton = document.createElement("button");
+  viewModeButton.type = "button";
+  viewModeButton.className = "view-mode-toggle";
+
+  const updateViewModeButton = (language = document.documentElement.lang) => {
+    const dictionary = translations[language] || translations.en;
+    const isDesktopMode = currentViewMode === "desktop";
+    const canShow = isDesktopMode || window.matchMedia("(max-width: 760px)").matches;
+    viewModeButton.hidden = !canShow;
+    viewModeButton.textContent = dictionary[isDesktopMode ? "common.mobileView" : "common.desktopView"];
+    viewModeButton.setAttribute("aria-pressed", String(isDesktopMode));
+  };
+
+  const applyViewMode = (mode, { persist = true } = {}) => {
+    currentViewMode = mode === "desktop" ? "desktop" : "auto";
+    if (viewportMeta) {
+      viewportMeta.setAttribute("content", currentViewMode === "desktop" ? desktopViewport : defaultViewport);
+    }
+    document.body.classList.toggle("force-desktop-view", currentViewMode === "desktop");
+    if (persist) localStorage.setItem("site-view-mode", currentViewMode);
+    updateViewModeButton();
+  };
+
   const applyLanguage = (language) => {
     const dictionary = translations[language] || translations.en;
     const languageLabels =
@@ -166,6 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     localStorage.setItem("site-language", language);
     renderPaperDetail(language);
+    updateViewModeButton(language);
   };
 
   const normalizeTitle = (value) =>
@@ -422,6 +454,13 @@ document.addEventListener("DOMContentLoaded", () => {
       renderMath();
     });
   });
+
+  viewModeButton.addEventListener("click", () => {
+    applyViewMode(currentViewMode === "desktop" ? "auto" : "desktop");
+  });
+  document.body.appendChild(viewModeButton);
+  window.addEventListener("resize", () => updateViewModeButton());
+  applyViewMode(currentViewMode, { persist: false });
 
   linkResearchPapers();
   formatPaperLists();
