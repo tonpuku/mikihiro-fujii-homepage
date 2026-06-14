@@ -1049,7 +1049,8 @@ h3 {
 .paper-list li {
   display: grid;
   grid-template-columns: 78px minmax(0, 1fr);
-  gap: 26px;
+  row-gap: 6px;
+  column-gap: 26px;
   margin: 0;
   padding: 20px 26px;
   border-bottom: 1px solid var(--line);
@@ -1489,7 +1490,8 @@ h3 {
 
   .paper-list li {
     grid-template-columns: 58px minmax(0, 1fr);
-    gap: 16px;
+    row-gap: 6px;
+    column-gap: 16px;
     padding: 18px;
   }
 
@@ -1514,7 +1516,8 @@ h3 {
 
   .paper-list li {
     grid-template-columns: 1fr;
-    gap: 6px;
+    row-gap: 6px;
+    column-gap: 0;
   }
 
   .paper-list li::before,
