@@ -864,7 +864,8 @@ h3 {
 .note-panel,
 .link-panel,
 .timeline,
-.course-group {
+.course-group,
+.paper-list {
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -1023,7 +1024,6 @@ h3 {
   font-size: clamp(1.35rem, 2.4vw, 1.85rem);
 }
 
-.paper-list,
 .talk-list,
 .course-list,
 .link-list {
@@ -1031,7 +1031,6 @@ h3 {
   padding-left: 1.35rem;
 }
 
-.paper-list li,
 .talk-list li,
 .course-list li,
 .link-list li {
@@ -1039,8 +1038,40 @@ h3 {
   padding-left: 0.15rem;
 }
 
+.paper-list {
+  margin: 0;
+  padding-left: 0;
+  overflow: hidden;
+  list-style: none;
+  counter-reset: paper-item;
+}
+
 .paper-list li {
-  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 78px minmax(0, 1fr);
+  gap: 26px;
+  margin: 0;
+  padding: 20px 26px;
+  border-bottom: 1px solid var(--line);
+  counter-increment: paper-item;
+}
+
+.paper-list li:last-child {
+  border-bottom: 0;
+}
+
+.paper-list li::before {
+  content: counter(paper-item);
+  grid-column: 1;
+  grid-row: 1 / span 3;
+  color: var(--journal-green);
+  font-weight: 760;
+  font-variant-numeric: tabular-nums;
+}
+
+.paper-list li > * {
+  grid-column: 2;
+  min-width: 0;
 }
 
 .paper-authors-line,
@@ -1059,6 +1090,7 @@ h3 {
   color: var(--ink);
   font-weight: 700;
   text-decoration-thickness: 1px;
+  overflow-wrap: anywhere;
 }
 
 .paper-title-line:hover {
@@ -1081,7 +1113,6 @@ h3 {
   font-size: 0.94rem;
 }
 
-.paper-list li::marker,
 .talk-list li::marker {
   color: var(--copper-dark);
   font-weight: 700;
@@ -1455,6 +1486,21 @@ h3 {
     grid-template-columns: 1fr;
     gap: 6px;
   }
+
+  .paper-list li {
+    grid-template-columns: 58px minmax(0, 1fr);
+    gap: 16px;
+    padding: 18px;
+  }
+
+  .paper-list li > * {
+    grid-column: 2;
+  }
+
+  .paper-list li::before {
+    grid-column: 1;
+    grid-row: 1 / span 3;
+  }
 }
 
 @media (max-width: 520px) {
@@ -1464,6 +1510,20 @@ h3 {
 
   .site-header {
     padding-inline: 16px;
+  }
+
+  .paper-list li {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .paper-list li::before,
+  .paper-list li > * {
+    grid-column: 1;
+  }
+
+  .paper-list li::before {
+    grid-row: auto;
   }
 
   .site-nav {
