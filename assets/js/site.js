@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "home.email": "E-mail",
       "home.research": "Research",
       "home.research.value": "Mathematical analysis of nonlinear PDEs in fluid dynamics",
-      "home.research.detail": "My research field is the mathematical analysis of nonlinear partial differential equations. In particular, I mainly study partial differential equations arising in fluid dynamics, such as the Navier-Stokes equations. The methods I use are primarily harmonic-analytic, and I am interested in well/ill-posedness in scaling critical spaces and quantitive properties via the asymptotic behavior or singular limit of solutions.",
+      "home.research.detail": "My research field is the mathematical analysis of nonlinear partial differential equations. In particular, I mainly study partial differential equations arising in fluid dynamics, such as the Navier-Stokes equations. The methods I use are primarily harmonic analysis, and I am interested in well/ill-posedness in scaling critical spaces and quantitive properties via the asymptotic behavior or singular limit of solutions.",
       "home.researchAreas": "Research Areas",
       "home.tag.navier": "Navier-Stokes equations",
       "home.tag.critical": "Critical spaces",
