@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const current = window.location.pathname.split("/").pop() || "index.html";
+  const siteBaseUrl = "https://tonpuku.github.io/mikihiro-fujii-homepage/";
+  const siteImageUrl = `${siteBaseUrl}assets/img/mikihiro-fujii-portrait.jpg`;
   const translations = {
     en: {
       "common.nav.home": "Home",
@@ -440,6 +442,133 @@ document.addEventListener("DOMContentLoaded", () => {
     element.hidden = !isVisible;
   };
 
+  const stripTex = (text) =>
+    String(text || "")
+      .replace(/\\widehat\{([^}]+)\}/g, "$1")
+      .replace(/\\mathbb\{([^}]+)\}/g, "$1")
+      .replace(/\\dot\{([^}]+)\}/g, "$1")
+      .replace(/\\[a-zA-Z]+/g, "")
+      .replace(/\$+/g, "")
+      .replace(/[{}]/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+
+  const setMeta = (attribute, key, content) => {
+    if (!content) return;
+    let meta = document.head.querySelector(`meta[${attribute}="${key}"]`);
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.setAttribute(attribute, key);
+      document.head.appendChild(meta);
+    }
+    meta.setAttribute("content", content);
+  };
+
+  const setCanonical = (href) => {
+    if (!href) return;
+    let canonical = document.head.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.rel = "canonical";
+      document.head.appendChild(canonical);
+    }
+    canonical.href = href;
+  };
+
+  const setJsonLd = (id, data) => {
+    let script = document.getElementById(id);
+    if (!script) {
+      script = document.createElement("script");
+      script.type = "application/ld+json";
+      script.id = id;
+      document.head.appendChild(script);
+    }
+    script.textContent = JSON.stringify(data);
+  };
+
+  const getPublicationIsoDate = (publicationDate) => {
+    const text = publicationDate?.en || "";
+    const match = text.match(/([A-Z][a-z]+)\s+([0-9]{1,2}),\s+([0-9]{4})$/);
+    if (!match) return "";
+    const months = {
+      January: "01",
+      February: "02",
+      March: "03",
+      April: "04",
+      May: "05",
+      June: "06",
+      July: "07",
+      August: "08",
+      September: "09",
+      October: "10",
+      November: "11",
+      December: "12"
+    };
+    const month = months[match[1]];
+    if (!month) return "";
+    return `${match[3]}-${month}-${match[2].padStart(2, "0")}`;
+  };
+
+  const getJournalName = (journal) => {
+    if (!journal) return "";
+    return journal.replace(/\s*\([0-9]{4}\)\s*$/, "").trim();
+  };
+
+  const updatePaperSeo = (paper, id) => {
+    const cleanTitle = stripTex(paper.listTitle || paper.title);
+    const displayJournal = getPaperDisplayJournal(paper);
+    const paperUrl = `${siteBaseUrl}paper.html?id=${encodeURIComponent(id)}`;
+    const description = stripTex(
+      `${cleanTitle} by ${paper.authors}. ${displayJournal ? `${displayJournal}. ` : ""}Abstract, preprint links, and journal links.`
+    );
+    const shortDescription = description.length > 220 ? `${description.slice(0, 217)}...` : description;
+
+    document.title = `${cleanTitle} | Mikihiro Fujii`;
+    setCanonical(paperUrl);
+    setMeta("name", "description", shortDescription);
+    setMeta("property", "og:type", "article");
+    setMeta("property", "og:title", `${cleanTitle} | Mikihiro Fujii`);
+    setMeta("property", "og:description", shortDescription);
+    setMeta("property", "og:url", paperUrl);
+    setMeta("property", "og:image", siteImageUrl);
+    setMeta("name", "twitter:title", `${cleanTitle} | Mikihiro Fujii`);
+    setMeta("name", "twitter:description", shortDescription);
+    setMeta("name", "twitter:image", siteImageUrl);
+
+    const datePublished = getPublicationIsoDate(paper.publicationDate);
+    if (datePublished) {
+      setMeta("property", "article:published_time", datePublished);
+    }
+
+    const sameAs = [paper.preprintUrl, paper.journalUrl].filter(Boolean);
+    const jsonLd = {
+      "@context": "https://schema.org",
+      "@type": "ScholarlyArticle",
+      headline: cleanTitle,
+      name: cleanTitle,
+      author: paper.authors.split(",").map((name) => ({
+        "@type": "Person",
+        name: name.trim()
+      })),
+      url: paperUrl,
+      image: siteImageUrl,
+      inLanguage: ["en", "ja"],
+      abstract: stripTex(paper.abstract?.en || "").slice(0, 5000),
+      sameAs
+    };
+    const journalName = getJournalName(paper.journal);
+    if (journalName && !/^submitted$/i.test(journalName)) {
+      jsonLd.isPartOf = {
+        "@type": "Periodical",
+        name: journalName
+      };
+    }
+    if (datePublished) {
+      jsonLd.datePublished = datePublished;
+    }
+    setJsonLd("paper-json-ld", jsonLd);
+  };
+
   const setJournalMeta = (element, journal, publicationDate, language = document.documentElement.lang) => {
     if (!element) return;
     element.textContent = "";
@@ -496,6 +625,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const journalLink = document.querySelector("[data-paper-journal-link]");
 
     if (!paper) {
+      document.title = `${dictionary["paper.notFound"]} | Mikihiro Fujii`;
       if (titleElement) titleElement.textContent = dictionary["paper.notFound"];
       if (authorsElement) authorsElement.textContent = "";
       setJournalMeta(journalMetaElement, "");
@@ -507,6 +637,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (titleElement) titleElement.textContent = paper.title;
     if (authorsElement) authorsElement.textContent = paper.authors;
+    updatePaperSeo(paper, id);
     setJournalMeta(journalMetaElement, getPaperDisplayJournal(paper), paper.publicationDate, language);
     if (abstractElement) abstractElement.textContent = paper.abstract[language] || paper.abstract.en;
 

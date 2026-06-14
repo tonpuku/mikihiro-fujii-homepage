@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tonpuku.github.io/mikihiro-fujii-homepage/sitemap.xml
