@@ -1655,13 +1655,18 @@ h3 {
   }
 
   .language-toggle {
-    grid-template-columns: repeat(2, minmax(72px, 1fr));
+    grid-template-columns: repeat(2, 31px);
   }
 
   .language-toggle button {
-    min-width: 72px;
-    padding: 0 6px;
-    font-size: 0.68rem;
+    min-width: 31px;
+    padding: 0;
+    font-size: 0;
+  }
+
+  .language-toggle button::after {
+    content: attr(data-short-label);
+    font-size: 0.76rem;
   }
 
   .hero-copy {

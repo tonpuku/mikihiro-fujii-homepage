@@ -187,6 +187,10 @@ document.addEventListener("DOMContentLoaded", () => {
       ja: "日本語",
       en: "ENGLISH"
     };
+    const shortLanguageLabels = {
+      ja: "JA",
+      en: "EN"
+    };
     document.documentElement.lang = language;
 
     document.querySelectorAll("[data-i18n]").forEach((element) => {
@@ -202,7 +206,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const label = languageLabels[option] || option;
       button.textContent = label;
       button.setAttribute("aria-label", label);
-      button.dataset.shortLabel = label;
+      button.dataset.shortLabel = shortLanguageLabels[option] || option.toUpperCase();
       button.setAttribute("aria-pressed", String(isActive));
     });
 
