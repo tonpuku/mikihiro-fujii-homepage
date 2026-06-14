@@ -365,10 +365,10 @@ document.addEventListener("DOMContentLoaded", () => {
           ? cleanLine(`${venue}, ${preprintIdentifier}`)
           : venue;
       const existingLink = titleElement.closest("a");
-      const internalHref = existingLink?.getAttribute("href") || "";
-      const titleLine = document.createElement(internalHref.startsWith("paper.html") ? "a" : "span");
+      const titleHref = existingLink?.getAttribute("href") || "";
+      const titleLine = document.createElement(titleHref ? "a" : "span");
       titleLine.className = "paper-title-line";
-      if (internalHref.startsWith("paper.html")) titleLine.href = internalHref;
+      if (titleHref) titleLine.href = titleHref;
 
       const titleEm = document.createElement("em");
       titleEm.textContent = titleText;
