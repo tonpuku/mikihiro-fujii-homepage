@@ -912,7 +912,8 @@ h3 {
 .link-panel,
 .timeline,
 .course-group,
-.paper-list {
+.paper-list,
+.talk-list {
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -1071,29 +1072,37 @@ h3 {
   font-size: clamp(1.35rem, 2.4vw, 1.85rem);
 }
 
-.talk-list,
 .course-list,
 .link-list {
   margin: 0;
   padding-left: 1.35rem;
 }
 
-.talk-list li,
 .course-list li,
 .link-list li {
   margin: 0 0 14px;
   padding-left: 0.15rem;
 }
 
-.paper-list {
+.paper-list,
+.talk-list {
   margin: 0;
   padding-left: 0;
   overflow: hidden;
   list-style: none;
+}
+
+.paper-list {
   counter-reset: paper-item;
 }
 
-.paper-list li {
+.talk-list {
+  margin-bottom: 22px;
+  counter-reset: talk-item;
+}
+
+.paper-list li,
+.talk-list li {
   display: grid;
   grid-template-columns: 78px minmax(0, 1fr);
   row-gap: 6px;
@@ -1101,14 +1110,23 @@ h3 {
   margin: 0;
   padding: 20px 26px;
   border-bottom: 1px solid var(--line);
+}
+
+.paper-list li {
   counter-increment: paper-item;
 }
 
-.paper-list li:last-child {
+.talk-list li {
+  counter-increment: talk-item;
+}
+
+.paper-list li:last-child,
+.talk-list li:last-child {
   border-bottom: 0;
 }
 
-.paper-list li::before {
+.paper-list li::before,
+.talk-list li::before {
   content: counter(paper-item);
   grid-column: 1;
   grid-row: 1 / span 3;
@@ -1117,7 +1135,13 @@ h3 {
   font-variant-numeric: tabular-nums;
 }
 
-.paper-list li > * {
+.talk-list li::before {
+  content: counter(talk-item);
+  grid-row: 1 / span 4;
+}
+
+.paper-list li > *,
+.talk-list li > * {
   grid-column: 2;
   min-width: 0;
 }
@@ -1161,9 +1185,32 @@ h3 {
   font-size: 0.94rem;
 }
 
-.talk-list li::marker {
-  color: var(--copper-dark);
+.talk-authors-line,
+.talk-title-line,
+.talk-venue-line,
+.talk-date-line {
+  display: block;
+}
+
+.talk-authors-line {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.talk-title-line {
+  color: var(--ink);
   font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.talk-venue-line {
+  color: var(--journal-green);
+  font-weight: 760;
+}
+
+.talk-date-line {
+  color: var(--muted);
+  font-size: 0.94rem;
 }
 
 .paper-meta,
@@ -1539,20 +1586,27 @@ h3 {
     gap: 6px;
   }
 
-  .paper-list li {
+  .paper-list li,
+  .talk-list li {
     grid-template-columns: 58px minmax(0, 1fr);
     row-gap: 6px;
     column-gap: 16px;
     padding: 18px;
   }
 
-  .paper-list li > * {
+  .paper-list li > *,
+  .talk-list li > * {
     grid-column: 2;
   }
 
-  .paper-list li::before {
+  .paper-list li::before,
+  .talk-list li::before {
     grid-column: 1;
     grid-row: 1 / span 3;
+  }
+
+  .talk-list li::before {
+    grid-row: 1 / span 4;
   }
 }
 
@@ -1565,18 +1619,22 @@ h3 {
     padding-inline: 16px;
   }
 
-  .paper-list li {
+  .paper-list li,
+  .talk-list li {
     grid-template-columns: 1fr;
     row-gap: 6px;
     column-gap: 0;
   }
 
   .paper-list li::before,
-  .paper-list li > * {
+  .paper-list li > *,
+  .talk-list li::before,
+  .talk-list li > * {
     grid-column: 1;
   }
 
-  .paper-list li::before {
+  .paper-list li::before,
+  .talk-list li::before {
     grid-row: auto;
   }
 

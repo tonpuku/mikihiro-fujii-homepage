@@ -374,6 +374,41 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
+  const formatTalkLists = () => {
+    document.querySelectorAll(".talk-list li").forEach((item) => {
+      if (item.dataset.formattedTalk === "true") return;
+
+      const metaElement = item.querySelector(".talk-meta");
+      const metaText = metaElement?.textContent.trim() || "";
+      const leadingText = cleanLine(item.textContent.replace(metaText, ""));
+      const match = leadingText.match(/^(.+?),\s*「(.+?)」,\s*(.*)$/);
+      if (!match) return;
+
+      const authorsLine = document.createElement("span");
+      authorsLine.className = "talk-authors-line";
+      authorsLine.textContent = cleanLine(match[1]);
+
+      const titleLine = document.createElement("span");
+      titleLine.className = "talk-title-line";
+      titleLine.textContent = `「${cleanLine(match[2])}」`;
+
+      const venueLine = document.createElement("span");
+      venueLine.className = "talk-venue-line";
+      venueLine.textContent = cleanLine(match[3]).replace(/,+$/, "").trim();
+
+      item.replaceChildren(authorsLine, titleLine, venueLine);
+
+      if (metaText) {
+        const dateLine = document.createElement("span");
+        dateLine.className = "talk-date-line";
+        dateLine.textContent = metaText;
+        item.appendChild(dateLine);
+      }
+
+      item.dataset.formattedTalk = "true";
+    });
+  };
+
   const setVisible = (element, isVisible) => {
     if (!element) return;
     element.hidden = !isVisible;
@@ -482,6 +517,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   linkResearchPapers();
   formatPaperLists();
+  formatTalkLists();
   ensurePageFormulaBackground();
   applyLanguage(getInitialLanguage());
 
