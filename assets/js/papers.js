@@ -363,7 +363,7 @@ window.PAPERS = [
   {
     "id": "heat-equation-fractional-brownian-singularities",
     "title": "Isolated singularities in the heat equation behaving like fractional Brownian motions",
-    "authors": "Mikihiro Fujii, Ikuro Okada, Eiji Yanagida",
+    "authors": "Mikihiro Fujii, Izumi Okada, Eiji Yanagida",
     "preprintUrl": "https://arxiv.org/abs/2012.04453",
     "preprintLabel": "arXiv",
     "journalUrl": "https://www.sciencedirect.com/science/article/abs/pii/S0022247X21004017",
