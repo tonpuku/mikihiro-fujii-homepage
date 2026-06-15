@@ -523,6 +523,17 @@ document.addEventListener("DOMContentLoaded", () => {
     return `${match[3]}-${month}-${match[2].padStart(2, "0")}`;
   };
 
+  const getPublicationDateDisplayText = (publicationDate, language) => {
+    const text =
+      typeof publicationDate === "string"
+        ? publicationDate
+        : publicationDate?.[language] || publicationDate?.en || "";
+    return text
+      .replace(/^(Published online|Available online|Published)[:：]?\s*/i, "")
+      .replace(/^(オンライン公開|オンライン出版|出版)[:：]?\s*/, "")
+      .trim();
+  };
+
   const getJournalName = (journal) => {
     if (!journal) return "";
     return journal.replace(/\s*\([0-9]{4}\)\s*$/, "").trim();
@@ -598,7 +609,9 @@ document.addEventListener("DOMContentLoaded", () => {
     nameElement.textContent = name;
     element.appendChild(nameElement);
 
-    if (yearMatch) {
+    const publicationDateText = getPublicationDateDisplayText(publicationDate, language);
+
+    if (yearMatch && !publicationDateText) {
       element.append(" ");
       const yearElement = document.createElement("span");
       yearElement.className = "paper-detail-journal-year";
@@ -606,10 +619,6 @@ document.addEventListener("DOMContentLoaded", () => {
       element.appendChild(yearElement);
     }
 
-    const publicationDateText =
-      typeof publicationDate === "string"
-        ? publicationDate
-        : publicationDate?.[language] || publicationDate?.en || "";
     if (publicationDateText) {
       element.append(", ");
       const dateElement = document.createElement("span");
