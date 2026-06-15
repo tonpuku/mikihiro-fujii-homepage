@@ -620,7 +620,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (publicationDateText) {
-      element.append(", ");
+      element.append("\n");
       const dateElement = document.createElement("span");
       dateElement.className = "paper-detail-publication-date";
       dateElement.textContent = publicationDateText;
