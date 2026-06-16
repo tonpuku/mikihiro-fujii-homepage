@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "research.proceedings": "Proceedings (Without Peer Review)",
       "research.talks": "Talks",
       "paper.eyebrow": "Paper Details",
-      "paper.abstract": "Commentary",
+      "paper.abstract": "Abstract",
       "paper.links": "Links",
       "paper.journal": "Journal",
       "paper.back": "Back to Research",
@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "research.proceedings": "プロシーディングス",
       "research.talks": "講演",
       "paper.eyebrow": "論文詳細",
-      "paper.abstract": "解説",
+      "paper.abstract": "アブストラクト",
       "paper.links": "リンク",
       "paper.journal": "ジャーナル",
       "paper.back": "研究ページに戻る",
@@ -544,7 +544,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const displayJournal = getPaperDisplayJournal(paper);
     const paperUrl = `${siteBaseUrl}paper.html?id=${encodeURIComponent(id)}`;
     const description = stripTex(
-      `${cleanTitle} by ${paper.authors}. ${displayJournal ? `${displayJournal}. ` : ""}Commentary, preprint links, and journal links.`
+      `${cleanTitle} by ${paper.authors}. ${displayJournal ? `${displayJournal}. ` : ""}Abstract, preprint links, and journal links.`
     );
     const shortDescription = description.length > 220 ? `${description.slice(0, 217)}...` : description;
 
@@ -631,10 +631,10 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const getPaperOverview = (paper, language) =>
-    paper?.commentary?.[language] ||
-    paper?.commentary?.en ||
     paper?.abstract?.[language] ||
     paper?.abstract?.en ||
+    paper?.commentary?.[language] ||
+    paper?.commentary?.en ||
     "";
 
   const renderPaperOverview = (element, text) => {
