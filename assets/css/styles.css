@@ -1311,6 +1311,14 @@ h3 {
   color: var(--muted);
 }
 
+.paper-commentary p {
+  line-height: 1.82;
+}
+
+.paper-commentary p + p {
+  margin-top: 16px;
+}
+
 .paper-links {
   margin: 0;
   padding-left: 1.35rem;

@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "research.proceedings": "Proceedings (Without Peer Review)",
       "research.talks": "Talks",
       "paper.eyebrow": "Paper Details",
-      "paper.abstract": "Abstract",
+      "paper.abstract": "Commentary",
       "paper.links": "Links",
       "paper.journal": "Journal",
       "paper.back": "Back to Research",
@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "research.proceedings": "プロシーディングス",
       "research.talks": "講演",
       "paper.eyebrow": "論文詳細",
-      "paper.abstract": "アブストラクト",
+      "paper.abstract": "解説",
       "paper.links": "リンク",
       "paper.journal": "ジャーナル",
       "paper.back": "研究ページに戻る",
@@ -544,7 +544,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const displayJournal = getPaperDisplayJournal(paper);
     const paperUrl = `${siteBaseUrl}paper.html?id=${encodeURIComponent(id)}`;
     const description = stripTex(
-      `${cleanTitle} by ${paper.authors}. ${displayJournal ? `${displayJournal}. ` : ""}Abstract, preprint links, and journal links.`
+      `${cleanTitle} by ${paper.authors}. ${displayJournal ? `${displayJournal}. ` : ""}Commentary, preprint links, and journal links.`
     );
     const shortDescription = description.length > 220 ? `${description.slice(0, 217)}...` : description;
 
@@ -578,7 +578,7 @@ document.addEventListener("DOMContentLoaded", () => {
       url: paperUrl,
       image: siteImageUrl,
       inLanguage: ["en", "ja"],
-      abstract: stripTex(paper.abstract?.en || "").slice(0, 5000),
+      abstract: stripTex(getPaperOverview(paper, "en")).slice(0, 5000),
       sameAs
     };
     const journalName = getJournalName(paper.journal);
@@ -630,6 +630,27 @@ document.addEventListener("DOMContentLoaded", () => {
     setVisible(element, true);
   };
 
+  const getPaperOverview = (paper, language) =>
+    paper?.commentary?.[language] ||
+    paper?.commentary?.en ||
+    paper?.abstract?.[language] ||
+    paper?.abstract?.en ||
+    "";
+
+  const renderPaperOverview = (element, text) => {
+    if (!element) return;
+    element.textContent = "";
+    const paragraphs = String(text || "")
+      .split(/\n{2,}/)
+      .map((paragraph) => paragraph.trim())
+      .filter(Boolean);
+    paragraphs.forEach((paragraph) => {
+      const paragraphElement = document.createElement("p");
+      paragraphElement.textContent = paragraph;
+      element.appendChild(paragraphElement);
+    });
+  };
+
   function renderPaperDetail(language) {
     const detail = document.querySelector("[data-paper-detail]");
     if (!detail || !window.PAPERS) return;
@@ -662,7 +683,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (authorsElement) authorsElement.textContent = paper.authors;
     updatePaperSeo(paper, id);
     setJournalMeta(journalMetaElement, getPaperDisplayJournal(paper), paper.publicationDate, language);
-    if (abstractElement) abstractElement.textContent = paper.abstract[language] || paper.abstract.en;
+    renderPaperOverview(abstractElement, getPaperOverview(paper, language));
 
     if (paper.preprintUrl) {
       setVisible(preprintRow, true);
