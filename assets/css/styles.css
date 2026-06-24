@@ -1196,6 +1196,11 @@ h3 {
   font-weight: 760;
 }
 
+.paper-preprint-id {
+  color: var(--journal-green);
+  font-weight: 760;
+}
+
 .paper-year-inline {
   color: var(--muted);
   font-size: 0.94rem;
@@ -1277,6 +1282,10 @@ h3 {
 
 .paper-title-block .paper-detail-journal-name {
   color: var(--journal-green);
+  font-weight: 840;
+}
+
+.paper-title-block .paper-preprint-id {
   font-weight: 840;
 }
 

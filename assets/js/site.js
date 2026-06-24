@@ -345,6 +345,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  function appendPreprintIdentifier(parent, identifier) {
+    if (!identifier) return;
+    parent.append(", ");
+    const identifierElement = document.createElement("span");
+    identifierElement.className = "paper-preprint-id";
+    identifierElement.textContent = identifier;
+    parent.appendChild(identifierElement);
+  }
+
   const getPreprintIdentifier = (paper) => {
     if (!paper || !paper.preprintUrl) return "";
     const url = paper.preprintUrl;
@@ -413,7 +422,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const metaLine = document.createElement("span");
         metaLine.className = "paper-year-line";
         metaLine.appendChild(createSubmittedLabel());
-        if (venueText) metaLine.append(`, ${venueText}`);
+        appendPreprintIdentifier(metaLine, venueText);
         item.appendChild(metaLine);
       } else if (venueText) {
         const venueLine = document.createElement("span");
@@ -643,7 +652,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const submittedLine = document.createElement("span");
       submittedLine.className = "paper-detail-journal-year";
       submittedLine.appendChild(createSubmittedLabel(language));
-      if (submittedMeta.detail) submittedLine.append(`, ${submittedMeta.detail}`);
+      appendPreprintIdentifier(submittedLine, submittedMeta.detail);
       element.appendChild(submittedLine);
       setVisible(element, true);
       return;
