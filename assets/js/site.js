@@ -243,6 +243,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     localStorage.setItem("site-language", language);
     renderPaperDetail(language);
+    applySubmittedLabels(language);
     updateViewModeButton(language);
   };
 
@@ -319,6 +320,31 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   };
 
+  function parseSubmittedMeta(value) {
+    const match = String(value || "")
+      .trim()
+      .replace(/[.\s]+$/, "")
+      .match(/^submitted(?:,\s*(.+))?$/i);
+    return match ? { detail: match[1] || "" } : null;
+  }
+
+  function getSubmittedLabel(language = document.documentElement.lang) {
+    return language === "ja" ? "投稿中" : "submitted";
+  }
+
+  function createSubmittedLabel(language = document.documentElement.lang) {
+    const element = document.createElement("span");
+    element.dataset.submittedLabel = "true";
+    element.textContent = getSubmittedLabel(language);
+    return element;
+  }
+
+  function applySubmittedLabels(language = document.documentElement.lang) {
+    document.querySelectorAll("[data-submitted-label]").forEach((element) => {
+      element.textContent = getSubmittedLabel(language);
+    });
+  }
+
   const getPreprintIdentifier = (paper) => {
     if (!paper || !paper.preprintUrl) return "";
     const url = paper.preprintUrl;
@@ -360,8 +386,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const authors = cleanLine(fullText.slice(0, titleIndex));
       const afterTitle = fullText.slice(titleIndex + titleText.length);
       const { venue, year, suffix } = splitVenueAndYear(afterTitle);
+      const isSubmittedPreprint = isPreprintSection && parseSubmittedMeta(venue);
       const venueText =
-        preprintIdentifier && !venue.toLowerCase().includes(preprintIdentifier.toLowerCase())
+        isSubmittedPreprint
+          ? preprintIdentifier
+          : preprintIdentifier && !venue.toLowerCase().includes(preprintIdentifier.toLowerCase())
           ? cleanLine(`${venue}, ${preprintIdentifier}`)
           : venue;
       const existingLink = titleElement.closest("a");
@@ -380,7 +409,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
       item.replaceChildren(authorsLine, titleLine);
 
-      if (venueText) {
+      if (isSubmittedPreprint) {
+        const metaLine = document.createElement("span");
+        metaLine.className = "paper-year-line";
+        metaLine.appendChild(createSubmittedLabel());
+        if (venueText) metaLine.append(`, ${venueText}`);
+        item.appendChild(metaLine);
+      } else if (venueText) {
         const venueLine = document.createElement("span");
         venueLine.className = "paper-venue-line";
         venueLine.textContent = venueText;
@@ -536,6 +571,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const getJournalName = (journal) => {
     if (!journal) return "";
+    if (parseSubmittedMeta(journal)) return "";
     return splitVenueAndYear(journal).venue || journal.replace(/\s*\([0-9]{4}\)\s*$/, "").trim();
   };
 
@@ -599,6 +635,17 @@ document.addEventListener("DOMContentLoaded", () => {
     element.textContent = "";
     if (!journal) {
       setVisible(element, false);
+      return;
+    }
+
+    const submittedMeta = parseSubmittedMeta(journal);
+    if (submittedMeta) {
+      const submittedLine = document.createElement("span");
+      submittedLine.className = "paper-detail-journal-year";
+      submittedLine.appendChild(createSubmittedLabel(language));
+      if (submittedMeta.detail) submittedLine.append(`, ${submittedMeta.detail}`);
+      element.appendChild(submittedLine);
+      setVisible(element, true);
       return;
     }
 
