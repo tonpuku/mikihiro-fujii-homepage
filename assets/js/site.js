@@ -536,7 +536,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const getJournalName = (journal) => {
     if (!journal) return "";
-    return journal.replace(/\s*\([0-9]{4}\)\s*$/, "").trim();
+    return splitVenueAndYear(journal).venue || journal.replace(/\s*\([0-9]{4}\)\s*$/, "").trim();
   };
 
   const updatePaperSeo = (paper, id) => {
@@ -602,8 +602,8 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    const yearMatch = journal.match(/\s*(\([0-9]{4}\))\s*$/);
-    const name = yearMatch ? journal.slice(0, yearMatch.index).trim() : journal;
+    const { venue, year, suffix } = splitVenueAndYear(journal);
+    const name = venue || journal;
     const nameElement = document.createElement("span");
     nameElement.className = "paper-detail-journal-name";
     nameElement.textContent = name;
@@ -611,11 +611,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const publicationDateText = getPublicationDateDisplayText(publicationDate, language);
 
-    if (yearMatch && !publicationDateText) {
+    if ((year || suffix) && !publicationDateText) {
       element.append(" ");
       const yearElement = document.createElement("span");
       yearElement.className = "paper-detail-journal-year";
-      yearElement.textContent = yearMatch[1];
+      yearElement.textContent = year ? `(${year})${suffix ? `, ${suffix}` : ""}` : `, ${suffix}`;
       element.appendChild(yearElement);
     }
 

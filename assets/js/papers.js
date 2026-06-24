@@ -87,7 +87,7 @@ window.PAPERS = [
     "preprintUrl": "https://hal.science/hal-04973317v1",
     "preprintLabel": "HAL",
     "journalUrl": "",
-    "journal": "Submitted",
+    "journal": "Journal of Evolution Equations, to appear",
     "abstract": {
       "en": "The original abstract is available from the arXiv, HAL, or journal link below.",
       "ja": "元のアブストラクトは下記の arXiv・HAL・ジャーナルリンクから確認できます。"
