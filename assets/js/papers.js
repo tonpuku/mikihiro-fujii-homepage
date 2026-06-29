@@ -167,7 +167,7 @@ window.PAPERS = [
     "preprintUrl": "https://arxiv.org/abs/2312.10878",
     "preprintLabel": "arXiv",
     "journalUrl": "https://doi.org/10.4171/aihpc/170",
-    "journal": "Annales de l'Institut Henri Poincare, Analyse Non Lineaire (2025)",
+    "journal": "Annales de l'Institut Henri Poincare C, Analyse Non Lineaire (2025)",
     "abstract": {
       "en": "The original abstract is available from the arXiv, HAL, or journal link below.",
       "ja": "元のアブストラクトは下記の arXiv・HAL・ジャーナルリンクから確認できます。"
