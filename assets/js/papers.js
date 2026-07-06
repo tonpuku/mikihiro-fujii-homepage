@@ -7,8 +7,8 @@ window.PAPERS = [
     "journal": "Submitted",
     "newUntil": "2026-08-06",
     "overviewLabel": {
-      "en": "Overview of this paper",
-      "ja": "この論文の概要"
+      "en": "Overview of this project",
+      "ja": "本研究の概要"
     },
     "abstract": {
       "en": String.raw`The purpose of this paper is to investigate the three-dimensional incompressible Navier--Stokes equations with the Coriolis force associated with rotation around the vertical axis with angular speed
