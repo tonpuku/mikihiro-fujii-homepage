@@ -939,16 +939,17 @@ h3 {
 }
 
 .home-news-section {
-  padding-top: 24px;
-  padding-bottom: 86px;
+  margin-top: 18px;
+  padding: 0 0 22px;
 }
 
 .home-news-header {
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 }
 
 .home-news-header h2 {
   color: var(--ink);
+  font-size: clamp(1.18rem, 2.1vw, 1.48rem);
 }
 
 .news-groups {
@@ -959,7 +960,7 @@ h3 {
 
 .news-group {
   min-width: 0;
-  padding: 22px;
+  padding: 18px;
   border: 1px solid rgba(220, 236, 241, 0.9);
   border-radius: var(--radius);
   background: rgba(255, 255, 255, 0.76);
