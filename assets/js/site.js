@@ -399,6 +399,25 @@ document.addEventListener("DOMContentLoaded", () => {
     return true;
   };
 
+  const appendNewsText = (element, item, language) => {
+    const text = String(getLocalizedValue(item.text, language));
+    const linkText = String(getLocalizedValue(item.linkText, language));
+    const linkIndex = linkText ? text.indexOf(linkText) : -1;
+
+    if (!item.href || linkIndex < 0) {
+      element.textContent = text;
+      return;
+    }
+
+    element.append(text.slice(0, linkIndex));
+    const link = document.createElement("a");
+    link.className = "news-link";
+    link.href = item.href;
+    link.textContent = linkText;
+    element.appendChild(link);
+    element.append(text.slice(linkIndex + linkText.length));
+  };
+
   const renderNews = (language = document.documentElement.lang) => {
     const groupsElement = document.querySelector("[data-news-groups]");
     if (!groupsElement) return;
@@ -435,10 +454,9 @@ document.addEventListener("DOMContentLoaded", () => {
           date.dateTime = item.date || "";
           date.textContent = formatNewsDate(item.date, language);
 
-          const message = document.createElement(item.href ? "a" : "span");
+          const message = document.createElement("span");
           message.className = "news-text";
-          if (item.href) message.href = item.href;
-          message.textContent = getLocalizedValue(item.text, language);
+          appendNewsText(message, item, language);
 
           newsItem.append(date, message);
           list.appendChild(newsItem);

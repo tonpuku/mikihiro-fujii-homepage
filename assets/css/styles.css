@@ -999,8 +999,13 @@ h3 {
   overflow-wrap: anywhere;
 }
 
-a.news-text:hover {
+.news-link {
   color: var(--teal);
+  font-weight: 780;
+}
+
+.news-link:hover {
+  color: var(--copper-dark);
 }
 
 .news-empty {
