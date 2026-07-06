@@ -693,6 +693,11 @@ document.addEventListener("DOMContentLoaded", () => {
     paper?.commentary?.en ||
     "";
 
+  const getPaperOverviewLabel = (paper, language, dictionary) =>
+    paper?.overviewLabel?.[language] ||
+    paper?.overviewLabel?.en ||
+    dictionary["paper.abstract"];
+
   const renderPaperOverview = (element, text) => {
     if (!element) return;
     element.textContent = "";
@@ -717,6 +722,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const titleElement = document.querySelector("[data-paper-title]");
     const authorsElement = document.querySelector("[data-paper-authors]");
     const journalMetaElement = document.querySelector("[data-paper-journal-meta]");
+    const overviewHeadingElement = document.querySelector("[data-paper-overview-heading]");
     const abstractElement = document.querySelector("[data-paper-abstract]");
     const preprintRow = document.querySelector("[data-paper-preprint-row]");
     const preprintLabel = document.querySelector("[data-paper-preprint-label]");
@@ -729,6 +735,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (titleElement) titleElement.textContent = dictionary["paper.notFound"];
       if (authorsElement) authorsElement.textContent = "";
       setJournalMeta(journalMetaElement, "");
+      if (overviewHeadingElement) overviewHeadingElement.textContent = dictionary["paper.abstract"];
       if (abstractElement) abstractElement.textContent = "";
       setVisible(preprintRow, false);
       setVisible(journalRow, false);
@@ -739,6 +746,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (authorsElement) authorsElement.textContent = paper.authors;
     updatePaperSeo(paper, id);
     setJournalMeta(journalMetaElement, getPaperDisplayJournal(paper), paper.publicationDate, language);
+    if (overviewHeadingElement) {
+      overviewHeadingElement.textContent = getPaperOverviewLabel(paper, language, dictionary);
+    }
     renderPaperOverview(abstractElement, getPaperOverview(paper, language));
 
     if (paper.preprintUrl) {
