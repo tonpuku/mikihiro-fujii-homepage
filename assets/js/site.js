@@ -354,6 +354,27 @@ document.addEventListener("DOMContentLoaded", () => {
     parent.appendChild(identifierElement);
   }
 
+  const getLocalDateKey = (date = new Date()) => {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const day = String(date.getDate()).padStart(2, "0");
+    return `${year}-${month}-${day}`;
+  };
+
+  const isNewPeriodActive = (newUntil) => {
+    const until = String(newUntil || "").trim();
+    return /^\d{4}-\d{2}-\d{2}$/.test(until) && getLocalDateKey() <= until;
+  };
+
+  const appendNewBadge = (parent, newUntil) => {
+    if (!isNewPeriodActive(newUntil)) return;
+    const badge = document.createElement("span");
+    badge.className = "paper-new-badge";
+    badge.textContent = "NEW!!";
+    badge.setAttribute("aria-label", "New");
+    parent.appendChild(badge);
+  };
+
   const getPreprintIdentifier = (paper) => {
     if (!paper || !paper.preprintUrl) return "";
     const url = paper.preprintUrl;
@@ -412,11 +433,16 @@ document.addEventListener("DOMContentLoaded", () => {
       titleEm.textContent = titleText;
       titleLine.appendChild(titleEm);
 
+      const titleRow = document.createElement("span");
+      titleRow.className = "paper-title-row";
+      titleRow.appendChild(titleLine);
+      appendNewBadge(titleRow, paper?.newUntil || item.dataset.newUntil);
+
       const authorsLine = document.createElement("span");
       authorsLine.className = "paper-authors-line";
       authorsLine.textContent = authors;
 
-      item.replaceChildren(authorsLine, titleLine);
+      item.replaceChildren(authorsLine, titleRow);
 
       if (isSubmittedPreprint) {
         const metaLine = document.createElement("span");

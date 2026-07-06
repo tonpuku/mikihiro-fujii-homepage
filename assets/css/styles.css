@@ -1175,6 +1175,14 @@ h3 {
   display: block;
 }
 
+.paper-title-row {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  column-gap: 0.55rem;
+  row-gap: 0.18rem;
+}
+
 .paper-authors-line {
   color: var(--muted);
   font-size: 0.95rem;
@@ -1187,8 +1195,27 @@ h3 {
   overflow-wrap: anywhere;
 }
 
+.paper-title-row .paper-title-line {
+  display: inline;
+  min-width: 0;
+}
+
 .paper-title-line:hover {
   color: var(--teal);
+}
+
+.paper-new-badge {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  padding: 0.05em 0.48em;
+  border: 1px solid rgba(191, 74, 84, 0.32);
+  border-radius: 999px;
+  background: rgba(191, 74, 84, 0.08);
+  color: #bf4a54;
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1.35;
 }
 
 .paper-venue-line {
