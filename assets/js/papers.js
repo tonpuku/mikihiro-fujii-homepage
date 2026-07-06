@@ -3,8 +3,6 @@ window.PAPERS = [
     "id": "sharp-decay-rotating-navier-stokes",
     "title": "Sharp decay estimates for global solutions to the incompressible rotating Navier-Stokes equations",
     "authors": "Mikihiro Fujii, Yang Li, Jiang Xu",
-    "preprintUrl": "assets/papers/sharp-decay-rates-rotating-navier-stokes.pdf",
-    "preprintLabel": "PDF",
     "journalUrl": "",
     "journal": "Submitted",
     "newUntil": "2026-08-06",
