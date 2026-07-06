@@ -15,8 +15,8 @@ window.NEWS = [
   },
   {
     category: "papers",
-    date: "2026-07-06",
-    expires: "2026-08-06",
+    date: "2026-06-24",
+    expires: "2026-07-24",
     href: "paper.html?id=fast-rotation-limit-incompressible-navier-stokes",
     linkText: {
       en: "single-authored paper",
