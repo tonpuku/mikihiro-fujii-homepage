@@ -28,6 +28,11 @@ document.addEventListener("DOMContentLoaded", () => {
       "home.tag.hall": "Hall-MHD system",
       "home.tag.boussinesq": "Boussinesq equations",
       "home.tag.compressible": "Compressible flows",
+      "home.news.title": "News",
+      "home.news.papers": "Paper News",
+      "home.news.talks": "Talks",
+      "home.news.other": "Other",
+      "home.news.empty": "No current items.",
       "cv.eyebrow": "Curriculum Vitae",
       "cv.title": "CV",
       "cv.employment": "Employment",
@@ -100,6 +105,11 @@ document.addEventListener("DOMContentLoaded", () => {
       "home.tag.hall": "Hall-MHD 系",
       "home.tag.boussinesq": "Boussinesq 方程式",
       "home.tag.compressible": "圧縮性流体",
+      "home.news.title": "ニュース",
+      "home.news.papers": "論文情報",
+      "home.news.talks": "講演情報",
+      "home.news.other": "その他",
+      "home.news.empty": "現在掲載する情報はありません．",
       "cv.eyebrow": "履歴",
       "cv.title": "略歴",
       "cv.employment": "職歴",
@@ -242,6 +252,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     localStorage.setItem("site-language", language);
+    renderNews(language);
     renderPaperDetail(language);
     applySubmittedLabels(language);
     updateViewModeButton(language);
@@ -359,6 +370,84 @@ document.addEventListener("DOMContentLoaded", () => {
     const month = String(date.getMonth() + 1).padStart(2, "0");
     const day = String(date.getDate()).padStart(2, "0");
     return `${year}-${month}-${day}`;
+  };
+
+  const getLocalizedValue = (value, language) => {
+    if (value && typeof value === "object") {
+      return value[language] || value.en || value.ja || "";
+    }
+    return value || "";
+  };
+
+  const formatNewsDate = (date, language) => {
+    const match = String(date || "").match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    if (!match) return date || "";
+    const [, year, month, day] = match;
+    if (language === "ja") {
+      return `${Number(year)}年${Number(month)}月${Number(day)}日`;
+    }
+    const monthName = new Intl.DateTimeFormat("en", { month: "long" }).format(
+      new Date(Number(year), Number(month) - 1, Number(day))
+    );
+    return `${monthName} ${Number(day)}, ${year}`;
+  };
+
+  const isNewsItemActive = (item) => {
+    const today = getLocalDateKey();
+    if (item?.category === "talks" && item.eventDate && item.eventDate < today) return false;
+    if (item?.expires && item.expires < today) return false;
+    return true;
+  };
+
+  const renderNews = (language = document.documentElement.lang) => {
+    const groupsElement = document.querySelector("[data-news-groups]");
+    if (!groupsElement) return;
+
+    const dictionary = translations[language] || translations.en;
+    const categories = ["papers", "talks", "other"];
+    const newsItems = Array.isArray(window.NEWS) ? window.NEWS : [];
+    groupsElement.textContent = "";
+
+    categories.forEach((category) => {
+      const groupElement = document.createElement("section");
+      groupElement.className = "news-group";
+
+      const heading = document.createElement("h3");
+      heading.textContent = dictionary[`home.news.${category}`];
+      groupElement.appendChild(heading);
+
+      const list = document.createElement("ul");
+      list.className = "news-list";
+      const activeItems = newsItems
+        .filter((item) => item.category === category && isNewsItemActive(item))
+        .sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")));
+
+      if (!activeItems.length) {
+        const emptyItem = document.createElement("li");
+        emptyItem.className = "news-empty";
+        emptyItem.textContent = dictionary["home.news.empty"];
+        list.appendChild(emptyItem);
+      } else {
+        activeItems.forEach((item) => {
+          const newsItem = document.createElement("li");
+          const date = document.createElement("time");
+          date.className = "news-date";
+          date.dateTime = item.date || "";
+          date.textContent = formatNewsDate(item.date, language);
+
+          const message = document.createElement(item.href ? "a" : "span");
+          message.className = "news-text";
+          if (item.href) message.href = item.href;
+          message.textContent = getLocalizedValue(item.text, language);
+
+          newsItem.append(date, message);
+          list.appendChild(newsItem);
+        });
+      }
+
+      groupElement.appendChild(list);
+      groupsElement.appendChild(groupElement);
+    });
   };
 
   const isNewPeriodActive = (newUntil) => {
