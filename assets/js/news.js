@@ -19,11 +19,11 @@ window.NEWS = [
     expires: "2026-07-24",
     href: "paper.html?id=fast-rotation-limit-incompressible-navier-stokes",
     linkText: {
-      en: "single-authored paper",
+      en: "paper",
       ja: "単著論文"
     },
     text: {
-      en: "A single-authored paper has been accepted for publication in Journal of Evolution Equations.",
+      en: "A paper has been accepted for publication in Journal of Evolution Equations.",
       ja: "単著論文がJournal of Evolution Equationsから掲載受理されました．"
     }
   }
