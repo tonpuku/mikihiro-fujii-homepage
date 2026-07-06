@@ -1,8 +1,9 @@
+// Paper news items should remain visible for three months from their date.
 window.NEWS = [
   {
     category: "papers",
     date: "2026-07-06",
-    expires: "2026-08-06",
+    expires: "2026-10-06",
     href: "paper.html?id=sharp-decay-rotating-navier-stokes",
     linkText: {
       en: "joint paper",
@@ -16,7 +17,7 @@ window.NEWS = [
   {
     category: "papers",
     date: "2026-06-24",
-    expires: "2026-07-24",
+    expires: "2026-09-24",
     href: "paper.html?id=fast-rotation-limit-incompressible-navier-stokes",
     linkText: {
       en: "paper",
