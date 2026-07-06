@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "home.tag.boussinesq": "Boussinesq equations",
       "home.tag.compressible": "Compressible flows",
       "home.news.title": "NEWS",
-      "home.news.papers": "Paper",
+      "home.news.papers": "Papers",
       "home.news.talks": "Talks",
       "home.news.other": "Other",
       "home.news.empty": "No current items.",
