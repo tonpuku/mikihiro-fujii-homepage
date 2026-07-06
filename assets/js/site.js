@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "research.journals": "査読付き学術論文",
       "research.proceedingsPeer": "査読付きプロシーディングス",
       "research.proceedings": "プロシーディングス",
-      "research.talks": "講演",
+      "research.talks": "講演履歴",
       "paper.eyebrow": "論文詳細",
       "paper.abstract": "アブストラクト",
       "paper.links": "リンク",
