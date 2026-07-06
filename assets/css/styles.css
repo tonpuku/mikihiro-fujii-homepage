@@ -235,6 +235,14 @@ a:hover {
   display: none;
 }
 
+.home-page > .home-formula-bg .formula-field {
+  bottom: 5%;
+}
+
+.home-page + .site-footer {
+  margin-top: 0;
+}
+
 .page-formula-bg {
   position: fixed;
   inset: 72px 0 0;
