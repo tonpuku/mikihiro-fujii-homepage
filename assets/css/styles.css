@@ -1209,6 +1209,17 @@ h3 {
   font-size: clamp(1.35rem, 2.4vw, 1.85rem);
 }
 
+.talk-section h3 {
+  margin: 24px 0 12px;
+  color: var(--journal-green);
+  font-size: 1.22rem;
+  font-weight: 760;
+}
+
+.talk-section h2 + h3 {
+  margin-top: 4px;
+}
+
 .course-list,
 .link-list {
   margin: 0;
