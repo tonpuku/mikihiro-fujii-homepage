@@ -368,6 +368,26 @@ document.addEventListener("DOMContentLoaded", () => {
     return element;
   }
 
+  const journalPaperReferenceLinks = {
+    "17": "paper.html?id=rotating-navier-stokes-critical-fourier-besov"
+  };
+
+  const linkJournalPaperReferences = (element) => {
+    if (!element) return;
+    const text = element.textContent || "";
+    const match = text.match(/Journal Paper (\d+)/);
+    if (!match || !journalPaperReferenceLinks[match[1]]) return;
+
+    element.textContent = "";
+    element.append(text.slice(0, match.index));
+    element.append("Journal Paper ");
+    const link = document.createElement("a");
+    link.href = journalPaperReferenceLinks[match[1]];
+    link.textContent = match[1];
+    element.appendChild(link);
+    element.append(text.slice(match.index + match[0].length));
+  };
+
   function applySubmittedLabels(language = document.documentElement.lang) {
     document.querySelectorAll("[data-submitted-label]").forEach((element) => {
       element.textContent = getSubmittedLabel(language);
@@ -579,6 +599,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const venueLine = document.createElement("span");
         venueLine.className = "paper-venue-line";
         venueLine.textContent = venueText;
+        linkJournalPaperReferences(venueLine);
         if (year || suffix) {
           const yearElement = document.createElement("span");
           yearElement.className = "paper-year-inline";
@@ -588,6 +609,7 @@ document.addEventListener("DOMContentLoaded", () => {
           } else {
             yearElement.textContent = `, ${suffix}`;
           }
+          linkJournalPaperReferences(yearElement);
           venueLine.appendChild(yearElement);
         }
         item.appendChild(venueLine);
