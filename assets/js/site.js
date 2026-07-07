@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const current = window.location.pathname.split("/").pop() || "index.html";
   const siteBaseUrl = "https://tonpuku.github.io/mikihiro-fujii-homepage/";
-  const siteImageUrl = `${siteBaseUrl}assets/img/mikihiro-fujii-portrait.jpg`;
+  const siteImageUrl = `${siteBaseUrl}assets/img/site-logo-512.png`;
   const translations = {
     en: {
       "common.nav.home": "Home",
