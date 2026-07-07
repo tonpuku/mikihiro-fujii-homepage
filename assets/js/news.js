@@ -2,20 +2,6 @@
 window.NEWS = [
   {
     category: "papers",
-    date: "2026-07-07",
-    expires: "2026-10-07",
-    href: "paper.html?id=global-solutions-navier-stokes-large-vertical-velocities",
-    linkText: {
-      en: "paper",
-      ja: "単著論文"
-    },
-    text: {
-      en: "A paper has been submitted.",
-      ja: "単著論文を投稿しました．"
-    }
-  },
-  {
-    category: "papers",
     date: "2026-07-06",
     expires: "2026-10-06",
     href: "paper.html?id=sharp-decay-rotating-navier-stokes",
