@@ -543,6 +543,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const getPaperDetailJournal = (paper) => paper?.detailJournal || getPaperDisplayJournal(paper);
 
+  const getPaperDetailJournalText = (journal, publicationDate, language = document.documentElement.lang) => {
+    if (!journal) return "";
+    const submittedMeta = parseSubmittedMeta(journal);
+    if (submittedMeta) {
+      return submittedMeta.detail ? `${getSubmittedLabel(language)}, ${submittedMeta.detail}` : getSubmittedLabel(language);
+    }
+
+    const { venue, year, suffix } = splitVenueAndYear(journal);
+    const name = venue || journal;
+    const publicationDateText = getPublicationDateDisplayText(publicationDate, language);
+    if (publicationDateText) {
+      return suffix ? `${name}, ${suffix}` : name;
+    }
+    if (year) return `${name} (${year})${suffix ? `, ${suffix}` : ""}`;
+    if (suffix) return `${name}, ${suffix}`;
+    return name;
+  };
+
   const formatPaperLists = () => {
     const paperMap = getPaperMap();
     document.querySelectorAll(".paper-list li").forEach((item) => {
@@ -844,11 +862,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const publicationDateText = getPublicationDateDisplayText(publicationDate, language);
 
     if (year || suffix) {
-      element.append(" ");
-      const yearElement = document.createElement("span");
-      yearElement.className = "paper-detail-journal-year";
-      yearElement.textContent = year ? `(${year})${suffix ? `, ${suffix}` : ""}` : `, ${suffix}`;
-      element.appendChild(yearElement);
+      const yearText = publicationDateText
+        ? suffix
+          ? `, ${suffix}`
+          : ""
+        : year
+        ? `(${year})${suffix ? `, ${suffix}` : ""}`
+        : `, ${suffix}`;
+      if (yearText) {
+        const yearElement = document.createElement("span");
+        yearElement.className = "paper-detail-journal-year";
+        element.append(yearText.startsWith(",") ? "" : " ");
+        yearElement.textContent = yearText;
+        element.appendChild(yearElement);
+      }
     }
 
     if (publicationDateText) {
@@ -942,7 +969,8 @@ document.addEventListener("DOMContentLoaded", () => {
       setVisible(journalRow, true);
       if (journalLink) {
         journalLink.href = paper.journalUrl;
-        journalLink.textContent = getPaperDetailJournal(paper) || paper.journalUrl;
+        journalLink.textContent =
+          getPaperDetailJournalText(getPaperDetailJournal(paper), paper.publicationDate, language) || paper.journalUrl;
       }
     } else {
       setVisible(journalRow, false);
