@@ -543,6 +543,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const getPaperDetailJournal = (paper) => paper?.detailJournal || getPaperDisplayJournal(paper);
 
+  const splitDetailJournalNameAndVolume = (value) => {
+    const cleaned = cleanLine(value);
+    const match = cleaned.match(/^(.+?)\s+([0-9][0-9A-Za-z.-]*)$/);
+    if (!match) return { name: cleaned, volume: "" };
+    return {
+      name: cleanLine(match[1]),
+      volume: cleanLine(match[2])
+    };
+  };
+
   const getPaperDetailJournalText = (journal, publicationDate, language = document.documentElement.lang) => {
     if (!journal) return "";
     const submittedMeta = parseSubmittedMeta(journal);
@@ -551,10 +561,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const { venue, year, suffix } = splitVenueAndYear(journal);
-    const name = venue || journal;
     const publicationDateText = getPublicationDateDisplayText(publicationDate, language);
+    const { name, volume } = publicationDateText
+      ? splitDetailJournalNameAndVolume(venue || journal)
+      : { name: venue || journal, volume: "" };
     if (publicationDateText) {
-      return suffix ? `${name}, ${suffix}` : name;
+      const detail = [volume, suffix].filter(Boolean).join(", ");
+      return detail ? `${name} ${detail}` : name;
     }
     if (year) return `${name} (${year})${suffix ? `, ${suffix}` : ""}`;
     if (suffix) return `${name}, ${suffix}`;
@@ -853,19 +866,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const { venue, year, suffix } = splitVenueAndYear(journal);
-    const name = venue || journal;
+    const publicationDateText = getPublicationDateDisplayText(publicationDate, language);
+    const { name, volume } = publicationDateText
+      ? splitDetailJournalNameAndVolume(venue || journal)
+      : { name: venue || journal, volume: "" };
     const nameElement = document.createElement("span");
     nameElement.className = "paper-detail-journal-name";
     nameElement.textContent = name;
     element.appendChild(nameElement);
 
-    const publicationDateText = getPublicationDateDisplayText(publicationDate, language);
-
     if (year || suffix) {
       const yearText = publicationDateText
-        ? suffix
-          ? `, ${suffix}`
-          : ""
+        ? [volume, suffix].filter(Boolean).join(", ")
         : year
         ? `(${year})${suffix ? `, ${suffix}` : ""}`
         : `, ${suffix}`;
