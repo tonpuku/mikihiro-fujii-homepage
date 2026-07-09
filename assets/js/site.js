@@ -541,6 +541,8 @@ document.addEventListener("DOMContentLoaded", () => {
     return paper.journal || "";
   };
 
+  const getPaperDetailJournal = (paper) => paper?.detailJournal || getPaperDisplayJournal(paper);
+
   const formatPaperLists = () => {
     const paperMap = getPaperMap();
     document.querySelectorAll(".paper-list li").forEach((item) => {
@@ -560,7 +562,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const preprintIdentifier = isPreprintSection ? getPreprintIdentifier(paper) : "";
       const authors = cleanLine(fullText.slice(0, titleIndex));
       const afterTitle = fullText.slice(titleIndex + titleText.length);
-      const { venue, year, suffix } = splitVenueAndYear(afterTitle);
+      const listJournal = paper?.journal ? getPaperDisplayJournal(paper) : afterTitle;
+      const { venue, year, suffix } = splitVenueAndYear(listJournal);
       const isSubmittedPreprint = isPreprintSection && parseSubmittedMeta(venue);
       const venueText =
         isSubmittedPreprint
@@ -759,7 +762,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const updatePaperSeo = (paper, id) => {
     const cleanTitle = stripTex(paper.listTitle || paper.title);
-    const displayJournal = getPaperDisplayJournal(paper);
+    const displayJournal = getPaperDetailJournal(paper);
     const paperUrl = `${siteBaseUrl}paper.html?id=${encodeURIComponent(id)}`;
     const description = stripTex(
       `${cleanTitle} by ${paper.authors}. ${displayJournal ? `${displayJournal}. ` : ""}Abstract, preprint links, and journal links.`
@@ -840,7 +843,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const publicationDateText = getPublicationDateDisplayText(publicationDate, language);
 
-    if ((year || suffix) && !publicationDateText) {
+    if (year || suffix) {
       element.append(" ");
       const yearElement = document.createElement("span");
       yearElement.className = "paper-detail-journal-year";
@@ -918,7 +921,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (titleElement) titleElement.textContent = paper.title;
     if (authorsElement) authorsElement.textContent = paper.authors;
     updatePaperSeo(paper, id);
-    setJournalMeta(journalMetaElement, getPaperDisplayJournal(paper), paper.publicationDate, language);
+    setJournalMeta(journalMetaElement, getPaperDetailJournal(paper), paper.publicationDate, language);
     if (overviewHeadingElement) {
       overviewHeadingElement.textContent = getPaperOverviewLabel(paper, language, dictionary);
     }
@@ -939,7 +942,7 @@ document.addEventListener("DOMContentLoaded", () => {
       setVisible(journalRow, true);
       if (journalLink) {
         journalLink.href = paper.journalUrl;
-        journalLink.textContent = paper.journal || paper.journalUrl;
+        journalLink.textContent = getPaperDetailJournal(paper) || paper.journalUrl;
       }
     } else {
       setVisible(journalRow, false);
