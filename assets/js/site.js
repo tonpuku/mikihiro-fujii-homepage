@@ -369,7 +369,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const journalPaperReferenceLinks = {
-    "17": "paper.html?id=rotating-navier-stokes-critical-fourier-besov"
+    "17": "paper.html?id=time-periodic-navier-stokes-whole-space"
   };
 
   const linkJournalPaperReferences = (element) => {
