@@ -1,6 +1,20 @@
 // Paper news items should remain visible for three months from their date.
 window.NEWS = [
   {
+    category: "talks",
+    date: "2026-08-16",
+    eventDate: "2026-09-03",
+    href: "https://www.mathsoc.jp/activity/meeting/kobe26sept/program/index.html",
+    linkText: {
+      en: "2026 MSJ Autumn Meeting",
+      ja: "2026年度秋季総合分科会"
+    },
+    text: {
+      en: "I will give a 10-minute talk titled \"臨界 Besov 空間における Navier-Stokes 方程式の解の非一意性\" at the 2026 MSJ Autumn Meeting (Kobe University).",
+      ja: "2026年度秋季総合分科会(神戸大学)にて10分「臨界 Besov 空間における Navier-Stokes 方程式の解の非一意性」という題目で講演します．"
+    }
+  },
+  {
     category: "papers",
     date: "2026-07-06",
     expires: "2026-10-06",
