@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "home.email": "メール",
       "home.research": "研究分野",
       "home.research.value": "流体力学に現れる非線形偏微分方程式の数学解析",
-      "home.research.detail": "私の研究分野は非線形偏微分方程式の数学解析であり，特にNavier-Stokes方程式などの流体力学に現れる偏微分方程式を主要な考察対象としております．研究において用いる手法は主に調和解析的手法であり，スケール臨界空間における適切性・非適切性および解の定量的な性質を漸近挙動等を通じて調べることに興味があります．",
+      "home.research.detail": "私の研究分野は非線形偏微分方程式の数学解析であり，特にNavier-Stokes方程式などの流体力学に現れる偏微分方程式を主要な考察対象としております．研究においては調和解析的手法を主に用いており，スケール臨界空間における適切性・非適切性および解の定量的な性質を漸近挙動等を通じて調べることに興味があります．",
       "home.researchAreas": "研究テーマ",
       "home.tag.navier": "Navier-Stokes 方程式",
       "home.tag.critical": "臨界空間",
