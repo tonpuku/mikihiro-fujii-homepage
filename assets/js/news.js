@@ -24,8 +24,8 @@ window.NEWS = [
       ja: "2026年度秋季総合分科会"
     },
     text: {
-      en: "On September 3, 2026, I will give a talk titled \"臨界 Besov 空間における Navier-Stokes 方程式の解の非一意性\" at the 2026 MSJ Autumn Meeting (Kobe University).",
-      ja: "2026年9月3日に2026年度秋季総合分科会(神戸大学)にて「臨界 Besov 空間における Navier-Stokes 方程式の解の非一意性」という題目で講演します．"
+      en: "On September 3, 2026, I will give a talk at the 2026 MSJ Autumn Meeting (Kobe University).",
+      ja: "2026年9月3日に2026年度秋季総合分科会(神戸大学)にて講演します．"
     }
   },
   {
