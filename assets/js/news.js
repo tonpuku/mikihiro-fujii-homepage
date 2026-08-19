@@ -1,6 +1,20 @@
 // Paper news items should remain visible for three months from their date.
 window.NEWS = [
   {
+    category: "papers",
+    date: "2026-08-18",
+    expires: "2026-11-18",
+    href: "paper.html?id=non-unique-l2-stationary-navier-stokes-whole-plane",
+    linkText: {
+      en: "A paper",
+      ja: "単著論文"
+    },
+    text: {
+      en: "A paper has been submitted.",
+      ja: "単著論文を投稿しました。"
+    }
+  },
+  {
     category: "talks",
     date: "2026-08-16",
     eventDate: "2026-09-03",
