@@ -21,6 +21,10 @@ $$
 $$
 ```
 
+## Text Style
+
+- Use a single hyphen in all public-facing text, including compound names such as `Navier-Stokes` and author-name sequences. Do not use TeX-style double hyphens such as `Navier--Stokes`.
+
 ## Local Preview
 
 From this directory:

@@ -1,8 +1,9 @@
 // Set newUntil to three months after a paper is added or moved between sections.
+// Use single hyphens in all public-facing text (for example, Navier-Stokes), never TeX-style double hyphens.
 window.PAPERS = [
   {
     "id": "non-unique-l2-stationary-navier-stokes-whole-plane",
-    "title": "Non-unique $L^2$ solutions to the stationary Navier--Stokes equations on the whole plane",
+    "title": "Non-unique $L^2$ solutions to the stationary Navier-Stokes equations on the whole plane",
     "authors": "Mikihiro Fujii",
     "preprintUrl": "https://arxiv.org/abs/2608.17456",
     "preprintLabel": "arXiv",
@@ -14,7 +15,7 @@ window.PAPERS = [
       "ja": "本研究の概要"
     },
     "abstract": {
-      "en": String.raw`In this study, we investigate the uniqueness of solutions to the stationary Navier--Stokes equations
+      "en": String.raw`In this study, we investigate the uniqueness of solutions to the stationary Navier-Stokes equations
 \[
   -\Delta u + \mathbb P (u \cdot \nabla)u = f, \qquad \operatorname{div}u = 0
 \]
@@ -22,15 +23,15 @@ where $f$ is a given divergence-free external force.
 
 When the spatial dimension is $n \geqslant 3$, solvability in critical spaces on $\mathbb R^n$ was initially established by Chen (1993, Pacific J. Math.), who proved the existence and uniqueness of a small solution $u \in L^n(\mathbb R^n)$ for a small external force $f \in \dot W^{-2,n}(\mathbb R^n)$. The two-dimensional counterpart of this theorem had long remained open.
 
-In recent years, progress has been made toward resolving this two-dimensional open problem in the negative by establishing nonuniqueness. Lemarié-Rieusset (2025, J. Funct. Anal.) constructed a nontrivial solution $u \in \dot H^{-1}(\mathbb T^2)$ on the two-dimensional torus with zero external force. This result was improved by Ashkarian--Bhargava--Gismondi--Novack (2025, preprint), who constructed nonunique solutions $u \in \dot H^{-\varepsilon}(\mathbb T^2) \cap L^{2-\varepsilon}(\mathbb T^2)$ ($\varepsilon>0$). Moreover, Cheskidov--Hou (2026, preprint) proved the nonuniqueness of solutions in $\dot B_{p,q}^{-s}(\mathbb T^2)$ ($1 \leqslant p,q \leqslant \infty$, $s<0$). All of these constructions of nonunique solutions employ convex integration, a method that has developed vigorously in recent years. Owing to the nature of the corresponding construction scheme, the resulting solutions must be highly singular, and consequently these results do not settle the uniqueness question for solutions in $L^2$. Furthermore, whereas all of these nonuniqueness results concern solutions on the torus, constructing solutions to the two-dimensional stationary Navier--Stokes equations on the whole plane $\mathbb R^2$ is known to be extremely difficult (except for analyses around certain special solutions); this difficulty comes from well-known the Stokes paradox. On the other hand, uniqueness of small solutions holds in $\dot B_{2,1}^0(\mathbb R^2)$, which is slightly smaller than $L^2(\mathbb R^2)$.
+In recent years, progress has been made toward resolving this two-dimensional open problem in the negative by establishing nonuniqueness. Lemarié-Rieusset (2025, J. Funct. Anal.) constructed a nontrivial solution $u \in \dot H^{-1}(\mathbb T^2)$ on the two-dimensional torus with zero external force. This result was improved by Ashkarian-Bhargava-Gismondi-Novack (2025, preprint), who constructed nonunique solutions $u \in \dot H^{-\varepsilon}(\mathbb T^2) \cap L^{2-\varepsilon}(\mathbb T^2)$ ($\varepsilon>0$). Moreover, Cheskidov-Hou (2026, preprint) proved the nonuniqueness of solutions in $\dot B_{p,q}^{-s}(\mathbb T^2)$ ($1 \leqslant p,q \leqslant \infty$, $s<0$). All of these constructions of nonunique solutions employ convex integration, a method that has developed vigorously in recent years. Owing to the nature of the corresponding construction scheme, the resulting solutions must be highly singular, and consequently these results do not settle the uniqueness question for solutions in $L^2$. Furthermore, whereas all of these nonuniqueness results concern solutions on the torus, constructing solutions to the two-dimensional stationary Navier-Stokes equations on the whole plane $\mathbb R^2$ is known to be extremely difficult (except for analyses around certain special solutions); this difficulty comes from well-known the Stokes paradox. On the other hand, uniqueness of small solutions holds in $\dot B_{2,1}^0(\mathbb R^2)$, which is slightly smaller than $L^2(\mathbb R^2)$.
 
-In this study, we prove that, for every $q>1$ and $\varepsilon>0$, there exists an external force $f \in \dot B_{2,q}^{-1}(\mathbb R^2)$ such that the stationary Navier--Stokes equations on $\mathbb R^2$ with this force admit at least two distinct solutions $u^+,u^- \in \dot B_{2,q}^{-1}(\mathbb R^2)$ satisfying
+In this study, we prove that, for every $q>1$ and $\varepsilon>0$, there exists an external force $f \in \dot B_{2,q}^{-1}(\mathbb R^2)$ such that the stationary Navier-Stokes equations on $\mathbb R^2$ with this force admit at least two distinct solutions $u^+,u^- \in \dot B_{2,q}^{-1}(\mathbb R^2)$ satisfying
 \[
   \| u^+ \|_{\dot B_{2,q}^0} + \| u^- \|_{\dot B_{2,q}^0} + \| f \|_{\dot B_{2,q}^{-2}} < \varepsilon.
 \]
 
 In the proof, we do not use convex integration. Instead, we combine Golovkin's classical method for the nonuniqueness of solutions to elliptic equations with a quadratic nonlinearity, with calculations that exploits the symmetries of the flow to control the inverse-cascade generated by the nonlinear term.`,
-      "ja": String.raw`本研究では定常Navier--Stokes方程式の定常問題
+      "ja": String.raw`本研究では定常Navier-Stokes方程式の定常問題
 \[
   -\Delta u + \mathbb P (u \cdot \nabla)u = f, \qquad \operatorname{div}u = 0,
 \]
@@ -38,9 +39,9 @@ In the proof, we do not use convex integration. Instead, we combine Golovkin's c
 
 空間次元が$n \geqslant 3$であるとき，$\mathbb R^n$上での臨界空間における可解性は，小さな外力$f \in \dot W^{-2,n}(\mathbb R^n)$に対する小さい解$u \in L^n(\mathbb R^n)$の一意存在性がChen (1993, Pacific J. Math.) によって知られている．この定理の2次元版は長らく未解決であった．
 
-近年，この2次元の未解決問題を一意性の観点から否定的に解決する研究が進んでおり，Lemarié-Rieusset (2025, J. Funct. Anal.) は2次元トーラス上で零外力に対する非自明解$u \in \dot H^{-1}(\mathbb T^2)$を構成した．この結果はAshkarian--Bhargava--Gismondi--Novack (2025, preprint)によって$u \in \dot H^{-\varepsilon}(\mathbb T^2) \cap L^{2-\varepsilon}(\mathbb T^2)$ ($\varepsilon>0$)へと改良された．また，Cheskidov--Hou (2026, preprint)は$\dot B_{p,q}^{-s}(\mathbb T^2)$ ($1 \leqslant p,q \leqslant \infty$, $s<0$)における解の非一意性を証明した．これらの非一意解の構成には，近年急速に発展してきたconvex integrationの手法を用いており，それに従った解の構成手順の事情により，解は非常に特異的であることが必要とされ，$L^2$に属する解の一意性には届かないものであった．また，これらの非一意性の結果はすべてトーラス上の解である一方，2次元定常Navier--Stokes方程式の全平面$\mathbb R^2$上での解を構成することは (特定の特殊解のまわりでの解析を除き) 大変困難であることがStokesのParadoxとして知られている．一方で，$L^2(\mathbb R^2)$よりわずかに狭い$\dot B_{2,1}^0(\mathbb R^2)$においては小さな解の一意性が成立する．
+近年，この2次元の未解決問題を一意性の観点から否定的に解決する研究が進んでおり，Lemarié-Rieusset (2025, J. Funct. Anal.) は2次元トーラス上で零外力に対する非自明解$u \in \dot H^{-1}(\mathbb T^2)$を構成した．この結果はAshkarian-Bhargava-Gismondi-Novack (2025, preprint)によって$u \in \dot H^{-\varepsilon}(\mathbb T^2) \cap L^{2-\varepsilon}(\mathbb T^2)$ ($\varepsilon>0$)へと改良された．また，Cheskidov-Hou (2026, preprint)は$\dot B_{p,q}^{-s}(\mathbb T^2)$ ($1 \leqslant p,q \leqslant \infty$, $s<0$)における解の非一意性を証明した．これらの非一意解の構成には，近年急速に発展してきたconvex integrationの手法を用いており，それに従った解の構成手順の事情により，解は非常に特異的であることが必要とされ，$L^2$に属する解の一意性には届かないものであった．また，これらの非一意性の結果はすべてトーラス上の解である一方，2次元定常Navier-Stokes方程式の全平面$\mathbb R^2$上での解を構成することは (特定の特殊解のまわりでの解析を除き) 大変困難であることがStokesのParadoxとして知られている．一方で，$L^2(\mathbb R^2)$よりわずかに狭い$\dot B_{2,1}^0(\mathbb R^2)$においては小さな解の一意性が成立する．
 
-本研究では，任意の$q>1$と$\varepsilon>0$に対して，ある外力$f \in \dot B_{2,q}^{-1}(\mathbb R^2)$が存在して，この外力に対する$\mathbb R^2$上の定常Navier--Stokes方程式は少なくとも2つの異なる解$u^+,u^- \in \dot B_{2,q}^{-1}(\mathbb R^2)$を持ち，
+本研究では，任意の$q>1$と$\varepsilon>0$に対して，ある外力$f \in \dot B_{2,q}^{-1}(\mathbb R^2)$が存在して，この外力に対する$\mathbb R^2$上の定常Navier-Stokes方程式は少なくとも2つの異なる解$u^+,u^- \in \dot B_{2,q}^{-1}(\mathbb R^2)$を持ち，
 \[
   \| u^+ \|_{\dot B_{2,q}^0} + \| u^- \|_{\dot B_{2,q}^0} + \| f \|_{\dot B_{2,q}^{-2}} < \varepsilon
 \]
@@ -63,12 +64,12 @@ In the proof, we do not use convex integration. Instead, we combine Golovkin's c
       "ja": "本研究の概要"
     },
     "abstract": {
-      "en": String.raw`The purpose of this paper is to investigate the three-dimensional incompressible Navier--Stokes equations with the Coriolis force associated with rotation around the vertical axis with angular speed
+      "en": String.raw`The purpose of this paper is to investigate the three-dimensional incompressible Navier-Stokes equations with the Coriolis force associated with rotation around the vertical axis with angular speed
 $\Omega \in \mathbb{R}\setminus\{0\}$, and to determine the optimal temporal decay rates of the $L^p$ norms of global-in-time solutions.
 
 The corresponding linearized equation is described by the semigroup
 $\{e^{t\Delta}e^{\pm i\Omega t D_3/|D|}\}_{t>0}$.
-Compared with the classical Navier--Stokes equations, the distinctive feature of the rotating Navier--Stokes equations is that the propagator
+Compared with the classical Navier-Stokes equations, the distinctive feature of the rotating Navier-Stokes equations is that the propagator
 $e^{\pm i\Omega t D_3/|D|}$ generated by the Coriolis force exhibits dispersive behavior.
 Consequently, it is essential to analyze the additional time decay produced by this dispersive effect.
 To this end, we consider the oscillatory integral
@@ -237,7 +238,7 @@ $-1$は多項式オーダーの意味で最適であることもわかってい�
   },
   {
     "id": "global-solutions-navier-stokes-large-vertical-velocities",
-    "title": "Global solutions to the Navier--Stokes equations with large vertical velocities in $\\dot{B}_{\\infty,\\sigma}^{-1}(\\mathbb{R}^3)$",
+    "title": "Global solutions to the Navier-Stokes equations with large vertical velocities in $\\dot{B}_{\\infty,\\sigma}^{-1}(\\mathbb{R}^3)$",
     "listTitle": "Global solutions to the Navier-Stokes equations with large vertical velocities in $\\dot{B}_{\\infty,\\sigma}^{-1}(\\mathbb{R}^3)$",
     "authors": "Mikihiro Fujii",
     "preprintUrl": "https://arxiv.org/abs/2607.04918",
@@ -245,7 +246,7 @@ $-1$は多項式オーダーの意味で最適であることもわかってい�
     "journalUrl": "",
     "journal": "Submitted",
     "abstract": {
-      "en": String.raw`In this paper, we consider the Cauchy problem for the $3$D incompressible Navier--Stokes equations and prove the existence of unique global solutions in the framework that the horizontal component of the velocity field is small in some critical Besov spaces including the classical Fujita--Kato class, while the vertical component is large in the wide class $\dot{B}_{\infty,\sigma}^{-1}(\mathbb{R}^3)$ ($1 \leq \sigma < \infty$) where the Navier--Stokes equations are known to be ill-posed in.`
+      "en": String.raw`In this paper, we consider the Cauchy problem for the $3$D incompressible Navier-Stokes equations and prove the existence of unique global solutions in the framework that the horizontal component of the velocity field is small in some critical Besov spaces including the classical Fujita-Kato class, while the vertical component is large in the wide class $\dot{B}_{\infty,\sigma}^{-1}(\mathbb{R}^3)$ ($1 \leq \sigma < \infty$) where the Navier-Stokes equations are known to be ill-posed in.`
     }
   },
   {
