@@ -47,7 +47,7 @@ In the proof, we do not use convex integration. Instead, we combine Golovkin's c
 \]
 を満たすことを証明する．
 
-証明では convex integration を用いずに，2 次の非線形項を持つ楕円形方程式の解の非一意性を論じる古典的な Golovkin の手法と，流れの対称性によって非線形項の逆カスケード流を制御する計算を組み合わせる．`
+証明では convex integration を用いずに，2 次の非線形項を持つ楕円型方程式の解の非一意性を論じる古典的な Golovkin の手法と，流れの対称性によって非線形項の逆カスケード流を制御する計算を組み合わせる．`
     }
   },
   {
