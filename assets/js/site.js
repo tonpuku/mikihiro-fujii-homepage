@@ -430,13 +430,6 @@ document.addEventListener("DOMContentLoaded", () => {
     return `${monthName} ${Number(day)}, ${year}`;
   };
 
-  const isNewsItemActive = (item) => {
-    const today = getLocalDateKey();
-    if (item?.category === "talks" && item.eventDate && item.eventDate < today) return false;
-    if (item?.expires && item.expires < today) return false;
-    return true;
-  };
-
   const appendNewsText = (element, item, language) => {
     const text = String(getLocalizedValue(item.text, language));
     const linkText = String(getLocalizedValue(item.linkText, language));
@@ -454,6 +447,26 @@ document.addEventListener("DOMContentLoaded", () => {
     link.textContent = linkText;
     element.appendChild(link);
     element.append(text.slice(linkIndex + linkText.length));
+  };
+
+  const updateNewsListViewport = (list) => {
+    const visibleItemCount = 5;
+    const items = Array.from(list.children);
+    const isScrollable = items.length > visibleItemCount;
+    list.classList.toggle("news-list-scrollable", isScrollable);
+    list.style.removeProperty("--news-list-max-height");
+    if (!isScrollable) return;
+
+    const rowGap = Number.parseFloat(getComputedStyle(list).rowGap) || 0;
+    const visibleHeight = items
+      .slice(0, visibleItemCount)
+      .reduce((height, item) => height + item.getBoundingClientRect().height, 0);
+    const gapHeight = rowGap * (visibleItemCount - 1);
+    list.style.setProperty("--news-list-max-height", `${Math.ceil(visibleHeight + gapHeight)}px`);
+  };
+
+  const updateNewsListViewports = () => {
+    document.querySelectorAll(".news-list").forEach(updateNewsListViewport);
   };
 
   const renderNews = (language = document.documentElement.lang) => {
@@ -476,22 +489,22 @@ document.addEventListener("DOMContentLoaded", () => {
       const list = document.createElement("ul");
       list.className = "news-list";
       list.classList.add(`news-list-${category}`);
-      const activeItems = newsItems
-        .filter((item) => item.category === category && isNewsItemActive(item))
+      const categoryItems = newsItems
+        .filter((item) => item.category === category)
         .sort((a, b) => {
           if (category === "talks") {
-            return String(a.eventDate || "").localeCompare(String(b.eventDate || ""));
+            return String(b.eventDate || "").localeCompare(String(a.eventDate || ""));
           }
           return String(b.date || "").localeCompare(String(a.date || ""));
         });
 
-      if (!activeItems.length) {
+      if (!categoryItems.length) {
         const emptyItem = document.createElement("li");
         emptyItem.className = "news-empty";
         emptyItem.textContent = dictionary["home.news.empty"];
         list.appendChild(emptyItem);
       } else {
-        activeItems.forEach((item) => {
+        categoryItems.forEach((item) => {
           const newsItem = document.createElement("li");
           const message = document.createElement("span");
           message.className = "news-text";
@@ -513,6 +526,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       groupElement.appendChild(list);
       groupsElement.appendChild(groupElement);
+      updateNewsListViewport(list);
     });
   };
 
@@ -1017,7 +1031,10 @@ document.addEventListener("DOMContentLoaded", () => {
     applyViewMode(currentViewMode === "desktop" ? "auto" : "desktop");
   });
   document.body.appendChild(viewModeButton);
-  window.addEventListener("resize", () => updateViewModeButton());
+  window.addEventListener("resize", () => {
+    updateViewModeButton();
+    updateNewsListViewports();
+  });
   applyViewMode(currentViewMode, { persist: false });
 
   linkResearchPapers();

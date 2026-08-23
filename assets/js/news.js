@@ -1,9 +1,8 @@
-// Paper news items should remain visible for three months from their date.
+// News items remain available as a permanent archive.
 window.NEWS = [
   {
     category: "papers",
     date: "2026-08-18",
-    expires: "2026-11-18",
     href: "paper.html?id=non-unique-l2-stationary-navier-stokes-whole-plane",
     linkText: {
       en: "A paper",
@@ -45,7 +44,6 @@ window.NEWS = [
   {
     category: "papers",
     date: "2026-07-06",
-    expires: "2026-10-06",
     href: "paper.html?id=sharp-decay-rotating-navier-stokes",
     linkText: {
       en: "joint paper",
@@ -59,7 +57,6 @@ window.NEWS = [
   {
     category: "papers",
     date: "2026-06-24",
-    expires: "2026-09-24",
     href: "paper.html?id=fast-rotation-limit-incompressible-navier-stokes",
     linkText: {
       en: "paper",

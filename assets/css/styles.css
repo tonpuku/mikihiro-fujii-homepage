@@ -1046,6 +1046,14 @@ h3 {
   gap: 10px;
 }
 
+.news-list-scrollable {
+  max-height: var(--news-list-max-height);
+  padding-right: 10px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+
 .news-talk-item {
   grid-template-columns: 0.8rem minmax(0, 1fr);
   column-gap: 3px;
