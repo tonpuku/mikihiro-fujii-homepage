@@ -1042,6 +1042,27 @@ h3 {
   gap: 4px;
 }
 
+.news-list-talks {
+  gap: 10px;
+}
+
+.news-talk-item {
+  grid-template-columns: 0.8rem minmax(0, 1fr);
+  column-gap: 3px;
+}
+
+.news-talk-item::before {
+  content: "・";
+  grid-column: 1;
+  color: var(--journal-green);
+  font-weight: 760;
+  line-height: 1.6;
+}
+
+.news-talk-item .news-text {
+  grid-column: 2;
+}
+
 .news-date {
   color: var(--muted);
   font-size: 0.86rem;

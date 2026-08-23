@@ -29,6 +29,20 @@ window.NEWS = [
     }
   },
   {
+    category: "talks",
+    date: "2026-08-23",
+    eventDate: "2026-10-09",
+    href: "https://www2.math.kyushu-u.ac.jp/FE-Seminar/",
+    linkText: {
+      en: "Kyushu Functional Equation Seminar",
+      ja: "九州関数方程式セミナー"
+    },
+    text: {
+      en: "On October 9, 2026, I will give a talk at the Kyushu Functional Equation Seminar.",
+      ja: "2026年10月9日に九州関数方程式セミナーにて講演します．"
+    }
+  },
+  {
     category: "papers",
     date: "2026-07-06",
     expires: "2026-10-06",

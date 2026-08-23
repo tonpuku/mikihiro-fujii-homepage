@@ -475,9 +475,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const list = document.createElement("ul");
       list.className = "news-list";
+      list.classList.add(`news-list-${category}`);
       const activeItems = newsItems
         .filter((item) => item.category === category && isNewsItemActive(item))
-        .sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")));
+        .sort((a, b) => {
+          if (category === "talks") {
+            return String(a.eventDate || "").localeCompare(String(b.eventDate || ""));
+          }
+          return String(b.date || "").localeCompare(String(a.date || ""));
+        });
 
       if (!activeItems.length) {
         const emptyItem = document.createElement("li");
@@ -487,16 +493,20 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         activeItems.forEach((item) => {
           const newsItem = document.createElement("li");
-          const date = document.createElement("time");
-          date.className = "news-date";
-          date.dateTime = item.date || "";
-          date.textContent = formatNewsDate(item.date, language);
-
           const message = document.createElement("span");
           message.className = "news-text";
           appendNewsText(message, item, language);
 
-          newsItem.append(date, message);
+          if (category === "talks") {
+            newsItem.className = "news-talk-item";
+            newsItem.appendChild(message);
+          } else {
+            const date = document.createElement("time");
+            date.className = "news-date";
+            date.dateTime = item.date || "";
+            date.textContent = formatNewsDate(item.date, language);
+            newsItem.append(date, message);
+          }
           list.appendChild(newsItem);
         });
       }
