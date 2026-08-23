@@ -18,7 +18,7 @@ window.NEWS = [
     category: "talks",
     date: "2026-08-16",
     eventDate: "2026-09-03",
-    href: "https://www.mathsoc.jp/activity/meeting/kobe26sept/program/index.html",
+    href: "https://www.mathsoc.jp/activity/meeting/kobe26sept/index.html",
     linkText: {
       en: "2026 MSJ Autumn Meeting",
       ja: "2026年度秋季総合分科会"
