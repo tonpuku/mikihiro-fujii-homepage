@@ -10,7 +10,7 @@ window.NEWS = [
     },
     text: {
       en: "A paper has been submitted.",
-      ja: "単著論文を投稿しました。"
+      ja: "単著論文を投稿しました．"
     }
   },
   {
