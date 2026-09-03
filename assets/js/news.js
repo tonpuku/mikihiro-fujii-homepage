@@ -13,7 +13,7 @@ window.NEWS = [
     },
     text: {
       en: "Mikihiro Fujii received the 2026 MSJ Takebe Katahiro Prize.",
-      ja: "藤井幹大が2026年度日本数学会賞建部賢弘特別賞を受賞しました．"
+      ja: "2026年度日本数学会賞建部賢弘特別賞を受賞しました．"
     }
   },
   {
