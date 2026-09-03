@@ -1,6 +1,22 @@
 // News items remain available as a permanent archive.
 window.NEWS = [
   {
+    category: "other",
+    date: "2026-09-02",
+    href: {
+      en: "https://www.mathsoc.jp/en/publicity/takebe2026-en.html",
+      ja: "https://www.mathsoc.jp/publicity/takebe2026.html"
+    },
+    linkText: {
+      en: "2026 MSJ Takebe Katahiro Prize",
+      ja: "2026年度日本数学会賞建部賢弘特別賞"
+    },
+    text: {
+      en: "Mikihiro Fujii received the 2026 MSJ Takebe Katahiro Prize.",
+      ja: "藤井幹大が2026年度日本数学会賞建部賢弘特別賞を受賞しました．"
+    }
+  },
+  {
     category: "papers",
     date: "2026-08-18",
     href: "paper.html?id=non-unique-l2-stationary-navier-stokes-whole-plane",

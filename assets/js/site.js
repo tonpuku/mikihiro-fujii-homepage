@@ -37,6 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
       "cv.title": "CV",
       "cv.employment": "Employment",
       "cv.education": "Education",
+      "cv.awards": "Awards",
+      "cv.award.takebe": "2026 MSJ Takebe Katahiro Prize",
+      "cv.award.takebe.achievement": "Well-posedness and long time behavior of solutions for the fluid mechanics via the method of harmonic analysis",
+      "cv.award.takebe.url": "https://www.mathsoc.jp/en/publicity/takebe2026-en.html",
       "cv.role.lecturer": "Lecturer",
       "cv.role.partTime": "Part-time Lecturer",
       "cv.role.assistantProfessor": "Assistant Professor",
@@ -63,6 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "cv.date.2021-04.2022-09": "April 2021 - September 2022",
       "cv.date.2018-04.2022-09": "April 2018 - September 2022",
       "cv.date.2014-04.2018-03": "April 2014 - March 2018",
+      "cv.date.2026-09": "September 2026",
       "research.eyebrow": "Papers and talks",
       "research.title": "Research",
       "research.description": "Mathematical analysis of nonlinear PDEs in fluid dynamics, especially Navier-Stokes type systems and critical function spaces.",
@@ -123,6 +128,10 @@ document.addEventListener("DOMContentLoaded", () => {
       "cv.title": "略歴",
       "cv.employment": "職歴",
       "cv.education": "学歴",
+      "cv.awards": "受賞歴",
+      "cv.award.takebe": "2026年度日本数学会賞建部賢弘特別賞",
+      "cv.award.takebe.achievement": "調和解析的手法による流体方程式の適切性と解の長時間挙動",
+      "cv.award.takebe.url": "https://www.mathsoc.jp/publicity/takebe2026.html",
       "cv.role.lecturer": "講師",
       "cv.role.partTime": "非常勤講師",
       "cv.role.assistantProfessor": "助教",
@@ -149,6 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "cv.date.2021-04.2022-09": "2021年4月 - 2022年9月",
       "cv.date.2018-04.2022-09": "2018年4月 - 2022年9月",
       "cv.date.2014-04.2018-03": "2014年4月 - 2018年3月",
+      "cv.date.2026-09": "2026年9月",
       "research.eyebrow": "論文・講演",
       "research.title": "研究業績",
       "research.description": "流体力学に現れる非線形偏微分方程式、特に Navier-Stokes 型方程式と臨界関数空間の数学解析を研究しています。",
@@ -266,6 +276,13 @@ document.addEventListener("DOMContentLoaded", () => {
       const key = element.getAttribute("data-i18n-label");
       if (dictionary[key]) {
         element.setAttribute("aria-label", dictionary[key]);
+      }
+    });
+
+    document.querySelectorAll("[data-i18n-href]").forEach((element) => {
+      const key = element.getAttribute("data-i18n-href");
+      if (dictionary[key]) {
+        element.setAttribute("href", dictionary[key]);
       }
     });
 
@@ -433,9 +450,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const appendNewsText = (element, item, language) => {
     const text = String(getLocalizedValue(item.text, language));
     const linkText = String(getLocalizedValue(item.linkText, language));
+    const href = String(getLocalizedValue(item.href, language));
     const linkIndex = linkText ? text.indexOf(linkText) : -1;
 
-    if (!item.href || linkIndex < 0) {
+    if (!href || linkIndex < 0) {
       element.textContent = text;
       return;
     }
@@ -443,7 +461,7 @@ document.addEventListener("DOMContentLoaded", () => {
     element.append(text.slice(0, linkIndex));
     const link = document.createElement("a");
     link.className = "news-link";
-    link.href = item.href;
+    link.href = href;
     link.textContent = linkText;
     element.appendChild(link);
     element.append(text.slice(linkIndex + linkText.length));
