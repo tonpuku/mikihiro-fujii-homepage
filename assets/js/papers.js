@@ -246,7 +246,8 @@ $-1$は多項式オーダーの意味で最適であることもわかってい�
     "journalUrl": "",
     "journal": "Submitted",
     "abstract": {
-      "en": String.raw`In this paper, we consider the Cauchy problem for the $3$D incompressible Navier-Stokes equations and prove the existence of unique global solutions in the framework that the horizontal component of the velocity field is small in some critical Besov spaces including the classical Fujita-Kato class, while the vertical component is large in the wide class $\dot{B}_{\infty,\sigma}^{-1}(\mathbb{R}^3)$ ($1 \leq \sigma < \infty$) where the Navier-Stokes equations are known to be ill-posed in.`
+      "en": String.raw`In this paper, we consider the Cauchy problem for the $3$D incompressible Navier-Stokes equations and prove the existence of unique global solutions in the framework that the horizontal component of the velocity field is small in some critical Besov spaces including the classical Fujita-Kato class, while the vertical component is large in the wide class $\dot{B}_{\infty,\sigma}^{-1}(\mathbb{R}^3)$ ($1 \leq \sigma < \infty$) where the Navier-Stokes equations are known to be ill-posed in.`,
+      "ja": String.raw`本論文では，$3$次元非圧縮性Navier-Stokes方程式のCauchy問題を考察し，速度場の水平成分が古典的なFujita-Katoクラスを含むいくつかの臨界Besov空間において小さい一方で，鉛直成分はNavier-Stokes方程式が非適切であることが知られている広いクラス$\dot{B}_{\infty,\sigma}^{-1}(\mathbb{R}^3)$（$1 \leq \sigma < \infty$）において大きいという枠組みの下で，一意な時間大域解の存在を証明する．`
     }
   },
   {
